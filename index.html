@@ -756,19 +756,34 @@
   }
 
   /* ── RESPONSIVE ── */
+  /* ── RESPONSIVE MOKER ── */
   @media (max-width: 1024px) {
-    nav { padding: 20px 30px; }
+    nav { padding: 15px 20px; }
     .nav-links { display: none; }
-    #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { padding-left: 30px; padding-right: 30px; }
-    #stats { padding: 60px 30px; grid-template-columns: repeat(2, 1fr); }
-    #over { grid-template-columns: 1fr; gap: 60px; }
-    .diensten-grid { grid-template-columns: 1fr; }
-    .reviews-grid { grid-template-columns: 1fr; }
-    .trust-bar { grid-template-columns: repeat(2, 1fr); }
-    .steps-row { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-    .steps-row::before { display: none; }
-    #contact { grid-template-columns: 1fr; gap: 60px; }
-    footer { flex-direction: column; gap: 24px; text-align: center; }
+    
+    /* Hier slopen we de zijwaartse scroll */
+    #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { 
+        padding-left: 20px !important; 
+        padding-right: 20px !important;
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+
+    #hero { padding-top: 100px; padding-bottom: 40px; }
+    #stats { padding: 40px 20px; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    #over { grid-template-columns: 1fr; gap: 40px; }
+    
+    .diensten-grid, .reviews-grid, .trust-bar, .steps-row { 
+        grid-template-columns: 1fr !important; 
+    }
+    
+    .sacred-geometry { width: 280px; height: 280px; }
+    .photo-placeholder { width: 180px; height: 180px; }
+    
+    #contact { grid-template-columns: 1fr; gap: 40px; }
+    .contact-form { padding: 30px 20px; }
+    
+    footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px 20px; }
   }
 </style>
 </head>
