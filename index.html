@@ -22,8 +22,8 @@
   html { scroll-behavior: smooth; }
 
   body {
-   background: var(--dark2); 
-    color: var(--white);
+    background: var(--dark-bg); 
+    color: var(--text-main);
     font-family: var(--font-body);
     font-size: 18px;
     line-height: 1.6;
@@ -32,45 +32,41 @@
 
   /* ── NAVBAR ── */
   nav {
-    position: fixed;
-  top: 0; 
-  left: 0; 
-  right: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 60px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px); 
-  border-bottom: 2px solid var(--gold);
+   position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px); 
+    border-bottom: 2px solid var(--gold);
   }
 
   .logo {
     font-family: var(--font-display);
     font-size: 15px;
     letter-spacing: 0.3em;
-    color: var(--white);
+    color: var(--text-main);
     text-decoration: none;
   }
 
   .nav-links {
    display: flex;
-    gap: 40px;
+    gap: 20px;
     list-style: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 10px 0;
   }
 
   .nav-links a {
    font-family: var(--font-display);
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  color: #1a1a1a; 
-  text-decoration: none;
-  transition: color 0.3s ease;
-  text-transform: uppercase; 
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: #1a1a1a; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
 }
 
 .nav-links a:hover {
@@ -80,14 +76,13 @@
   .nav-links a:hover { color: var(--gold); }
 
   .btn-nav {
-    font-family: var(--font-display);
+   font-family: var(--font-display);
     font-size: 10px;
     letter-spacing: 0.2em;
     color: var(--gold);
     border: 1px solid var(--gold);
     padding: 8px 15px;
     text-decoration: none;
-    transition: all 0.3s;
   }
 
   .btn-nav:hover {
@@ -100,11 +95,10 @@
    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 140px 60px 80px;
+    padding: 180px 20px 80px; 
     position: relative;
     overflow: hidden;
-    background: var(--dark2); 
-    color: #1a1a1a;
+    background: var(--dark-bg);
   }
 
   .hero-bg {
@@ -780,9 +774,9 @@
   @media (max-width: 1024px) {
     /* Navbar aanpassingen */
     nav { 
-      padding: 15px 20px; 
-      flex-direction: row;
-      justify-content: space-between; }
+      flex-direction: row; 
+        justify-content: space-between;
+        padding: 20px 60px; }
     
     /* Hier slopen we de zijwaartse scroll */
     #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { 
