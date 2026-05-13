@@ -9,15 +9,15 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --black: #ffffff;           
-    --dark: #f8f9fa;            
-    --dark2: #fdfbf7;           
-    --card: #ffffff;            
-    --gold: #b8964d;            
-    --gold-light: #d4af37;      
-    --gold-dim: #a68a44;        
-    --white: #1a1a1a;           
-    --grey: #5a5a5a;            
+    --black: #0a0a0a;
+    --dark: #0f0f14;
+    --dark2: #13131a;
+    --card: #161620;
+    --gold: #c9a84c;
+    --gold-light: #e2c27d;
+    --gold-dim: #8a6f35;
+    --white: #f5f0e8;
+    --grey: #7a7a7a;
     --font-display: 'Cinzel', serif;
     --font-body: 'Cormorant Garamond', serif;
   }
@@ -25,8 +25,8 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--black);
-    color: var(--white);
+    background: #f9f6f0;
+    color: #1a2340;
     font-family: var(--font-body);
     font-size: 18px;
     line-height: 1.6;
@@ -36,16 +36,15 @@
   /* ── NAVBAR ── */
   nav {
     position: fixed;
-    position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 24px 60px;
-    background: rgba(255, 255, 255, 0.95); 
+    background: rgba(10,10,10,0.85);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(184, 150, 77, 0.2); 
+    border-bottom: 1px solid rgba(201,168,76,0.1);
   }
 
   .logo {
@@ -66,7 +65,7 @@
     font-family: var(--font-display);
     font-size: 11px;
     letter-spacing: 0.2em;
-    color: #333333
+    color: var(--grey);
     text-decoration: none;
     transition: color 0.3s;
   }
@@ -97,7 +96,6 @@
     padding: 140px 60px 80px;
     position: relative;
     overflow: hidden;
-   color: #1a1a1a;
   }
 
   .hero-bg {
@@ -105,7 +103,6 @@
     inset: 0;
     background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
                 radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.03) 0%, transparent 50%);
-   color: #1a1a1a;
   }
 
   .stars {
@@ -124,7 +121,7 @@
       radial-gradient(2px 2px at 45% 90%, rgba(201,168,76,0.3) 0%, transparent 100%);
   }
 
- .hero-content { position: relative; z-index: 1; max-width: 90%; margin: 0 auto; }
+  .hero-content { position: relative; z-index: 1; max-width: 600px; }
 
   .hero-label {
     font-family: var(--font-display);
@@ -132,7 +129,6 @@
     letter-spacing: 0.35em;
     color: var(--gold);
     margin-bottom: 32px;
-   color: #1a1a1a;
   }
 
   .hero-name {
@@ -141,24 +137,21 @@
     font-weight: 300;
     line-height: 0.95;
     margin-bottom: 32px;
-   color: #1a1a1a;
   }
 
   .hero-name em {
     font-style: italic;
     color: var(--gold-light);
-   color: #1a1a1a;
   }
 
   .hero-tagline {
     font-family: var(--font-body);
     font-size: 22px;
     font-style: italic;
-    color: #4a4a4a
+    color: rgba(245,240,232,0.7);
     font-weight: 300;
     margin-bottom: 48px;
     line-height: 1.5;
-  
   }
 
   .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
@@ -182,8 +175,8 @@
     font-size: 11px;
     letter-spacing: 0.2em;
     background: transparent;
-    color: var(--white);
-    border: 1px solid rgba(245,240,232,0.3);
+    color: #1a2340;
+    border: 1px solid rgba(26,35,64,0.3);
     padding: 16px 32px;
     text-decoration: none;
     transition: all 0.3s;
@@ -193,7 +186,7 @@
 
   /* ── STATS ── */
   #stats {
-    background: var(--dark2);
+    background: #1a2340;
     padding: 80px 60px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -217,7 +210,7 @@
     font-family: var(--font-display);
     font-size: 10px;
     letter-spacing: 0.25em;
-    color: var(--grey);
+    color: rgba(255,255,255,0.65);
   }
 
   /* ── SECTION HEADER ── */
@@ -336,7 +329,7 @@
   .over-title em { font-style: italic; color: var(--gold-light); }
 
   .over-text {
-    color: rgba(245,240,232,0.65);
+    color: #4a5568;
     font-size: 17px;
     line-height: 1.8;
     margin-bottom: 16px;
@@ -348,7 +341,7 @@
   /* ── DIENSTEN ── */
   #diensten {
     padding: 120px 60px;
-    background: var(--dark2);
+    background: #f0ede7;
   }
 
   .diensten-grid {
@@ -358,9 +351,10 @@
   }
 
   .dienst-card {
-    background: var(--card);
+    background: #ffffff;
     padding: 48px 40px;
-    border: 1px solid rgba(201,168,76,0.08);
+    border: 1px solid rgba(184,146,42,0.2);
+    box-shadow: 0 2px 15px rgba(26,35,64,0.05);
     position: relative;
     transition: all 0.4s;
     cursor: pointer;
@@ -369,8 +363,8 @@
   }
 
   .dienst-card:hover {
-    background: #1a1a28;
-    border-color: rgba(201,168,76,0.25);
+    background: #f8f4ec;
+    border-color: rgba(184,146,42,0.4);
   }
 
   .dienst-number {
@@ -387,12 +381,12 @@
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 16px;
-    color: var(--white);
+    color: #1a2340;
   }
 
   .dienst-desc {
     font-size: 15px;
-    color: rgba(245,240,232,0.5);
+    color: #4a5568;
     line-height: 1.7;
     flex: 1;
     margin-bottom: 32px;
@@ -448,10 +442,11 @@
   }
 
   .review-card {
-    background: var(--card);
-    border: 1px solid rgba(201,168,76,0.08);
+    background: #ffffff;
+    border: 1px solid rgba(184,146,42,0.2);
     padding: 48px 40px;
     position: relative;
+    box-shadow: 0 2px 15px rgba(26,35,64,0.05);
   }
 
   .review-quote-mark {
@@ -472,7 +467,7 @@
   .review-text {
     font-size: 16px;
     font-style: italic;
-    color: rgba(245,240,232,0.75);
+    color: #4a5568;
     line-height: 1.8;
     margin-bottom: 32px;
   }
@@ -501,7 +496,7 @@
   /* ── WERKWIJZE ── */
   #werkwijze {
     padding: 120px 60px;
-    background: var(--dark2);
+    background: #1a2340;
   }
 
   .trust-bar {
@@ -510,8 +505,8 @@
     gap: 20px;
     margin-bottom: 100px;
     padding: 40px;
-    border: 1px solid rgba(201,168,76,0.1);
-    background: rgba(201,168,76,0.03);
+    border: 1px solid rgba(201,168,76,0.3);
+    background: rgba(255,255,255,0.05);
   }
 
   .trust-item {
@@ -524,7 +519,7 @@
 
   .trust-text {
     font-size: 14px;
-    color: rgba(245,240,232,0.7);
+    color: rgba(255,255,255,0.8);
   }
 
   .steps-row {
@@ -560,7 +555,7 @@
     font-style: italic;
     font-size: 20px;
     color: var(--gold);
-    background: var(--dark2);
+    background: #1a2340;
     position: relative;
     z-index: 1;
   }
@@ -574,7 +569,7 @@
 
   .step-text {
     font-size: 14px;
-    color: rgba(245,240,232,0.5);
+    color: #4a5568;
     line-height: 1.7;
   }
 
@@ -582,7 +577,7 @@
   #quote {
     padding: 120px 60px;
     text-align: center;
-    background: var(--dark);
+    background: #1a2340;
     position: relative;
   }
 
@@ -591,7 +586,7 @@
     font-size: clamp(22px, 3vw, 36px);
     font-weight: 300;
     font-style: italic;
-    color: var(--white);
+    color: #ffffff;
     max-width: 900px;
     margin: 0 auto 32px;
     line-height: 1.5;
@@ -601,7 +596,7 @@
     font-family: var(--font-display);
     font-size: 10px;
     letter-spacing: 0.3em;
-    color: var(--gold);
+    color: #c9a84c;
   }
 
   /* ── CONTACT ── */
@@ -713,8 +708,8 @@
 
   /* ── FOOTER ── */
   footer {
-    background: var(--dark2);
-    border-top: 1px solid rgba(201,168,76,0.1);
+    background: #1a2340;
+    border-top: 1px solid rgba(201,168,76,0.3);
     padding: 60px;
     display: flex;
     align-items: center;
@@ -725,12 +720,12 @@
     font-family: var(--font-display);
     font-size: 13px;
     letter-spacing: 0.3em;
-    color: var(--gold);
+    color: var(--white);
   }
 
   .footer-copy {
     font-size: 13px;
-    color: var(--grey);
+    color: rgba(255,255,255,0.6);
   }
 
   .footer-links {
@@ -743,7 +738,7 @@
     font-family: var(--font-display);
     font-size: 10px;
     letter-spacing: 0.2em;
-    color: var(--grey);
+    color: rgba(255,255,255,0.6);
     text-decoration: none;
     transition: color 0.3s;
   }
@@ -763,34 +758,19 @@
   }
 
   /* ── RESPONSIVE ── */
-  /* ── RESPONSIVE MOKER ── */
   @media (max-width: 1024px) {
-    nav { padding: 15px 20px; }
+    nav { padding: 20px 30px; }
     .nav-links { display: none; }
-    
-    /* Hier slopen we de zijwaartse scroll */
-    #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { 
-        padding-left: 20px !important; 
-        padding-right: 20px !important;
-        width: 100% !important;
-        overflow-x: hidden;
-    }
-
-    #hero { padding-top: 100px; padding-bottom: 40px; }
-    #stats { padding: 40px 20px; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    #over { grid-template-columns: 1fr; gap: 40px; }
-    
-    .diensten-grid, .reviews-grid, .trust-bar, .steps-row { 
-        grid-template-columns: 1fr !important; 
-    }
-    
-    .sacred-geometry { width: 280px; height: 280px; }
-    .photo-placeholder { width: 180px; height: 180px; }
-    
-    #contact { grid-template-columns: 1fr; gap: 40px; }
-    .contact-form { padding: 30px 20px; }
-    
-    footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px 20px; }
+    #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { padding-left: 30px; padding-right: 30px; }
+    #stats { padding: 60px 30px; grid-template-columns: repeat(2, 1fr); }
+    #over { grid-template-columns: 1fr; gap: 60px; }
+    .diensten-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .trust-bar { grid-template-columns: repeat(2, 1fr); }
+    .steps-row { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .steps-row::before { display: none; }
+    #contact { grid-template-columns: 1fr; gap: 60px; }
+    footer { flex-direction: column; gap: 24px; text-align: center; }
   }
 </style>
 </head>
@@ -808,26 +788,14 @@
   <a href="#contact" class="btn-nav">Boek een Sessie</a>
 </nav>
 
-<div class="hero-content fade-in">
-    <p class="hero-label">Strategisch Inzicht & Rendement</p>
-    <h1 class="hero-name">De Business<em>Architect</em></h1>
-    <p class="hero-tagline">
-        Ik repareer geen symptomen. Ik saneer het fundament van je bedrijf.<br>
-        <strong>Binnen 1 minuut zie ik waar jouw winst lekt en je energie stagneert.</strong>
-    </p>
-    
-    <div class="hero-buttons">
-      <a href="#contact" class="btn-primary">Vraag een High-End Scan aan</a>
-      <a href="#diensten" class="btn-secondary">Bekijk de Werkwijze</a>
-    </div>
-</div>
-    Nieuwsbrief meld je aan https://laposta.nl/f/ssuhizunl3rw</p>
-  
-        </a>
-    </div>
-</body>
-</html>
-   
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="stars"></div>
+  <div class="hero-content fade-in">
+    <p class="hero-label">Interdimensionaal Bewustzijn</p>
+    <h1 class="hero-name">Tamara<br><em>Esseveld</em></h1>
+    <p class="hero-tagline">Ik repareer geen symptomen.<br>Ik saneer het fundament.</p>
     <div class="hero-buttons">
       <a href="#contact" class="btn-primary">Boek een Sessie</a>
       <a href="#diensten" class="btn-secondary">Bekijk Diensten</a>
@@ -838,15 +806,15 @@
 <!-- STATS -->
 <section id="stats">
   <div class="stat fade-in">
-    <div class="stat-number">800+</div>
+    <div class="stat-number">200%</div>
     <div class="stat-label">Klanten Geholpen</div>
   </div>
   <div class="stat fade-in">
-    <div class="stat-number">10+</div>
+    <div class="stat-number">11+</div>
     <div class="stat-label">Jaar Ervaring</div>
   </div>
   <div class="stat fade-in">
-    <div class="stat-number">10+</div>
+    <div class="stat-number">11+</div>
     <div class="stat-label">Unieke Diensten</div>
   </div>
   <div class="stat fade-in">
@@ -878,30 +846,9 @@
   <div class="over-content fade-in">
     <div class="section-tag"><span>Over Mij</span></div>
     <h2 class="over-title">All-round Intuïtief <em>Master</em></h2>
-    <p class="over-text"><div id="sellbtn_product_widget_container">
-         <div id="sell-card-preview">
-            <style type="text/css">
-               @CHARSET "UTF-8";.mbssellwidget-productcard-container,.mbssellwidget-columnpanel-container{display:block;overflow:hidden;background:#fff;border:2px solid #eaedef;padding:30px;max-width:590px;margin:0 auto;box-sizing:content-box;font-family:"Roobert",Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5em;font-weight:normal;color:#282828;text-align:left}.mbssellwidget-productcard-covercontainer{display:block;overflow:hidden;width:35%;max-width:185px;float:left;overflow:hidden;margin:0 30px 0 0}.mbssellwidget-productcard-covercontainer img{width:100%;margin:0}@media screen and (max-width: 500px){.mbssellwidget-productcard-covercontainer{float:none;width:100%;max-width:none}}.mbssellwidget-productcard-authorcontainer{display:block;overflow:hidden;margin-bottom:20px}.mbssellwidget-productcard-authorcontainer .mbssellwidget-productcard-authorimage{display:block;overflow:hidden;float:left;width:40px;height:40px;border-radius:50%;margin-right:10px}.mbssellwidget-productcard-authorcontainer .mbssellwidget-productcard-authorimage img{width:100%}.mbssellwidget-productcard-authorcontainer .mbssellwidget-productcard-authorname{line-height:40px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.mbssellwidget-productcard-bookcontainer{display:block;overflow:hidden}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-booktitle{font-size:1.1em;line-height:1.5em;font-weight:500}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-bookdesc{font-size:.85em;line-height:1.5em;color:#727577}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-bookprice{margin-top:10px;margin-bottom:20px}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-bookprice .mbssellwidget-productcard-bookprice-binding{display:inline;font-size:.8em;text-transform:uppercase;color:#727577}.mbssellwidget-sellbutton{display:inline-block;background:#1F59CC;color:#fff;border:0px solid #1F59CC;font-family:"Roobert",Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;line-height:1.5em;text-decoration:none;text-transform:uppercase;border-radius:5px;padding:8px 20px;cursor:pointer}.mbssellwidget-sellbutton:hover{background:#174299;border:0px solid #1F59CC;border-color:#174299;color:#fff;text-decoration:none}.mbssellwidget-columnpanel-container{max-width:240px}@media screen and (max-width: 500px){.mbssellwidget-columnpanel-container{max-width:none}}.mbssellwidget-columnpanel-covercontainer{display:block;overflow:hidden;overflow:hidden;margin:0 0 20px 0;width:100%}.mbssellwidget-columnpanel-covercontainer img{width:100%;max-height:400px;margin:0}
-            </style>
-            <div id="sell-card22062910">
-                  <div id="sellbtn_buy-button22062910"><a id="btn_button22062910" class="mbssellwidget-sellbutton" href="https://www.bravenewbooks.nl/books/22062910">Nu kopen</a></div>
-            </div>
-         </div>
-      </div>Mijn boek is nu te koop !Ik ben Tamara Esseveld – CelestialElora. "Optimaliseer het Menselijk Fundament van uw Organisatie."
-Geavanceerde Systeem-Scans voor High-Performance Leiderschap en Duurzame Inzetbaarheid.</p>
-    <p class="over-text">De Blauwdruk van Jouw Herrijzenis 🏗️✨
-Een systeem bouw je niet op drijfzand. Mijn werk als Business Architect gaat diep, is rauw en transformeert je fundament op de 144-frequentie. Dit is geen traject voor de massa. Ik werk exclusief met de leiders en vernieuwers die voelen dat de oude 'legbatterij' van overleven niet meer past, en die klaar zijn om hun eigen kasteel te bewonen.
-Omdat de energie waarmee we werken hoog is, hanteer ik een bewust deurbeleid vanuit bedding:
-De Poort is de Intake 🗝️
-Ik werk niet met directe boekingen. De vitrinekast zit op slot, niet om je buiten te sluiten, maar om de zuiverheid van het proces te bewaken. We beginnen altijd met een vlijmscherpe scan van 5 minuten.
-De Scan: Jouw Systeem in Kaart
-Tijdens deze scan lees ik de onzichtbare data van jouw systeem. Ik kijk niet naar de buitenkant, maar naar de blauwdruk van je lichaam en je business. Ik zie waar de 'foutmeldingen' zitten—die energetische blokkades die leiden tot burn-out, stagnatie of een haperende koers—voordat je systeem bezwijkt onder de druk.
-Samen Bouwen op de 144-Blauwdruk
-Met meer dan een decennium aan ervaring in interdimensionale diagnose en strategische systeem-interventie, begeleid ik je naar je werkelijke potentieel. Ik breng de rust en de structuur terug, zodat je niet meer hoeft te vechten tegen je eigen fundament, maar erdoor gedragen wordt.
-🧱 DE TOEGANGSCODE: START MET DE INTAKE 🏗️⚡
-Ben jij klaar om de ruis achter je te laten en te bouwen vanuit jouw ware autoriteit?
-De Selectie: Pas na de intake beslissen we of we de fundering gaan storten.
-Klaar voor de echte reboot? Vraag eerst je intake aan. 🔨🔑</p>
+    <p class="over-text">Ik ben Tamara Esseveld – CelestialElora. Waar anderen symptomen behandelen, ga ik naar de kern. Ik scan je blauwdruk en vertaal blokkades naar harde data.</p>
+    <p class="over-text">Geen zweverig gedoe, maar de rauwe waarheid achter je stagnatie. Ik zie wat de rest mist – en ik laat het je zien.</p>
+    <p class="over-text">Met meer dan een decade aan ervaring in interdimensionale diagnose, energetische healing en strategische systeem-interventie begeleid ik ondernemers en particulieren naar hun werkelijke potentieel.</p>
     <a href="#contact" class="btn-primary">Begin Jouw Transformatie</a>
   </div>
 </section>
@@ -913,89 +860,44 @@ Klaar voor de echte reboot? Vraag eerst je intake aan. 🔨🔑</p>
     <h2 class="section-title">Kies Jouw <em>Traject</em></h2>
   </div>
   <div class="diensten-grid">
-   <div class="dienst-card fade-in">
+    <div class="dienst-card fade-in">
       <div class="dienst-number">01</div>
-      <h3 class="dienst-name">De Deep-Dive Scan(bedrijven)</h3>
-      <p class="dienst-desc">"De Fundament Analyse (High-End)".
-
-
-Een volledige energetische en strategische doorlichting van uw organisatie. Waar zit de weerstand? Waarom stagneert de groei?
-</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ 1.495,- (ex BTW)</div>
-        </div>
-        
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">02</div>
-      <h3 class="dienst-name">De Transformatie(bedrijven)</h3>
-      <p class="dienst-desc">Wat:Het Architect-Traject
-
-Volledige begeleiding bij het herstructureren van de bedrijfsenergie en leiderschap.</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ 4.995,- (ex BTW)</div>
-          <div class="dienst-duur">Traject</div>
-        </div>
-       
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">03</div>
-      <h3 class="dienst-name">De Architect-on-Call (Retainer) (bedrijven)</h3>
-      <p class="dienst-desc">"Wat:Directe toegang tot mijn expertise voor crisisbeheersing en strategische koersbepaling. Ik scan de energetische horizon terwijl jullie de operatie draaien.
-
-Resultaat: 24/7 weerbaarheid, eliminatie van 'ruis' in de besluitvorming en een stabiel fundament onder druk.(minimaal 3 maanden)</p>
+      <h3 class="dienst-name">Business & Strategie</h3>
+      <p class="dienst-desc">Strategie is waardeloos op een wankel fundament. Ik combineer energetische diagnose met concrete businessstrategie voor duurzaam resultaat.</p>
       <div class="dienst-footer">
         <div>
           <div class="dienst-prijs">Op aanvraag</div>
-          <div class="dienst-duur">3 maanden</div>
-        </div>
-        
-      </div>
-    </div>
-   <div class="dienst-card fade-in">
-      <div class="dienst-number">04</div>
-      <h3 class="dienst-name">De Full Systeem-Reboot (Implementation) (bedrijven)</h3>
-      <p class="dienst-desc">"Wat:Volledige herstructurering van een afdeling of directie-kernteam. Van 'crisis-management' naar 'scaling-capabilities'. De totale energetische renovatie
-
-Resultaat:Een organisatie die vaart op de hoogste versnelling zonder verlies van talent of kapitaal.</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">Projectbasis (Op aanvraag</div>
-          <div class="dienst-duur">Project</div>
-        </div>
-        
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">05</div>
-      <h3 class="dienst-name">Personal Baseline Audit</h3>
-      <p class="dienst-desc">Een snelle scan van de actuele belastbaarheid en mentale focus.Blokkades in het lichaam.</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ 111</div>
-          <div class="dienst-duur">Personal Baseline Audit</div>
+          <div class="dienst-duur">Volledig Traject</div>
         </div>
         <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
       </div>
     </div>
     <div class="dienst-card fade-in">
-      <div class="dienst-number">06</div>
+      <div class="dienst-number">02</div>
+      <h3 class="dienst-name">Chakra & Aura Alignment Scan</h3>
+      <p class="dienst-desc">Uw ziel spreekt in kleuren, in patronen en in onzichtbare vibraties. Uw aura is de stille spiegel van uw innerlijke wereld. Samen ontdekken we de verborgen betekenissen achter de kleuren en de vorm van uw aura. Laat mij uw energie vertalen in inzicht, en onthul de essentie die u werkelijk bent.</p>
+      <div class="dienst-footer">
+        <div>
+          <div class="dienst-prijs">€ 44</div>
+          <div class="dienst-duur">Aura Reading</div>
+        </div>
+        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
+      </div>
+    </div>
+    <div class="dienst-card fade-in">
+      <div class="dienst-number">03</div>
       <h3 class="dienst-name">Energetische Huisreiniging (Op Afstand)</h3>
       <p class="dienst-desc">Stagneert de energie in je woning? Fysieke ruimtes verzamelen foutcodes door stress, oude patronen of externe ruis. Ik saneer je woning energetisch op afstand. Energetische Audit, Systeem-Reset en Architect-Rapport (PDF) inbegrepen. Geen reiskosten, directe resultaten.</p>
       <div class="dienst-footer">
         <div>
-          <div class="dienst-prijs">€ 144</div>
+          <div class="dienst-prijs">€ 99</div>
           <div class="dienst-duur">Op Afstand</div>
         </div>
         <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
       </div>
     </div>
     <div class="dienst-card fade-in">
-      <div class="dienst-number">07</div>
+      <div class="dienst-number">04</div>
       <h3 class="dienst-name">De 144 Reality Scan</h3>
       <p class="dienst-desc">Draait je solo-business op drijfzand? Ik scan niet je to-do lijst, ik scan je blauwdruk. Ik decodeer de Rotte Balken, de Verzakking en de Gouden Lijn. 15 minuten. Geen coaching, geen ruis – de harde diagnose van je fundament en de instructie voor herstel.</p>
       <div class="dienst-footer">
@@ -1007,88 +909,57 @@ Resultaat:Een organisatie die vaart op de hoogste versnelling zonder verlies van
       </div>
     </div>
     <div class="dienst-card fade-in">
-      <div class="dienst-number">08</div>
-      <h3 class="dienst-name">Executive Flash Scan (particulieren</h3>
-      <p class="dienst-desc"> Loop je privé vast? De fout zit in je broncode. Ik scan je energetische infrastructuur en lokaliseer de lekken.
-
-Optie 1: De Single Flash Scan (1 Vraag) 🎯
-Eén brandende vraag over je werk, relatie of gezondheid. Ik geef je de exacte blauwdruk van de blokkade én de oplossing.
-Tarief: € 144,-
-
-Optie 2: De Gezins-Blauwdruk Scan 👨‍👩‍👧‍👦🏗️
-Waarom is er ruis in huis? Ik scan het fundament van je gezin en herstel de rust en kracht in jullie kasteel.
-Tarief: € 333,-
-</p>
+      <div class="dienst-number">05</div>
+      <h3 class="dienst-name">The 360° Energy Scan</h3>
+      <p class="dienst-desc">Soms schuilt de waarheid in wat onzichtbaar is. Dien een foto van jezelf in en ik lees de verborgen boodschappen in jouw energie. Fotoreading, tarotlegging en aurareading samen vormen een compleet beeld van wie je bent, waar je staat en welke stappen je kunt zetten. Vastgelegd in een digitaal document vol inzichten.</p>
       <div class="dienst-footer">
         <div>
-          <div class="dienst-prijs">€ 144</div>
+          <div class="dienst-prijs">€ 111</div>
           <div class="dienst-duur">Digitaal Rapport</div>
         </div>
         <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
       </div>
     </div>
     <div class="dienst-card fade-in">
-      <div class="dienst-number">09</div>
+      <div class="dienst-number">06</div>
       <h3 class="dienst-name">Tweelingziel/Soulmate</h3>
       <p class="dienst-desc">Stopt die verbinding maar niet uit je systeem te verdwijnen? Stop met gissen. Ik decodeer de blauwdruk van jullie connectie. Energetische Diagnose: Waar lekt de stroom? Wat is de 'Gouden Lijn'? Inzicht in de 'waarom' en de 'hoe nu verder'. Herwin je neutraliteit en regie.</p>
       <div class="dienst-footer">
         <div>
-          <div class="dienst-prijs">€ 144</div>
+          <div class="dienst-prijs">€ 33,33</div>
           <div class="dienst-duur">Blauwdruk-Scan</div>
         </div>
         <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
       </div>
     </div>
     <div class="dienst-card fade-in">
-      <div class="dienst-number">10</div>
-      <h3 class="dienst-name">ONDERHOUDS-RESET</h3>
-      <p class="dienst-desc">Je fundament is gestort, de malware is verwijderd en de 144-frequentie draait. Maar wtf... de buitenwereld zit nog vol ruis. 
-
-Voel je weer even de 'denk-ruis' of een storing in de hardware? Laat het niet sudderen tot de boel weer blokkeert. De Onderhouds-Reset is de APK voor jouw energetische kasteel.
-
-Exclusief voor Architecten die de 3-daagse Reset hebben voltooid.
-
-Snel-sanering: Nieuwe krakers direct verwijderen.
-
-Frequentie-Check: Her-kalibratie naar de 144-broncode.
-
-Firewall Update: Je fundament harden in de 177-autoriteit.
-
-Blijf de Architect. Houd je bouwplaats schoon..</p>
+      <div class="dienst-number">07</div>
+      <h3 class="dienst-name">Energetische Healing</h3>
+      <p class="dienst-desc">Lichamelijke zwaarte of een brok in je keel? Dat zijn foutcodes in je fundament. Ik scan je blauwdruk en dwing je systeem terug naar de optimale 'Gouden' frequentie. Systeem-Scan, Architect-Interventie en Architect-Rapport (PDF) inbegrepen. Geen zweverig gedoe, maar een harde shift.</p>
       <div class="dienst-footer">
         <div>
-          <div class="dienst-prijs">€ 144</div>
-          <div class="dienst">PDF</div>
+          <div class="dienst-prijs">€ 88</div>
+          <div class="dienst-duur">20–30 min + PDF</div>
         </div>
         <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
       </div>
     </div>
     <div class="dienst-card fade-in">
-      <div class="dienst-number">11</div>
-      <h3 class="dienst-name">🚨 144 EMERGENCY RESET</h3>
-      <p class="dienst-desc">Sta je energetisch in de brand? Word je 'overgenomen' door vreemde energieën, stemmen, of zit je in een acute systeem-crisis? Wat ik doe in 24 uur:
-
-Acute Scan: Ik spoor direct het lek of de 'krakers' in je systeem op.
-
-Directe Sanering: Ik gooi vreemde energieën eruit en dicht de gaten in je fundament.
-
-Systeem-Lock: Ik herstel je autoriteit op de 144-frequentie. Jij bent weer kapitein.
-
-Voor wie: Dappere zielen in een energetische noodsituatie die direct hun regie terug willen.
-
-Investering: €144,- (De code voor herstel).</p>
+      <div class="dienst-number">08</div>
+      <h3 class="dienst-name">De Onrecht-Scan</h3>
+      <p class="dienst-desc">Voel je dat het scheef zit op je werk, maar krijg je de vinger er niet op? Onrecht vreet je fundament weg. Wat je krijgt: Waar lekt de energie? Waarom raakt dit jou nu? En je eerstvolgende stap naar herstel. Binnen 48u jouw Architect-oordeel in PDF.</p>
       <div class="dienst-footer">
         <div>
-          <div class="dienst-prijs">€ 144</div>
+          <div class="dienst-prijs">€ 33</div>
           <div class="dienst-duur">PDF binnen 48u</div>
         </div>
         <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
       </div>
     </div>
     <div class="dienst-card fade-in">
-      <div class="dienst-number">12</div>
+      <div class="dienst-number">09</div>
       <h3 class="dienst-name">De Blauwdruk-Reset (3 Maanden)</h3>
-      <p class="dienst-desc">Klaar met symptoombestrijding? 3 maanden de diepte in. Maand 1: Systeem-Scan & Eerste Sanering (4 sessies per week). Maand 2: De Opschoning – oude patronen afbreken (2 sessies pw). Maand 3: De Nieuwe Opbouw – jij wordt je eigen Architect. Voor wie klaar is met de oude weg.</p>
+      <p class="dienst-desc">Klaar met symptoombestrijding? 3 maanden de diepte in. Maand 1: Systeem-Scan & Eerste Sanering (4 sessies). Maand 2: De Opschoning – oude patronen afbreken (2 sessies). Maand 3: De Nieuwe Opbouw – jij wordt je eigen Architect. Voor wie klaar is met de oude weg.</p>
       <div class="dienst-footer">
         <div>
           <div class="dienst-prijs">€ 4.500</div>
@@ -1098,31 +969,32 @@ Investering: €144,- (De code voor herstel).</p>
       </div>
     </div>
     <div class="dienst-card fade-in">
-      <div class="dienst-number">13</div>
-      <h3 class="dienst-name">Strategic Alignment & Recovery</h3>
-      <p class="dienst-desc">Intensieve sanering van het zenuwstelsel om besluitvaardigheid en energie te herstellen. 3 daagse reset. Basis €222, Onbeperkt contact €333, 5 dagen VIP €555.
+      <div class="dienst-number">10</div>
+      <h3 class="dienst-name">De Blauwdruk: Systeem-Reparatie</h3>
+      <p class="dienst-desc">Geen coaching, maar hacking. 3 dagen, 10 min/dag. We elimineren blokkades en herstellen je 'Gouden' frequentie. De 3-Daagse Focus-Reset voor wie direct resultaat wil.</p>
       <div class="dienst-footer">
         <div>
-          <div class="dienst-prijs">€ 222</div>
-          <div class="dienst-duur">Strategic Alignment & Recovery €222-€333-€555 </div>
+          <div class="dienst-prijs">€ 150</div>
+          <div class="dienst-duur">3-Daagse Reset</div>
         </div>
-        <<a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
+        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
       </div>
     </div>
     <div class="dienst-card fade-in">
-  <div class="dienst-number">14</div>
-  <h3 class="dienst-name">De Blueprint Breath (Masterclass)</h3>
-  <p class="dienst-desc">Blaas de ruis uit je fundering. Je kan niet groter groeien dan je eigen longinhoud. In deze masterclass gebruiken we de adem als hogedrukreiniger voor je systeem. We sporen de 'metaalmoeheid' in je lichaam op en blazen de weg vrij voor scherpe focus en winst. Geen ontspanning, maar een actieve herstructurering van je ademhaling en je business-power.</p>
-  <div class="dienst-footer">
-    <div>
-      <div class="dienst-prijs">€ 111,-</div>
-      <div class="dienst-duur">Live Online Sessie</div>
-    </div>
-    <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
-  </div>
+      <div class="dienst-number">11</div>
+      <h3 class="dienst-name">De Blueprint Breath (Masterclass)</h3>
+      <p class="dienst-desc">Blaas de ruis uit je fundering. Je bedrijf kan niet groter groeien dan je eigen longinhoud. In deze masterclass gebruiken we de adem als hogedrukreiniger voor je systeem. We sporen de 'metaalmoeheid' in je lichaam op en blazen de weg vrij voor scherpe focus en winst. Geen ontspanning, maar een actieve herstructurering van je ademhaling en je business-power.</p>
+      <div class="dienst-footer">
+        <div>
+          <div class="dienst-prijs">€ 111</div>
+          <div class="dienst-duur">Live Online Sessie</div>
+        </div>
+        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" style="text-decoration:none;background:#c9a84c;color:#0a0a0a;font-family:Cinzel,serif;font-size:10px;letter-spacing:0.15em;padding:10px 16px;display:inline-block;" onmouseover="this.style.background='#e2c27d'" onmouseout="this.style.background='#c9a84c'">BETAAL VIA PAYPAL</a>
+      </div>
     </div>
   </div>
 </section>
+
 <!-- ERVARINGEN -->
 <section id="ervaringen">
   <div class="section-header fade-in">
@@ -1133,23 +1005,26 @@ Investering: €144,- (De code voor herstel).</p>
     <div class="review-card fade-in">
       <div class="review-quote-mark">"</div>
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Ik heb dit laatst gedaan bij Elora en echt waar ze  goed is in wat ze doet... echt een aanrader 😁🤗🤎 ."</p>
+      <p class="review-text">"Na de Blauwdruk-Scan begreep ik eindelijk waarom mijn bedrijf niet groeide ondanks alle inspanningen. Tamara zag precies waar de blokkade zat. Drie maanden later is mijn omzet verdubbeld."</p>
       <div class="review-divider"></div>
-      <div class="review-name">Wim.</div>
+      <div class="review-name">Marieke V.</div>
+      <div class="review-role">Ondernemer, Amsterdam</div>
     </div>
     <div class="review-card fade-in">
       <div class="review-quote-mark">"</div>
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">"CelestialElora is als je echt geholpen wilt worden. In mijn geval de  tweelingzielconnectie, in 1 klap tot de kern komen en ook meteen kunnen voelen dat het werkt.  Ben super dankbaar en blij dat ik een sessie heb geboekt bij haar. Had het veel eerder moeten doen. Ze is de beste, echt een master!"</p>
+      <p class="review-text">"Ik was sceptisch maar de 360° Energy Scan was het meest heldere gesprek dat ik ooit heb gehad. Tamara benoemt dingen die niemand anders kan zien. Absoluut transformatief."</p>
       <div class="review-divider"></div>
-      <div class="review-name">Nancy.</div>
+      <div class="review-name">David R.</div>
+      <div class="review-role">Directeur, Rotterdam</div>
     </div>
     <div class="review-card fade-in">
       <div class="review-quote-mark">"</div>
       <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Als je wil investeren in jezelf boek een sessie bij haar sta er open voor, niet twijfelen en je zal zeker geen spijt krijgen!!"</p>
+      <p class="review-text">"De Blueprint Reset heeft mijn leven letterlijk op zijn kop gezet — in de beste zin. Ik functioneer nu vanuit een stevigheid die ik nog nooit eerder had gevoeld. Tamara is uniek."</p>
       <div class="review-divider"></div>
-      <div class="review-name">Lossi.</div>
+      <div class="review-name">Sasha M.</div>
+      <div class="review-role">Coach & Trainer, Utrecht</div>
     </div>
   </div>
 </section>
@@ -1212,32 +1087,23 @@ Investering: €144,- (De code voor herstel).</p>
     <p class="contact-sub">Reactie binnen 24 uur gegarandeerd.</p>
   </div>
   <div class="contact-form fade-in" style="display:flex;flex-direction:column;justify-content:center;">
-    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:rgba(245,240,232,0.7);margin-bottom:40px;line-height:1.7;">Stuur mij een e-mail en ik reageer binnen 24 uur.</p>
-    <a href="mailto:tamara.esseveld@live.nl" class="btn-primary" style="font-size:13px;padding:20px 40px;text-align:center;">tamara.esseveld@live.nl</a>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#4a5568;margin-bottom:40px;line-height:1.7;">Stuur mij een e-mail en ik reageer binnen 24 uur.</p>
+    <a href="/cdn-cgi/l/email-protection#443025292536256a213737213221282004282d32216a2a28" class="btn-primary" style="font-size:13px;padding:20px 40px;text-align:center;"><span class="__cf_email__" data-cfemail="f783969a968596d99284849281929b93b79b9e8192d9999b">[email&#160;protected]</span></a>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-logo">CelestialElora</div>
   <p class="footer-copy">© 2025 Tamara Esseveld – CelestialElora</p>
   <ul class="footer-links">
-    <li><a href="voorwaarden.html">Algemene Voorwaarden</a></li>
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Algemene Voorwaarden</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Fade in observer
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
-Voorwaarden.html
+    ent
