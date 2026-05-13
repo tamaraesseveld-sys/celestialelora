@@ -9,14 +9,15 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-   --black: #121212;         
-    --dark: #f0ede6;          
-    --dark2: #e8e2d6;         
-    --card: #ffffff;           
-    --gold: #b8964d;           
-    --gold-light: #d4af37;      
-    --gold-dim: #a68a44;        
+   --black: #000000;
+    --dark: #f7f3eb;          
+    --dark2: #fdfaf5;         
+    --card: #ffffff;          
+    --gold: #b8964d;
+    --gold-light: #d4af37;
+    --gold-dim: #a68a44;
     --white: #1a1a1a;         
+    --grey: #5a5a5a;
     --font-display: 'Cinzel', serif;
     --font-body: 'Cormorant Garamond', serif;
   }
@@ -24,7 +25,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--black);
+   background: var(--dark2); 
     color: var(--white);
     font-family: var(--font-body);
     font-size: 18px;
@@ -99,22 +100,21 @@
 
   /* ── HERO ── */
   #hero {
-    min-height: 100vh;
+   min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 140px 60px 80px;
     position: relative;
     overflow: hidden;
-   background-color: #fdfbf7;
-   color: #1a1a1a;
+    background: var(--dark2); 
+    color: #1a1a1a;
   }
 
   .hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
-                radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.03) 0%, transparent 50%);
-   color: #1a1a1a;
+    background: radial-gradient(ellipse at 70% 50%, rgba(184, 150, 77, 0.12) 0%, transparent 70%),
+                radial-gradient(ellipse at 20% 80%, rgba(184, 150, 77, 0.08) 0%, transparent 60%);
   }
 
   .stars {
@@ -167,7 +167,7 @@
     font-family: var(--font-body);
     font-size: 22px;
     font-style: italic;
-    color: #2c2c2c;
+    color: #333333; 
     font-weight: 400;
     margin-bottom: 48px;
     line-height: 1.5;
