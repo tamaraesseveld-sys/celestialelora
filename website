@@ -470,7 +470,7 @@
   }
 
   .review-stars {
-    color: var(--gold);
+    color: #b8964d;
     font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 24px;
@@ -479,7 +479,7 @@
   .review-text {
     font-size: 16px;
     font-style: italic;
-    color: rgba(245,240,232,0.75);
+    color: #1a1a1a; 
     line-height: 1.8;
     margin-bottom: 32px;
   }
