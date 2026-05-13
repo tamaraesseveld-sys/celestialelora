@@ -581,7 +581,7 @@
 
   .step-text {
     font-size: 14px;
-    color: rgba(245,240,232,0.5);
+    color: #1a1a1a; /
     line-height: 1.7;
   }
 
