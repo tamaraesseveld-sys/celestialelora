@@ -84,11 +84,11 @@
 
   .btn-nav {
     font-family: var(--font-display);
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 0.2em;
     color: var(--gold);
     border: 1px solid var(--gold);
-    padding: 12px 24px;
+    padding: 8px 15px;
     text-decoration: none;
     transition: all 0.3s;
   }
@@ -150,7 +150,7 @@
 
   .hero-name {
     font-family: var(--font-body);
-    font-size: clamp(50px, 7vw, 90px);
+    font-size: 40px;
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 24px;
@@ -780,8 +780,11 @@
   /* ── RESPONSIVE ── */
   /* ── RESPONSIVE MOKER ── */
   @media (max-width: 1024px) {
-    nav { padding: 15px 20px; }
-    .nav-links { display: none; }
+    /* Navbar aanpassingen */
+    nav { 
+      padding: 15px 20px; 
+      flex-direction: row;
+      justify-content: space-between; }
     
     /* Hier slopen we de zijwaartse scroll */
     #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { 
