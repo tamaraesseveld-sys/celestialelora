@@ -10,14 +10,11 @@
 
   :root {
    --black: #000000;
-    --dark: #f7f3eb;          
-    --dark2: #fdfaf5;         
-    --card: #ffffff;          
+    --dark-bg: #fdfaf5;   
+    --card: #ffffff;      
     --gold: #b8964d;
-    --gold-light: #d4af37;
-    --gold-dim: #a68a44;
-    --white: #1a1a1a;         
-    --grey: #5a5a5a;
+    --text-main: #1a1a1a; 
+    --text-light: #5a5a5a;
     --font-display: 'Cinzel', serif;
     --font-body: 'Cormorant Garamond', serif;
   }
@@ -371,20 +368,21 @@
   }
 
   .dienst-card {
-    background: var(--card);
+    background: var(--card); 
     padding: 48px 40px;
-    border: 1px solid rgba(201,168,76,0.08);
+    border: 1px solid rgba(184, 150, 77, 0.15); 
     position: relative;
-    transition: all 0.4s;
+    transition: all 0.4s ease;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    color: #1a1a1a;
   }
 
   .dienst-card:hover {
-   background: #fff; /* Houd de achtergrond wit
-    border-color: var(--gold); /* Maak alleen de rand goud
-    transform: translateY(-5px); /* Laat de kaart een klein beetje zweven voor interactie
+   background: #ffffff; 
+    border-color: var(--gold);
+    transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   }
 
@@ -398,19 +396,19 @@
   }
 
   .dienst-name {
-    font-family: var(--font-body);
+   font-family: var(--font-body);
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 16px;
-    color: #1a1a1a;
+    color: #000000;
   }
 
   .dienst-desc {
     font-size: 16px;
-    color: #5a5a5a;
+    color: #4a4a4a; 
     line-height: 1.7;
     flex: 1;
-    margin-bottom: 32px
+    margin-bottom: 32px;
   }
 
   .dienst-footer {
