@@ -32,13 +32,13 @@
 
   /* ── NAVBAR ── */
   nav {
-   position: fixed;
+  position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px); 
     border-bottom: 2px solid var(--gold);
@@ -53,8 +53,8 @@
   }
 
   .nav-links {
-   display: flex;
-    gap: 20px;
+  display: flex;
+    gap: 15px; 
     list-style: none;
     margin: 10px 0;
   }
@@ -92,10 +92,10 @@
 
   /* ── HERO ── */
   #hero {
-   min-height: 100vh;
+   mmin-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 180px 20px 80px; 
+    padding: 180px 20px 60px; 
     position: relative;
     overflow: hidden;
     background: var(--dark-bg);
@@ -141,10 +141,10 @@
 
   .hero-name {
     font-family: var(--font-body);
-    font-size: 40px;
+    font-size: clamp(30px, 8vw, 45px);
     font-weight: 300;
     line-height: 1.2;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     color: #1a1a1a;
     display: block;
   }
@@ -771,14 +771,18 @@
 
   /* ── RESPONSIVE ── */
   /* ── RESPONSIVE MOKER ── */
-  @media (max-width: 1024px) {
-    /* Navbar aanpassingen */
-    nav { 
-      flex-direction: row; 
-        justify-content: space-between;
-        padding: 20px 60px; }
+  @media (min-width: 1024px) {
+    nav {
+        flex-direction: column; /* Dit zet ze onder elkaar op mobiel */
+  align-items: center;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.nav-links {
+  margin: 10px 0;
+  gap: 15px;
     
-    /* Hier slopen we de zijwaartse scroll */
     #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { 
         padding-left: 20px !important; 
         padding-right: 20px !important;
