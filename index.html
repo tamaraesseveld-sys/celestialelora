@@ -771,40 +771,85 @@
 
   /* ── RESPONSIVE ── */
   /* ── RESPONSIVE MOKER ── */
-  @media (min-width: 1024px) {
+ @media (max-width: 1024px) {
     nav {
-        flex-direction: column; /* Dit zet ze onder elkaar op mobiel */
-  align-items: center;
-  padding: 15px 10px;
-  text-align: center;
-}
-
-.nav-links {
-  margin: 10px 0;
-  gap: 15px;
+      padding: 10px;
+    }
+    .nav-links {
+      gap: 10px;
+    }
+    .nav-links a {
+      font-size: 9px;
+    }
+    .btn-nav {
+      display: none; /* Verberg de knop in de nav op kleine schermen voor ruimte */
+    }
     
     #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { 
-        padding-left: 20px !important; 
-        padding-right: 20px !important;
-        width: 100% !important;
-        overflow-x: hidden;
+      padding: 80px 20px 40px !important;
     }
 
-    #hero { padding-top: 100px; padding-bottom: 40px; }
-    #stats { padding: 40px 20px; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    #over { grid-template-columns: 1fr; gap: 40px; }
-    
-    .diensten-grid, .reviews-grid, .trust-bar, .steps-row { 
-        grid-template-columns: 1fr !important; 
+    #stats { 
+      grid-template-columns: repeat(2, 1fr); 
+      padding: 40px 20px;
+    }
+
+    #over, #contact { 
+      grid-template-columns: 1fr; 
+      gap: 50px; 
+    }
+
+    .diensten-grid, .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .steps-row {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .steps-row::before {
+      display: none; /* Verwijder de verbindingslijn op mobiel */
+    }
+
+    .sacred-geometry {
+      width: 300px;
+      height: 300px;
+    }
+    .photo-placeholder {
+      width: 180px;
+      height: 180px;
     }
     
-    .sacred-geometry { width: 280px; height: 280px; }
-    .photo-placeholder { width: 180px; height: 180px; }
-    
-    #contact { grid-template-columns: 1fr; gap: 40px; }
-    .contact-form { padding: 30px 20px; }
-    
-    footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px 20px; }
+    .trust-bar {
+      grid-template-columns: 1fr;
+      margin-bottom: 50px;
+    }
+  }
+
+  /* Specifiek voor kleine telefoons (schermen kleiner dan 600px) */
+  @media (max-width: 600px) {
+    .hero-name {
+      font-size: 32px;
+    }
+    .hero-tagline {
+      font-size: 18px;
+    }
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #stats {
+      grid-template-columns: 1fr;
+    }
+    footer {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 </style>
 </head>
