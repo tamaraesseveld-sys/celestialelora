@@ -125,9 +125,9 @@
   }
 
  .hero-content { position: relative; 
-  max-width: 900px; /* Geeft de tekst de ruimte om binnen het beeld te blijven */
-    margin: 0 auto;   /* Centreert de inhoud netjes */
-    text-align: left; /* Houdt de tekst strak aan de linkerkant */
+  max-width: 900px; 
+    margin: 0 auto;   
+    text-align: left; 
     padding: 0 20px;}
 
   .hero-label {
@@ -141,17 +141,21 @@
 
   .hero-name {
     font-family: var(--font-body);
-    font-size: clamp(30px, 8vw, 45px);
+    font-size: clamp(35px, 8vw, 60px);
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 20px;
-    color: #1a1a1a;
+    color: var(--gold);
+    text-transform: uppercase;
     display: block;
+   letter-spacing: 0.1em;
   }
 
   .hero-name em {
     font-style: italic;
     display: inline-block;
+   color: var(--text-main); 
+    font-weight: 500;
   }
 
   .hero-tagline {
@@ -782,7 +786,7 @@
       font-size: 9px;
     }
     .btn-nav {
-      display: none; /* Verberg de knop in de nav op kleine schermen voor ruimte */
+      display: none; 
     }
     
     #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { 
@@ -808,7 +812,7 @@
       gap: 40px;
     }
     .steps-row::before {
-      display: none; /* Verwijder de verbindingslijn op mobiel */
+      display: none; 
     }
 
     .sacred-geometry {
@@ -826,7 +830,7 @@
     }
   }
 
-  /* Specifiek voor kleine telefoons (schermen kleiner dan 600px) */
+  
   @media (max-width: 600px) {
     .hero-name {
       font-size: 32px;
@@ -875,8 +879,12 @@
     <p class="hero-label">Strategisch Inzicht & Rendement</p>
     <h1 class="hero-name">De Business<em>Architect</em></h1>
     <p class="hero-tagline">
-      Ik repareer geen symptomen. Ik saneer het fundament van je bedrijf.<br>
-      <strong>Binnen 1 minuut zie ik waar jouw winst lekt en je energie stagneert.</strong>
+      HET HOOGSTE RENDEMENT IS EEN ZUIVER FUNDAMENT
+
+De Celestial Business Architect
+
+Ik cureer niet de symptomen, ik saneer de blauwdruk van je imperium.
+Binnen 60 seconden decodeer ik waar je winst lekt en je autoriteit stagneert.</strong>
     </p>
     
     <div class="hero-buttons">
