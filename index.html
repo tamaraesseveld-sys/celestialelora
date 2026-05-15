@@ -9,12 +9,11 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-   --black: #000000;
     --dark-bg: #fdfaf5;   
     --card: #ffffff;      
     --gold: #b8964d;
     --text-main: #1a1a1a; 
-    --text-light: #5a5a5a;
+    --grey: #5a5a5a;
     --font-display: 'Cinzel', serif;
     --font-body: 'Cormorant Garamond', serif;
   }
@@ -32,16 +31,10 @@
 
   /* ── NAVBAR ── */
   nav {
-  position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px); 
-    border-bottom: 2px solid var(--gold);
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 10px; background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px); border-bottom: 2px solid var(--gold);
   }
 
   .logo {
@@ -92,7 +85,7 @@
 
   /* ── HERO ── */
   #hero {
-   mmin-height: 100vh;
+   min-height: 80vh
     display: flex;
     align-items: center;
     padding: 180px 20px 60px; 
@@ -371,9 +364,9 @@
   }
 
   .diensten-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Zorgt dat ze netjes naast elkaar staan */
+    gap: 25px; 
   }
 
   .dienst-card {
