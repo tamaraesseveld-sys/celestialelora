@@ -17,31 +17,61 @@
             --font-body: 'Cormorant Garamond', serif;
         }
         html { scroll-behavior: smooth; }
-        body { background: var(--dark-bg); color: var(--text-main); font-family: var(--font-body); font-size: 18px; line-height: 1.6; }
+        body { background: var(--dark-bg); color: var(--text-main); font-family: var(--font-body); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
 
         /* NAVBAR */
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border-bottom: 2px solid var(--gold); }
+        nav { 
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100; 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 15px 40px; background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(20px); border-bottom: 2px solid var(--gold); 
+        }
         .logo { font-family: var(--font-display); font-size: 18px; letter-spacing: 0.3em; text-decoration: none; color: var(--text-main); text-transform: uppercase; }
+        
         .nav-links { display: flex; gap: 20px; list-style: none; }
-        .nav-links a { font-family: var(--font-display); font-size: 11px; text-decoration: none; color: var(--text-main); text-transform: uppercase; }
+        .nav-links a { font-family: var(--font-display); font-size: 11px; text-decoration: none; color: var(--text-main); text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
 
         /* HERO */
-        #hero { padding: 180px 20px 80px; text-align: center; background: var(--dark-bg); }
+        #hero { padding: 200px 20px 100px; text-align: center; background: var(--dark-bg); min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
         .hero-label { font-family: var(--font-display); font-size: 12px; color: var(--gold); letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 20px; }
-        .hero-name { font-size: clamp(35px, 8vw, 65px); font-weight: 300; margin-bottom: 20px; text-transform: uppercase; }
-        .hero-name em { font-style: italic; color: var(--gold); }
+        .hero-name { font-size: clamp(35px, 8vw, 65px); font-weight: 300; margin-bottom: 20px; text-transform: uppercase; line-height: 1.1; }
+        .hero-name em { font-style: italic; color: var(--gold); font-weight: 400; }
+        .hero-tagline { max-width: 700px; margin: 0 auto 40px; font-size: 22px; font-style: italic; color: var(--grey); }
+
+        /* OVER MIJ SECTIE */
+        #over { padding: 100px 40px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .over-visual { position: relative; display: flex; justify-content: center; align-items: center; }
+        .logo-circle { width: 280px; height: 280px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover; z-index: 2; background: white; }
+        .sacred-geo { position: absolute; width: 400px; height: 400px; opacity: 0.2; animation: rotate 60s linear infinite; }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
         /* DIENSTEN GRID */
-        #diensten { padding: 80px 40px; background: #fff; }
+        #diensten { padding: 100px 20px; background: #fff; }
         .diensten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; }
-        .dienst-card { background: var(--dark-bg); padding: 30px; border: 1px solid rgba(184, 150, 77, 0.15); transition: 0.3s; display: flex; flex-direction: column; }
-        .dienst-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .dienst-card { background: var(--dark-bg); padding: 35px; border: 1px solid rgba(184, 150, 77, 0.15); transition: 0.4s ease; display: flex; flex-direction: column; }
+        .dienst-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(184, 150, 77, 0.1); }
         .dienst-number { font-size: 35px; color: var(--gold); opacity: 0.3; font-family: var(--font-body); }
-        .dienst-name { font-family: var(--font-body); font-size: 22px; font-weight: 600; margin: 10px 0; color: #000; }
-        .dienst-desc { font-size: 16px; color: var(--grey); flex-grow: 1; margin-bottom: 15px; }
-        .prijs-tag { font-family: var(--font-display); font-size: 10px; color: var(--gold); letter-spacing: 0.1em; border-top: 1px solid rgba(184, 150, 77, 0.1); padding-top: 10px; }
+        .dienst-name { font-family: var(--font-body); font-size: 24px; font-weight: 600; margin: 10px 0; color: #000; }
+        .dienst-desc { font-size: 17px; color: var(--grey); flex-grow: 1; margin-bottom: 20px; }
+        .prijs-tag { font-family: var(--font-display); font-size: 10px; color: var(--gold); letter-spacing: 0.2em; border-top: 1px solid rgba(184, 150, 77, 0.1); padding-top: 15px; text-transform: uppercase; }
 
-        .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 15px 30px; text-decoration: none; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 20px; }
+        /* BUTTONS */
+        .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 18px 40px; text-decoration: none; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); }
+        .btn-primary:hover { background: transparent; color: var(--gold); }
+
+        /* CONTACT */
+        #contact { padding: 100px 20px; text-align: center; background: var(--dark-bg); }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+            nav { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            #over { grid-template-columns: 1fr; text-align: center; }
+            .sacred-geo { width: 300px; height: 300px; }
+            .logo-circle { width: 220px; height: 220px; }
+            #hero { padding-top: 150px; }
+        }
     </style>
 </head>
 <body>
@@ -51,6 +81,7 @@
     <ul class="nav-links">
         <li><a href="#diensten">Diensten</a></li>
         <li><a href="#over">Over Tamara</a></li>
+        <li><a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank">Nieuwsbrief</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -58,13 +89,36 @@
 <section id="hero">
     <p class="hero-label">Strategisch Inzicht & Rendement</p>
     <h1 class="hero-name">De Business <em>Architect</em></h1>
-    <a href="#contact" class="btn-primary">Vraag een Scan aan</a>
+    <p class="hero-tagline">Het hoogste rendement is een zuiver fundament. Ik saneer de blauwdruk van je imperium.</p>
+    <a href="#contact" class="btn-primary">Vraag een High-End Scan aan</a>
+</section>
+
+<section id="over">
+    <div class="over-visual">
+        <svg class="sacred-geo" viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="180" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+            <polygon points="200,40 346,130 346,270 200,360 54,270 54,130" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+            <circle cx="200" cy="200" r="120" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+        </svg>
+        <img src="logo celestial.jpeg" alt="Tamara Esseveld" class="logo-circle">
+    </div>
+    <div class="over-content">
+        <p class="hero-label">De Vrouw achter de Architect</p>
+        <h2 class="hero-name" style="font-size: 40px;">Tamara <em>Esseveld</em></h2>
+        <p>Mijn werk als Business Architect is een diepe reis naar de kern, getuned op de 144-frequentie. Ik kijk voorbij de buitenkant, direct in de blauwdruk van je onderneming.</p>
+        <p style="margin-top: 15px;">Ik voel waar de energie stagneert—die subtiele blokkades die leiden tot uitputting—nog voordat je systeem signalen geeft.</p>
+        
+        <div style="margin-top: 30px; padding: 20px; border: 1px solid var(--gold);">
+            <p><strong>Mijn boek 'Celestial Elora' is nu beschikbaar</strong></p>
+            <a href="https://www.bravenewbooks.nl/books/22062910" target="_blank" style="color: var(--gold); text-decoration: underline; font-family: var(--font-display); font-size: 12px;">Bestel direct bij Brave New Books →</a>
+        </div>
+    </div>
 </section>
 
 <section id="diensten">
-    <div style="text-align:center; margin-bottom: 50px;">
+    <div style="text-align:center; margin-bottom: 60px;">
         <p class="hero-label">Portfolio</p>
-        <h2 style="font-size: 40px; font-weight: 300;">14 Facetten van <em>Transformatie</em></h2>
+        <h2 style="font-size: 45px; font-weight: 300; text-transform: uppercase;">14 Facetten van <em>Transformatie</em></h2>
     </div>
     
     <div class="diensten-grid">
@@ -153,6 +207,13 @@
             <div class="prijs-tag">LEGACY</div>
         </div>
     </div>
+</section>
+
+<section id="contact">
+    <h2 class="hero-name">Klaar voor <em>Transformatie</em>?</h2>
+    <p style="margin-bottom: 30px;">Neem direct contact op voor een kennismaking of lichtscan.</p>
+    <a href="mailto:info@celestialelora.nl" class="btn-primary">Stuur een E-mail</a>
+    <p style="margin-top: 20px; font-size: 14px; color: var(--grey);">Of schrijf je in voor de <a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank" style="color: var(--gold);">nieuwsbrief</a></p>
 </section>
 
 </body>
