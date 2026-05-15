@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+https://tamaraesseveld-sys.github.io/celestialelora/ mijn logo staat er niet in <!DOCTYPE html>
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
@@ -6,276 +6,276 @@
 <title>CelestialElora – Tamara Esseveld</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --dark-bg: #fdfaf5;   
-    --card: #ffffff;      
-    --gold: #b8964d;
-    --gold-light: #d4bc8d;
-    --text-main: #1a1a1a; 
-    --grey: #5a5a5a;
-    --black: #000000;
-    --font-display: 'Cinzel', serif;
-    --font-body: 'Cormorant Garamond', serif;
-  }
+  :root {
+   --black: #000000;
+    --dark-bg: #fdfaf5;   
+    --card: #ffffff;      
+    --gold: #b8964d;
+    --text-main: #1a1a1a; 
+    --text-light: #5a5a5a;
+    --font-display: 'Cinzel', serif;
+    --font-body: 'Cormorant Garamond', serif;
+  }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; }
 
-  body {
-    background: var(--dark-bg); 
-    color: var(--text-main);
-    font-family: var(--font-body);
-    font-size: 18px;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+  body {
+    background: var(--dark-bg); 
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-  /* ── NAVBAR ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; flex-direction: column; align-items: center;
-    padding: 10px; background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px); border-bottom: 2px solid var(--gold);
-  }
+  /* ── NAVBAR ── */
+  nav {
+  position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px); 
+    border-bottom: 2px solid var(--gold);
+  }
 
-  .logo {
-    font-family: var(--font-display);
-    font-size: 15px;
-    letter-spacing: 0.3em;
-    color: var(--text-main);
-    text-decoration: none;
-  }
+  .logo {
+    font-family: var(--font-display);
+    font-size: 15px;
+    letter-spacing: 0.3em;
+    color: var(--text-main);
+    text-decoration: none;
+  }
 
-  .nav-links a {
-    font-family: var(--font-display);
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: #1a1a1a; 
-    text-decoration: none;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-  }
-  .nav-links a:hover { color: var(--gold); }
+  .nav-links {
+  display: flex;
+    gap: 15px; 
+    list-style: none;
+    margin: 10px 0;
+  }
 
-  .btn-nav {
-    font-family: var(--font-display);
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    padding: 8px 15px;
-    text-decoration: none;
-  }
+  .nav-links a {
+   font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: #1a1a1a; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
 
-  .btn-nav:hover {
-    background: var(--gold);
-    color: white;
-  }
-  .nav-links a:hover { color: var(--gold); }
+.nav-links a:hover {
+  color: var(--gold);
+  }
 
-  .btn-nav {
-   font-family: var(--font-display);
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    padding: 8px 15px;
-    text-decoration: none;
-  }
+  .nav-links a:hover { color: var(--gold); }
 
-  .btn-nav:hover {
-    background: var(--gold);
-    color: var(--black);
-  }
+  .btn-nav {
+   font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 8px 15px;
+    text-decoration: none;
+  }
 
-  /* ── HERO ── */
-  #hero {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    padding: 180px 20px 60px; 
-    position: relative;
-    overflow: hidden;
-    background: var(--dark-bg);
-  }
+  .btn-nav:hover {
+    background: var(--gold);
+    color: var(--black);
+  }
 
-  hero-bg {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 70% 50%, rgba(184, 150, 77, 0.12) 0%, transparent 70%),
-                radial-gradient(ellipse at 20% 80%, rgba(184, 150, 77, 0.08) 0%, transparent 60%);
-  }
+  /* ── HERO ── */
+  #hero {
+   mmin-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 180px 20px 60px; 
+    position: relative;
+    overflow: hidden;
+    background: var(--dark-bg);
+  }
 
-  .stars {
-    position: absolute;
-    inset: 0;
-    background-image:
-      radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
-      radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.3) 0%, transparent 100%),
-      radial-gradient(1px 1px at 50% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
-      radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,0.3) 0%, transparent 100%),
-      radial-gradient(1px 1px at 85% 70%, rgba(255,255,255,0.4) 0%, transparent 100%),
-      radial-gradient(1px 1px at 92% 25%, rgba(255,255,255,0.3) 0%, transparent 100%),
-      radial-gradient(1px 1px at 15% 85%, rgba(255,255,255,0.2) 0%, transparent 100%),
-      radial-gradient(1px 1px at 60% 75%, rgba(255,255,255,0.3) 0%, transparent 100%),
-      radial-gradient(2px 2px at 80% 10%, rgba(201,168,76,0.5) 0%, transparent 100%),
-      radial-gradient(2px 2px at 45% 90%, rgba(201,168,76,0.3) 0%, transparent 100%);
-  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(184, 150, 77, 0.12) 0%, transparent 70%),
+                radial-gradient(ellipse at 20% 80%, rgba(184, 150, 77, 0.08) 0%, transparent 60%);
+  }
 
- .hero-content { position: relative; 
-  max-width: 900px; 
-    margin: 0 auto;   
-    text-align: left; 
-    padding: 0 20px;}
+  .stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 70%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 25%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 85%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 75%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(2px 2px at 80% 10%, rgba(201,168,76,0.5) 0%, transparent 100%),
+      radial-gradient(2px 2px at 45% 90%, rgba(201,168,76,0.3) 0%, transparent 100%);
+  }
 
-  .hero-label {
-    font-family: var(--font-display);
-    font-size: 10px;
-    letter-spacing: 0.35em;
-    color: var(--gold);
-    margin-bottom: 32px;
-   color: #1a1a1a;
-  }
+ .hero-content { position: relative; 
+  max-width: 900px; 
+    margin: 0 auto;   
+    text-align: left; 
+    padding: 0 20px;}
 
-  .hero-name {
-    font-family: var(--font-body);
-    font-size: clamp(35px, 8vw, 60px);
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: var(--gold);
-    text-transform: uppercase;
-    display: block;
-   letter-spacing: 0.1em;
-  }
+  .hero-label {
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    margin-bottom: 32px;
+   color: #1a1a1a;
+  }
 
-  .hero-name em {
-    font-style: italic;
-    display: inline-block;
-   color: var(--text-main); 
-    font-weight: 500;
-  }
+  .hero-name {
+    font-family: var(--font-body);
+    font-size: clamp(35px, 8vw, 60px);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+   letter-spacing: 0.1em;
+  }
 
-  .hero-tagline {
-    font-family: var(--font-body);
-    font-size: 22px;
-    font-style: italic;
-    color: #333333; 
-    font-weight: 400;
-    margin-bottom: 48px;
-    line-height: 1.5;
-  
-  }
+  .hero-name em {
+    font-style: italic;
+    display: inline-block;
+   color: var(--text-main); 
+    font-weight: 500;
+  }
 
-  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-tagline {
+    font-family: var(--font-body);
+    font-size: 22px;
+    font-style: italic;
+    color: #333333; 
+    font-weight: 400;
+    margin-bottom: 48px;
+    line-height: 1.5;
+  
+  }
 
-  .btn-primary {
-    font-family: var(--font-display);
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    background: var(--gold);
-    color: var(--black);
-    padding: 16px 32px;
-    text-decoration: none;
-    transition: all 0.3s;
-    font-weight: 500;
-  }
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
 
-  .btn-primary:hover { background: var(--gold-light); }
+  .btn-primary {
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    background: var(--gold);
+    color: var(--black);
+    padding: 16px 32px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
 
-  .btn-secondary {
-    font-family: var(--font-display);
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    background: transparent;
-    color: var(--white);
-    border: 1px solid rgba(245,240,232,0.3);
-    padding: 16px 32px;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
+  .btn-primary:hover { background: var(--gold-light); }
 
-  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+  .btn-secondary {
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(245,240,232,0.3);
+    padding: 16px 32px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
 
-  /* ── STATS ── */
-  #stats {
-    background: var(--dark2);
-    padding: 80px 60px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    border-top: 1px solid rgba(201,168,76,0.15);
-    border-bottom: 1px solid rgba(201,168,76,0.15);
-  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
 
-  .stat { text-align: center; }
+  /* ── STATS ── */
+  #stats {
+    background: var(--dark2);
+    padding: 80px 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
 
-  .stat-number {
-    font-family: var(--font-body);
-    font-size: clamp(48px, 5vw, 72px);
-    font-weight: 300;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 12px;
-  }
+  .stat { text-align: center; }
 
-  .stat-label {
-    font-family: var(--font-display);
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    color: var(--grey);
-  }
+  .stat-number {
+    font-family: var(--font-body);
+    font-size: clamp(48px, 5vw, 72px);
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
 
-  /* ── SECTION HEADER ── */
-  .section-header {
-    text-align: center;
-    margin-bottom: 70px;
-  }
+  .stat-label {
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--grey);
+  }
 
-  .section-tag {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 24px;
-  }
+  /* ── SECTION HEADER ── */
+  .section-header {
+    text-align: center;
+    margin-bottom: 70px;
+  }
 
-  .section-tag span {
-    font-family: var(--font-display);
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    color: var(--gold);
-  }
+  .section-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
 
-  .section-tag::before,
-  .section-tag::after {
-    content: '';
-    width: 40px;
-    height: 1px;
-    background: var(--gold);
-  }
+  .section-tag span {
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+  }
 
-  .section-title {
-    font-family: var(--font-body);
-    font-size: clamp(40px, 5vw, 64px);
-    font-weight: 300;
-    line-height: 1.1;
-  }
+  .section-tag::before,
+  .section-tag::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
 
-  .section-title em {
-    font-style: italic;
-    color: var(--gold-light);
-  }
+  .section-title {
+    font-family: var(--font-body);
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 300;
+    line-height: 1.1;
+  }
 
-  /* ── OVER MIJ ── */
-  #over {
-   padding: 120px 60px;
+  .section-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  /* ── OVER MIJ ── */
+  #over {
+    padding: 120px 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
     align-items: center;
-    background: var(--dark-bg);
   }
 
   .logo-circle {
@@ -289,681 +289,678 @@
       background: #ffffff;
   }
 
-  position: relative;
+  .over-visual {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 500px;
   }
-
-  .sacred-geometry {
-    position: relative;
-    width: 380px;
-    height: 380px;
-  }
-
-  .sacred-geometry svg {
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
-    animation: rotate-slow 60s linear infinite;
-  }
-
-  @keyframes rotate-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  .photo-placeholder {
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    background: var(--card);
-    border: 1px solid rgba(201,168,76,0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: var(--grey);
-    font-family: var(--font-body);
-    font-style: italic;
-    font-size: 14px;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .photo-placeholder::before {
-    content: '✦';
-    color: var(--gold-dim);
-    font-size: 20px;
-  }
-
-  .over-content .section-tag { justify-content: flex-start; }
-  .over-content .section-tag::before { display: none; }
-
-  .over-title {
-    font-family: var(--font-body);
-    font-size: clamp(32px, 4vw, 52px);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 32px;
-  }
-
-  .over-title em { font-style: italic; color: var(--gold-light); }
-
-  .over-text {
-    color: rgba(245,240,232,0.65);
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 16px;
-    font-weight: 300;
-  }
-
-  .over-text:last-of-type { margin-bottom: 40px; }
-
-  /* ── DIENSTEN ── */
-  #diensten {
-    padding: 120px 60px;
-    background: var(--dark2);
-  }
-
-  .diensten-grid {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Zorgt dat ze netjes naast elkaar staan */
-    gap: 25px; 
-  }
-
-  .dienst-card {
-    background: var(--card); 
-    padding: 48px 40px;
-    border: 1px solid rgba(184, 150, 77, 0.15); 
-    position: relative;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    color: #1a1a1a;
-  }
-
-  .dienst-card:hover {
-   background: #ffffff; 
-    border-color: var(--gold);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  }
-
-  .dienst-number {
-    font-family: var(--font-body);
-    font-size: 52px;
-    font-weight: 300;
-    color: rgba(201,168,76,0.15);
-    line-height: 1;
-    margin-bottom: 24px;
-  }
-
-  .dienst-name {
-   font-family: var(--font-body);
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 16px;
-    color: #000000;
-  }
-
-  .dienst-desc {
-    font-size: 16px;
-    color: #4a4a4a; 
-    line-height: 1.7;
-    flex: 1;
-    margin-bottom: 32px;
-  }
-
-  .dienst-footer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  .dienst-prijs {
-    font-family: var(--font-body);
-    font-size: 32px;
-    font-weight: 300;
-    color: var(--gold);
-  }
-
-  .dienst-duur {
-    font-family: var(--font-display);
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    color: var(--grey);
-    margin-top: 4px;
-  }
-
-  .dienst-arrow {
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(201,168,76,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold);
-    font-size: 16px;
-    transition: all 0.3s;
-  }
-
-  .dienst-card:hover .dienst-arrow {
-    background: var(--gold);
-    color: var(--black);
-  }
-
-  /* ── ERVARINGEN ── */
-  #ervaringen {
-    padding: 120px 60px;
-  }
-
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-
-  .review-card {
-    background: var(--card);
-    border: 1px solid rgba(201,168,76,0.08);
-    padding: 48px 40px;
-    position: relative;
-  }
-
-  .review-quote-mark {
-    font-family: var(--font-body);
-    font-size: 80px;
-    color: rgba(201,168,76,0.15);
-    line-height: 0.8;
-    margin-bottom: 16px;
-  }
-
-  .review-stars {
-    color: #b8964d;
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin-bottom: 24px;
-  }
-
-  .review-text {
-    font-size: 16px;
-    font-style: italic;
-    color: #1a1a1a; 
-    line-height: 1.8;
-    margin-bottom: 32px;
-  }
-
-  .review-divider {
-    width: 32px;
-    height: 1px;
-    background: var(--gold-dim);
-    margin-bottom: 20px;
-  }
-
-  .review-name {
-    font-family: var(--font-display);
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    margin-bottom: 4px;
-  }
-
-  .review-role {
-    font-size: 13px;
-    color: var(--grey);
-    font-style: italic;
-  }
-
-  /* ── WERKWIJZE ── */
-  #werkwijze {
-    padding: 120px 60px;
-    background: var(--dark2);
-  }
-
-  .trust-bar {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 100px;
-    padding: 40px;
-    border: 1px solid rgba(201,168,76,0.1);
-    background: rgba(201,168,76,0.03);
-  }
-
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .trust-icon { font-size: 24px; }
-
-  .trust-text {
-    font-size: 14px;
-    color: rgba(245,240,232,0.7);
-  }
-
-  .steps-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    position: relative;
-    margin-top: 60px;
-  }
-
-  .steps-row::before {
-    content: '';
-    position: absolute;
-    top: 28px;
-    left: 12%;
-    right: 12%;
-    height: 1px;
-    background: rgba(201,168,76,0.2);
-  }
-
-  .step { text-align: center; padding: 0 20px; }
-
-  .step-num {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 1px solid rgba(201,168,76,0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 24px;
-    font-family: var(--font-body);
-    font-style: italic;
-    font-size: 20px;
-    color: var(--gold);
-    background: var(--dark2);
-    position: relative;
-    z-index: 1;
-  }
-
-  .step-title {
-    font-family: var(--font-body);
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 12px;
-  }
-
-  .step-text {
-    font-size: 14px;
-    color: #1a1a1a; /
-    line-height: 1.7;
-  }
-
-  /* ── QUOTE ── */
-  #quote {
-    padding: 120px 60px;
-    text-align: center;
-    background: var(--dark);
-    position: relative;
-  }
-
-  .big-quote {
-    font-family: var(--font-body);
-    font-size: clamp(22px, 3vw, 36px);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--white);
-    max-width: 900px;
-    margin: 0 auto 32px;
-    line-height: 1.5;
-  }
-
-  .quote-attr {
-    font-family: var(--font-display);
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    color: var(--gold);
-  }
-
-  /* ── CONTACT ── */
-  #contact {
-    padding: 120px 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-    align-items: start;
-  }
-
-  .contact-left .section-tag { justify-content: flex-start; }
-  .contact-left .section-tag::before { display: none; }
-
-  .contact-title {
-    font-family: var(--font-body);
-    font-size: clamp(36px, 4vw, 56px);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 24px;
-  }
-
-  .contact-title em { font-style: italic; color: var(--gold-light); }
-
-  .contact-sub {
-    font-size: 16px;
-    color: var(--grey);
-    font-style: italic;
-  }
-
-  .contact-form {
-    background: var(--card);
-    border: 1px solid rgba(201,168,76,0.12);
-    padding: 56px 48px;
-  }
-
-  .form-title {
-    font-family: var(--font-body);
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 8px;
-  }
-
-  .form-sub {
-    font-size: 14px;
-    color: #5a5a5a;
-    font-style: italic;
-    margin-bottom: 40px;
-  }
-
-  .form-group { margin-bottom: 24px; }
-
-  .form-label {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 9px;
-    letter-spacing: 0.25em;
-    color: var(--grey);
-    margin-bottom: 10px;
-  }
-
-  .form-input,
-  .form-textarea,
-  .form-select {
-    width: 100%;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(201,168,76,0.15);
-    color: var(--white);
-    padding: 14px 18px;
-    font-family: var(--font-body);
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
-    appearance: none;
-  }
-
-  .form-input:focus,
-  .form-textarea:focus,
-  .form-select:focus {
-    border-color: var(--gold);
-  }
-
-  .form-input::placeholder,
-  .form-textarea::placeholder {
-    color: rgba(245,240,232,0.25);
-    font-style: italic;
-  }
-
-  .form-textarea { resize: vertical; min-height: 120px; }
-
-  .form-select option { background: var(--dark); }
-
-  .btn-submit {
-    width: 100%;
-    background: var(--gold);
-    color: var(--black);
-    border: none;
-    padding: 18px;
-    font-family: var(--font-display);
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-weight: 500;
-    margin-top: 8px;
-  }
-
-  .btn-submit:hover { background: var(--gold-light); }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--dark2);
-    border-top: 1px solid rgba(201,168,76,0.1);
-    padding: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .footer-logo {
-    font-family: var(--font-display);
-    font-size: 13px;
-    letter-spacing: 0.3em;
-    color: var(--gold);
-  }
-
-  .footer-copy {
-    font-size: 13px;
-    color: var(--grey);
-  }
-
-  .footer-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-  }
-
-  .footer-links a {
-    font-family: var(--font-display);
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--grey);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  .footer-links a:hover { color: var(--gold); }
-
-  /* ── FADE IN ANIMATION ── */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ── RESPONSIVE ── */
-  /* ── RESPONSIVE MOKER ── */
- @media (max-width: 1024px) {
-    nav {
-      padding: 10px;
-    }
-    .nav-links {
-      gap: 10px;
-    }
-    .nav-links a {
-      font-size: 9px;
-    }
-    .btn-nav {
-      display: none; 
-    }
-    
-    #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { 
-      padding: 80px 20px 40px !important;
-    }
-
-    #stats { 
-      grid-template-columns: repeat(2, 1fr); 
-      padding: 40px 20px;
-    }
-
-    #over, #contact { 
-      grid-template-columns: 1fr; 
-      gap: 50px; 
-    }
-
-    .diensten-grid, .reviews-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .steps-row {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-    .steps-row::before {
-      display: none; 
-    }
-
-    .sacred-geometry {
-      width: 300px;
-      height: 300px;
-    }
-    .photo-placeholder {
-      width: 180px;
-      height: 180px;
-    }
-    
-    .trust-bar {
-      grid-template-columns: 1fr;
-      margin-bottom: 50px;
-    }
-  }
-
-  
-  @media (max-width: 600px) {
-    .hero-name {
-      font-size: 32px;
-    }
-    .hero-tagline {
-      font-size: 18px;
-    }
-    .nav-links {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    #stats {
-      grid-template-columns: 1fr;
-    }
-    footer {
-      flex-direction: column;
-      gap: 20px;
-      text-align: center;
-    }
-    .footer-links {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
+  .sacred-geometry {
+    position: relative;
+    width: 380px;
+    height: 380px;
+  }
+
+  .sacred-geometry svg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    animation: rotate-slow 60s linear infinite;
+  }
+
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .photo-placeholder {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--grey);
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .photo-placeholder::before {
+    content: '✦';
+    color: var(--gold-dim);
+    font-size: 20px;
+  }
+
+  .over-content .section-tag { justify-content: flex-start; }
+  .over-content .section-tag::before { display: none; }
+
+  .over-title {
+    font-family: var(--font-body);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+
+  .over-title em { font-style: italic; color: var(--gold-light); }
+
+  .over-text {
+    color: rgba(245,240,232,0.65);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+
+  .over-text:last-of-type { margin-bottom: 40px; }
+
+  /* ── DIENSTEN ── */
+  #diensten {
+    padding: 120px 60px;
+    background: var(--dark2);
+  }
+
+  .diensten-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .dienst-card {
+    background: var(--card); 
+    padding: 48px 40px;
+    border: 1px solid rgba(184, 150, 77, 0.15); 
+    position: relative;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    color: #1a1a1a;
+  }
+
+  .dienst-card:hover {
+   background: #ffffff; 
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+
+  .dienst-number {
+    font-family: var(--font-body);
+    font-size: 52px;
+    font-weight: 300;
+    color: rgba(201,168,76,0.15);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+
+  .dienst-name {
+   font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #000000;
+  }
+
+  .dienst-desc {
+    font-size: 16px;
+    color: #4a4a4a; 
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 32px;
+  }
+
+  .dienst-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .dienst-prijs {
+    font-family: var(--font-body);
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--gold);
+  }
+
+  .dienst-duur {
+    font-family: var(--font-display);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--grey);
+    margin-top: 4px;
+  }
+
+  .dienst-arrow {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(201,168,76,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+
+  .dienst-card:hover .dienst-arrow {
+    background: var(--gold);
+    color: var(--black);
+  }
+
+  /* ── ERVARINGEN ── */
+  #ervaringen {
+    padding: 120px 60px;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .review-card {
+    background: var(--card);
+    border: 1px solid rgba(201,168,76,0.08);
+    padding: 48px 40px;
+    position: relative;
+  }
+
+  .review-quote-mark {
+    font-family: var(--font-body);
+    font-size: 80px;
+    color: rgba(201,168,76,0.15);
+    line-height: 0.8;
+    margin-bottom: 16px;
+  }
+
+  .review-stars {
+    color: #b8964d;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+
+  .review-text {
+    font-size: 16px;
+    font-style: italic;
+    color: #1a1a1a; 
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .review-divider {
+    width: 32px;
+    height: 1px;
+    background: var(--gold-dim);
+    margin-bottom: 20px;
+  }
+
+  .review-name {
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .review-role {
+    font-size: 13px;
+    color: var(--grey);
+    font-style: italic;
+  }
+
+  /* ── WERKWIJZE ── */
+  #werkwijze {
+    padding: 120px 60px;
+    background: var(--dark2);
+  }
+
+  .trust-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 100px;
+    padding: 40px;
+    border: 1px solid rgba(201,168,76,0.1);
+    background: rgba(201,168,76,0.03);
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .trust-icon { font-size: 24px; }
+
+  .trust-text {
+    font-size: 14px;
+    color: rgba(245,240,232,0.7);
+  }
+
+  .steps-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+    margin-top: 60px;
+  }
+
+  .steps-row::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: rgba(201,168,76,0.2);
+  }
+
+  .step { text-align: center; padding: 0 20px; }
+
+  .step-num {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--gold);
+    background: var(--dark2);
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-title {
+    font-family: var(--font-body);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+
+  .step-text {
+    font-size: 14px;
+    color: #1a1a1a; /
+    line-height: 1.7;
+  }
+
+  /* ── QUOTE ── */
+  #quote {
+    padding: 120px 60px;
+    text-align: center;
+    background: var(--dark);
+    position: relative;
+  }
+
+  .big-quote {
+    font-family: var(--font-body);
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    max-width: 900px;
+    margin: 0 auto 32px;
+    line-height: 1.5;
+  }
+
+  .quote-attr {
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    padding: 120px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+  }
+
+  .contact-left .section-tag { justify-content: flex-start; }
+  .contact-left .section-tag::before { display: none; }
+
+  .contact-title {
+    font-family: var(--font-body);
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .contact-title em { font-style: italic; color: var(--gold-light); }
+
+  .contact-sub {
+    font-size: 16px;
+    color: var(--grey);
+    font-style: italic;
+  }
+
+  .contact-form {
+    background: var(--card);
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 56px 48px;
+  }
+
+  .form-title {
+    font-family: var(--font-body);
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .form-sub {
+    font-size: 14px;
+    color: #5a5a5a;
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+
+  .form-group { margin-bottom: 24px; }
+
+  .form-label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    color: var(--grey);
+    margin-bottom: 10px;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.15);
+    color: var(--white);
+    padding: 14px 18px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    appearance: none;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-select:focus {
+    border-color: var(--gold);
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: rgba(245,240,232,0.25);
+    font-style: italic;
+  }
+
+  .form-textarea { resize: vertical; min-height: 120px; }
+
+  .form-select option { background: var(--dark); }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 18px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+
+  .btn-submit:hover { background: var(--gold-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark2);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+  }
+
+  .footer-copy {
+    font-size: 13px;
+    color: var(--grey);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--grey);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ── FADE IN ANIMATION ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  /* ── RESPONSIVE MOKER ── */
+ @media (max-width: 1024px) {
+    nav {
+      padding: 10px;
+    }
+    .nav-links {
+      gap: 10px;
+    }
+    .nav-links a {
+      font-size: 9px;
+    }
+    .btn-nav {
+      display: none; 
+    }
+    
+    #hero, #over, #diensten, #ervaringen, #werkwijze, #quote, #contact { 
+      padding: 80px 20px 40px !important;
+    }
+
+    #stats { 
+      grid-template-columns: repeat(2, 1fr); 
+      padding: 40px 20px;
+    }
+
+    #over, #contact { 
+      grid-template-columns: 1fr; 
+      gap: 50px; 
+    }
+
+    .diensten-grid, .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .steps-row {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .steps-row::before {
+      display: none; 
+    }
+
+    .sacred-geometry {
+      width: 300px;
+      height: 300px;
+    }
+    .photo-placeholder {
+      width: 180px;
+      height: 180px;
+    }
+    
+    .trust-bar {
+      grid-template-columns: 1fr;
+      margin-bottom: 50px;
+    }
+  }
+
+  
+  @media (max-width: 600px) {
+    .hero-name {
+      font-size: 32px;
+    }
+    .hero-tagline {
+      font-size: 18px;
+    }
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #stats {
+      grid-template-columns: 1fr;
+    }
+    footer {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
 </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
 <nav>
-  <a href="#" class="logo">CelestialElora</a>
-  <ul class="nav-links">
-    <li><a href="#diensten">Diensten</a></li>
-    <li><a href="#over">Over Tamara</a></li>
-    <li><a href="#ervaringen">Ervaringen</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#contact" class="btn-nav">Boek een Sessie</a>
+  <a href="#" class="logo">CelestialElora</a>
+  <ul class="nav-links">
+    <li><a href="#diensten">Diensten</a></li>
+    <li><a href="#over">Over Tamara</a></li>
+    <li><a href="#ervaringen">Ervaringen</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="btn-nav">Boek een Sessie</a>
 </nav>
 
 <section id="hero">
-  <div class="hero-bg"></div>
-  <div class="stars"></div>
-  
- <section id="hero">
-    <div class="hero-content">
-        <p class="hero-label">Strategisch Inzicht & Rendement</p>
-        <h1 class="hero-name">De Business <em>Architect</em></h1>
-        <p class="hero-tagline">
-            Het hoogste rendement is een zuiver fundament. <br>
-            Ik cureer niet de symptomen, ik saneer de blauwdruk van je imperium.
-        </p>
-        <div class="hero-buttons">
-            <a href="#contact" class="btn-primary">Vraag een High-End Scan aan</a>
-        </div>
-    </div>
-</section>#diensten" class="btn-secondary">Bekijk de Werkwijze</a>
-    </div>
+  <div class="hero-bg"></div>
+  <div class="stars"></div>
+  
+  <div class="hero-content fade-in">
+    <p class="hero-label">Strategisch Inzicht & Rendement</p>
+    <h1 class="hero-name">De Business<em>Architect</em></h1>
+    <p class="hero-tagline">
+      HET HOOGSTE RENDEMENT IS EEN ZUIVER FUNDAMENT
 
-    <p style="margin-top: 20px; font-size: 14px; color: var(--grey);">
-      Nieuwsbrief? Meld je aan via <a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank" style="color: var(--gold); text-decoration: underline;">deze link</a>
-    </p>
-  </div>
+De Celestial Business Architect
+
+Ik cureer niet de symptomen, ik saneer de blauwdruk van je imperium.
+Binnen 60 seconden decodeer ik waar je winst lekt en je autoriteit stagneert.</strong>
+    </p>
+    
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Vraag een High-End Scan aan</a>
+      <a href="#diensten" class="btn-secondary">Bekijk de Werkwijze</a>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 14px; color: var(--grey);">
+      Nieuwsbrief? Meld je aan via <a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank" style="color: var(--gold); text-decoration: underline;">deze link</a>
+    </p>
+  </div>
 </section>
-   
+   
 
 <!-- STATS -->
 <section id="stats">
-  <div class="stat fade-in">
-    <div class="stat-number">800+</div>
-    <div class="stat-label">Klanten Geholpen</div>
-  </div>
-  <div class="stat fade-in">
-    <div class="stat-number">10+</div>
-    <div class="stat-label">Jaar Ervaring</div>
-  </div>
-  <div class="stat fade-in">
-    <div class="stat-number">10+</div>
-    <div class="stat-label">Unieke Diensten</div>
-  </div>
-  <div class="stat fade-in">
-    <div class="stat-number">98%</div>
-    <div class="stat-label">% Tevreden Klanten</div>
-  </div>
+  <div class="stat fade-in">
+    <div class="stat-number">800+</div>
+    <div class="stat-label">Klanten Geholpen</div>
+  </div>
+  <div class="stat fade-in">
+    <div class="stat-number">10+</div>
+    <div class="stat-label">Jaar Ervaring</div>
+  </div>
+  <div class="stat fade-in">
+    <div class="stat-number">10+</div>
+    <div class="stat-label">Unieke Diensten</div>
+  </div>
+  <div class="stat fade-in">
+    <div class="stat-number">98%</div>
+    <div class="stat-label">% Tevreden Klanten</div>
+  </div>
 </section>
 
 <!-- OVER MIJ -->
 <section id="over">
-  <div class="over-visual fade-in">
-    <div class="sacred-geometry">
-      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="200" cy="200" r="180" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
-        <circle cx="200" cy="200" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
-        <circle cx="200" cy="200" r="80" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
-        <circle cx="200" cy="70" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
-        <circle cx="200" cy="330" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
-        <circle cx="87" cy="135" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
-        <circle cx="313" cy="135" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
-        <circle cx="87" cy="265" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
-        <circle cx="313" cy="265" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
-        <polygon points="200,40 346,130 346,270 200,360 54,270 54,130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
-        <polygon points="200,360 346,270 346,130 200,40 54,130 54,270" fill="none" stroke="#c9a84c" stroke-width="0.3" transform="rotate(30, 200, 200)"/>
-      </svg>
-   <section id="over">
-  <div class="over-visual fade-in">
-    <div class="sacred-geometry">
-      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        </svg>
-    </div>
-    <img src="logo celestial.jpeg" alt="Celestial Elora Logo" class="logo-circle">
-  </div> <div class="over-content fade-in"> <div class="section-tag"><span>Over Mij</span></div>
-    <h2 class="over-title">All-round Intuïtief <em>Master</em></h2>
-    <div class="over-text"> 
-       ```<div id="sellbtn_product_widget_container">
-         <div id="sell-card-preview">
-            <style type="text/css">
-               @CHARSET "UTF-8";.mbssellwidget-productcard-container,.mbssellwidget-columnpanel-container{display:block;overflow:hidden;background:#fff;border:2px solid #eaedef;padding:30px;max-width:590px;margin:0 auto;box-sizing:content-box;font-family:"Roobert",Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5em;font-weight:normal;color:#282828;text-align:left}.mbssellwidget-productcard-covercontainer{display:block;overflow:hidden;width:35%;max-width:185px;float:left;overflow:hidden;margin:0 30px 0 0}.mbssellwidget-productcard-covercontainer img{width:100%;margin:0}@media screen and (max-width: 500px){.mbssellwidget-productcard-covercontainer{float:none;width:100%;max-width:none}}.mbssellwidget-productcard-authorcontainer{display:block;overflow:hidden;margin-bottom:20px}.mbssellwidget-productcard-authorcontainer .mbssellwidget-productcard-authorimage{display:block;overflow:hidden;float:left;width:40px;height:40px;border-radius:50%;margin-right:10px}.mbssellwidget-productcard-authorcontainer .mbssellwidget-productcard-authorimage img{width:100%}.mbssellwidget-productcard-authorcontainer .mbssellwidget-productcard-authorname{line-height:40px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.mbssellwidget-productcard-bookcontainer{display:block;overflow:hidden}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-booktitle{font-size:1.1em;line-height:1.5em;font-weight:500}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-bookdesc{font-size:.85em;line-height:1.5em;color:#727577}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-bookprice{margin-top:10px;margin-bottom:20px}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-bookprice .mbssellwidget-productcard-bookprice-binding{display:inline;font-size:.8em;text-transform:uppercase;color:#727577}.mbssellwidget-sellbutton{display:inline-block;background:#1F59CC;color:#fff;border:0px solid #1F59CC;font-family:"Roobert",Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;line-height:1.5em;text-decoration:none;text-transform:uppercase;border-radius:5px;padding:8px 20px;cursor:pointer}.mbssellwidget-sellbutton:hover{background:#174299;border:0px solid #1F59CC;border-color:#174299;color:#fff;text-decoration:none}.mbssellwidget-columnpanel-container{max-width:240px}@media screen and (max-width: 500px){.mbssellwidget-columnpanel-container{max-width:none}}.mbssellwidget-columnpanel-covercontainer{display:block;overflow:hidden;overflow:hidden;margin:0 0 20px 0;width:100%}.mbssellwidget-columnpanel-covercontainer img{width:100%;max-height:400px;margin:0}
-            </style>
-            <div id="sell-card22062910">
-                  <div id="sellbtn_buy-button22062910"><a id="btn_button22062910" class="mbssellwidget-sellbutton" href="https://www.bravenewbooks.nl/books/22062910">Nu kopen</a></div>
-            </div>
-         </div>
-      </div>Mijn boek is nu te koop !CelestialElora – Jouw Business in Goddelijke Alignment ✨
+  <div class="over-visual fade-in">
+    <div class="sacred-geometry">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="200" cy="200" r="180" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="200" cy="200" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="200" cy="200" r="80" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="200" cy="70" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="200" cy="330" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="87" cy="135" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="313" cy="135" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="87" cy="265" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="313" cy="265" r="130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+        <polygon points="200,40 346,130 346,270 200,360 54,270 54,130" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+        <polygon points="200,360 346,270 346,130 200,40 54,130 54,270" fill="none" stroke="#c9a84c" stroke-width="0.3" transform="rotate(30, 200, 200)"/>
+      </svg>
+    </div>
+   <img src="logo celestial.jpeg" alt="Celestial Elora Logo" class="logo-circle">
+  </div> <div class="over-content fade-in">
+    <div class="section-tag"><span>Over Mij</span></div>
+    <h2 class="over-title">All-round Intuïtief <em>Master</em></h2>
+    <p class="over-text"><div id="sellbtn_product_widget_container">
+         <div id="sell-card-preview">
+            <style type="text/css">
+               @CHARSET "UTF-8";.mbssellwidget-productcard-container,.mbssellwidget-columnpanel-container{display:block;overflow:hidden;background:#fff;border:2px solid #eaedef;padding:30px;max-width:590px;margin:0 auto;box-sizing:content-box;font-family:"Roobert",Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5em;font-weight:normal;color:#282828;text-align:left}.mbssellwidget-productcard-covercontainer{display:block;overflow:hidden;width:35%;max-width:185px;float:left;overflow:hidden;margin:0 30px 0 0}.mbssellwidget-productcard-covercontainer img{width:100%;margin:0}@media screen and (max-width: 500px){.mbssellwidget-productcard-covercontainer{float:none;width:100%;max-width:none}}.mbssellwidget-productcard-authorcontainer{display:block;overflow:hidden;margin-bottom:20px}.mbssellwidget-productcard-authorcontainer .mbssellwidget-productcard-authorimage{display:block;overflow:hidden;float:left;width:40px;height:40px;border-radius:50%;margin-right:10px}.mbssellwidget-productcard-authorcontainer .mbssellwidget-productcard-authorimage img{width:100%}.mbssellwidget-productcard-authorcontainer .mbssellwidget-productcard-authorname{line-height:40px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.mbssellwidget-productcard-bookcontainer{display:block;overflow:hidden}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-booktitle{font-size:1.1em;line-height:1.5em;font-weight:500}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-bookdesc{font-size:.85em;line-height:1.5em;color:#727577}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-bookprice{margin-top:10px;margin-bottom:20px}.mbssellwidget-productcard-bookcontainer .mbssellwidget-productcard-bookprice .mbssellwidget-productcard-bookprice-binding{display:inline;font-size:.8em;text-transform:uppercase;color:#727577}.mbssellwidget-sellbutton{display:inline-block;background:#1F59CC;color:#fff;border:0px solid #1F59CC;font-family:"Roobert",Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;line-height:1.5em;text-decoration:none;text-transform:uppercase;border-radius:5px;padding:8px 20px;cursor:pointer}.mbssellwidget-sellbutton:hover{background:#174299;border:0px solid #1F59CC;border-color:#174299;color:#fff;text-decoration:none}.mbssellwidget-columnpanel-container{max-width:240px}@media screen and (max-width: 500px){.mbssellwidget-columnpanel-container{max-width:none}}.mbssellwidget-columnpanel-covercontainer{display:block;overflow:hidden;overflow:hidden;margin:0 0 20px 0;width:100%}.mbssellwidget-columnpanel-covercontainer img{width:100%;max-height:400px;margin:0}
+            </style>
+            <div id="sell-card22062910">
+                  <div id="sellbtn_buy-button22062910"><a id="btn_button22062910" class="mbssellwidget-sellbutton" href="https://www.bravenewbooks.nl/books/22062910">Nu kopen</a></div>
+            </div>
+         </div>
+      </div>Mijn boek is nu te koop !CelestialElora – Jouw Business in Goddelijke Alignment ✨
 Ontwaak het Ware Fundament van je Leiderschap. Geavanceerde Systeem-Scans voor de Nieuwe Vrouwelijke Leider en Visionair.
 De Alchemie van jouw Business-Blauwdruk 🏛️🌹
 Een imperium bouwt men niet op wilskracht alleen, maar op een fundament dat ademt en stroomt. Mijn werk als Business Architect is een diepe, rauwe reis naar de kern van je bestaan, getuned op de 144-frequentie.
@@ -973,421 +970,108 @@ Ik werk niet met directe boekingen. De toegang tot mijn werk is niet gesloten om
 De Scan: Jouw Systeem in Kaart
 Tijdens deze scan stem ik af op de onzichtbare frequenties van jouw systeem. Ik kijk voorbij de buitenkant, direct in de blauwdruk van je lichaam en je onderneming. Ik voel waar de energie stagneert—die subtiele energetische blokkades die leiden tot uitputting of een haperende koers—nog voordat je systeem signalen van vermoeidheid geeft.
 Creëren vanuit de 144-Blauwdruk
-Met meer dan tien jaar ervaring in interdimensionale diagnose en e systeem-interventie, begeleid ik je naar je werkelijke potentieel. Ik breng de rust, de flow en de structuur terug. Je hoeft niet langer te vechten tegen je eigen fundament; je leert hoe je erdoor gedragen wordt, zodat jouw business een bron van energie wordt in plaats van een last.
+Met meer dan tien jaar ervaring in interdimensionale diagnose en strategische systeem-interventie, begeleid ik je naar je werkelijke potentieel. Ik breng de rust, de flow en de structuur terug. Je hoeft niet langer te vechten tegen je eigen fundament; je leert hoe je erdoor gedragen wordt, zodat jouw business een bron van energie wordt in plaats van een last.
 🧱 DE TOEGANGSCODE: ONTMOET JEZELF IN DE INTAKE 🏗️⚡
 Ben jij klaar om de ruis van de buitenwereld te dimmen en te bouwen vanuit jouw diepste weten?
 De Selectie: Pas na de intake voelen we samen of de resonantie klopt om de fundering voor jouw nieuwe tijdperk te leggen.
 
 Klaar voor de belichaming van jouw succes?</p>
-    <a href="#contact" class="btn-primary">Begin Jouw Transformatie</a>
-  </div>
+    <a href="#contact" class="btn-primary">Begin Jouw Transformatie</a>
+  </div>
 </section>
 
 <!-- DIENSTEN -->
 <section id="diensten">
-  <div class="section-header fade-in">
-    <div class="section-tag"><span>Mijn Diensten</span></div>
-    <h2 class="section-title">Kies Jouw <em>Traject</em></h2>
-  </div>
-  <div class="diensten-grid">
-   <div class="dienst-card fade-in">
-      <div class="dienst-number">01</div>
-      <h3 class="dienst-name">De Deep-Dive Scan(bedrijven)</h3>
-      <p class="dienst-desc">"De Fundament Analyse (High-End)".
+  <div class="section-header fade-in">
+    <div class="section-tag"><span>Mijn Diensten</span></div>
+    <h2 class="section-title">Kies Jouw <em>Traject</em></h2>
+  </div>
+  <div class="diensten-grid">
+   <div class="dienst-card fade-in">
+      <div class="dienst-number">01</div>
+      <h3 class="dienst-name">De Deep-Dive Scan(bedrijven)</h3>
+      <p class="dienst-desc">"De Fundament Analyse (High-End)".
 
 
 Een diepgaande doorlichting van de onderstroom binnen uw organisatie. Ik leg bloot wat de cijfers niet laten zien: Waar stokt de natuurlijke flow? Waarom stagneert de groei ondanks de inzet? In deze scan analyseren we het fundament van uw leiderschap en de structuur van uw bedrijf, zodat de weg naar moeiteloze expansie weer vrijkomt
 </p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">Prijs op aanvraag</div>
-        </div>
-        
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">02</div>
-      <h3 class="dienst-name">De Transformatie(bedrijven)</h3>
-      <p class="dienst-desc">Wat:Het Architect-Traject
+      <div class="dienst-footer">
+        <div>
+          <div class="dienst-prijs">Prijs op aanvraag</div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="dienst-card fade-in">
+      <div class="dienst-number">02</div>
+      <h3 class="dienst-name">De Transformatie(bedrijven)</h3>
+      <p class="dienst-desc">Wat:Het Architect-Traject
 
 De Business Transformatie: Van Overleven naar Autoriteit
 
-Wat: Gedurende een intensief traject van 3 tot 4 maanden werken we aan de totale herijking van uw organisatie.
-We gaan verder dan oppervlakkige coaching; we herschrijven de blauwdruk van uw bedrijf. Ik begeleid u bij het
-opschonen van stagnerende patronen en het installeren van een fundament dat rust, helderheid en natuurlijke groei faciliteert.
+Wat: Gedurende een intensief traject van 3 tot 4 maanden werken we aan de totale herijking van uw organisatie. We gaan verder dan oppervlakkige coaching; we herschrijven de blauwdruk van uw bedrijf. Ik begeleid u bij het opschonen van stagnerende patronen en het installeren van een fundament dat rust, helderheid en natuurlijke groei faciliteert.
 
-Voor wie: Leiders en ondernemers die klaar zijn om hun volledige autoriteit te belichamen en die begrijpen dat een gezond 
-fundament de enige weg is naar duurzaam succes, Dit traject is volledig maatwerk en wordt afgestemd op de specifieke 
-behoeften van uw organisatie...</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">prijs op aanvraag</div>
-          <div class="dienst-duur">Traject 3 maanden</div>
-        </div>
-       
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">03</div>
-      <h3 class="dienst-name">De Architect-on-Call (Retainer) (bedrijven)</h3>
-      <p class="dienst-desc">"Wat:De Inhoud: Onbeperkte toegang tot mijn strategisch inzicht voor crisisinterventie 
-       en koersbewaking. Ik fungeer als de waakvlam van uw organisatie; ik zie wat er in de onderstroom gebeurt terwijl u bouwt.
+Voor wie: Leiders en ondernemers die klaar zijn om hun volledige autoriteit te belichamen en die begrijpen dat een gezond fundament de enige weg is naar duurzaam succes, Dit traject is volledig maatwerk en wordt afgestemd op de specifieke behoeften van uw organisatie...</p>
+      <div class="dienst-footer">
+        <div>
+          <div class="dienst-prijs">prijs op aanvraag</div>
+          <div class="dienst-duur">Traject 3 maanden</div>
+        </div>
+       
+      </div>
+    </div>
+    <div class="dienst-card fade-in">
+      <div class="dienst-number">03</div>
+      <h3 class="dienst-name">De Architect-on-Call (Retainer) (bedrijven)</h3>
+      <p class="dienst-desc">"Wat:De Inhoud: Onbeperkte toegang tot mijn strategisch inzicht voor crisisinterventie en koersbewaking. Ik fungeer als de waakvlam van uw organisatie; ik zie wat er in de onderstroom gebeurt terwijl u bouwt.
 
-Het Resultaat: 24/7 weerbaarheid en een zuivere besluitvorming zonder afleiding. We elimineren de blokkades in de kiem, 
-zodat uw bedrijf een veilige en winstgevende koers blijft varen.
-(Exclusief beschikbaar voor een select aantal partners, minimaal 3 maanden).Dit partnership is uitsluitend beschikbaar na 
- een succesvol afgerond Architect-Traject of een uitgebreide Fundament Analyse. Tarieven worden vastgesteld op basis van de gewenste beschikbaarheid."
+Het Resultaat: 24/7 weerbaarheid en een zuivere besluitvorming zonder afleiding. We elimineren de blokkades in de kiem, zodat uw bedrijf een veilige en winstgevende koers blijft varen.
+(Exclusief beschikbaar voor een select aantal partners, minimaal 3 maanden).Dit partnership is uitsluitend beschikbaar na een succesvol afgerond Architect-Traject of een uitgebreide Fundament Analyse. Tarieven worden vastgesteld op basis van de gewenste beschikbaarheid."
 
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">Op aanvraag</div>
-          <div class="dienst-duur">minimaal 3 maanden</div>
-        </div>
-        
-      </div>
-    </div>
-   <div class="dienst-card fade-in">
-      <div class="dienst-number">04</div>
-      <h3 class="dienst-name">De Full Systeem-Reboot (Implementation) (bedrijven)</h3>
-      <p class="dienst-desc">"De Systeem-Reboot: Van Stagnatie naar Schaalbaarheid
+      <div class="dienst-footer">
+        <div>
+          <div class="dienst-prijs">Op aanvraag</div>
+          <div class="dienst-duur">minimaal 3 maanden</div>
+        </div>
+        
+      </div>
+    </div>
+   <div class="dienst-card fade-in">
+      <div class="dienst-number">04</div>
+      <h3 class="dienst-name">De Full Systeem-Reboot (Implementation) (bedrijven)</h3>
+      <p class="dienst-desc">"De Systeem-Reboot: Van Stagnatie naar Schaalbaarheid
 
 De Full Systeem-Reboot (Organisatorische Implementatie)
 
-De Inhoud: Een fundamentele herstructurering van een specifieke afdeling of het directie-kernteam. We transformeren de dynamiek 
-van 'reactief crisismanagement' naar 'proactieve schaalbaarheid'. Dit is een volledige renovatie van de interne structuur en 
-de onderlinge samenwerking.
-Het Resultaat: Een organisatie die opereert op de hoogste versnelling, gedragen door een gezond fundament. 
-U realiseert groei en versnelling zonder het verlies van kostbaar talent of kapitaal.
+De Inhoud: Een fundamentele herstructurering van een specifieke afdeling of het directie-kernteam. We transformeren de dynamiek van 'reactief crisismanagement' naar 'proactieve schaalbaarheid'. Dit is een volledige renovatie van de interne structuur en de onderlinge samenwerking.
+Het Resultaat: Een organisatie die opereert op de hoogste versnelling, gedragen door een gezond fundament. U realiseert groei en versnelling zonder het verlies van kostbaar talent of kapitaal.
 (Projectbasis – Maatwerk na uitgebreide analyse)
 
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">Projectbasis (Op aanvraag</div>
-          <div class="dienst-duur">Project</div>
-        </div>
-        
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">05</div>
-      <h3 class="dienst-name">Blueprint Brand-Scan (bedrijven</h3>
-      <p class="dienst-desc">Decodeer de architectuur van je succes.
+      <div class="dienst-footer">
+        <div>
+          <div class="dienst-prijs">Projectbasis (Op aanvraag</div>
+          <div class="dienst-duur">Project</div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="dienst-card fade-in">
+      <div class="dienst-number">05</div>
+      <h3 class="dienst-name">Personal Baseline Audit</h3>
+      <p class="dienst-desc">Personal Baseline Audit
 
-Is jouw merk een fundament of een blokkade?
-Veel ondernemers groeien sneller dan hun visuele identiteit. Als je logo, kleuren en presentatie niet meer resoneren met je huidige niveau, ontstaat er energetische ruis. En ruis stoot high-end klanten af.
-Jouw merk moet je autoriteit dragen, niet beperken.
-Als Business Architect scan ik de onzichtbare blauwdruk van je bedrijf. Ik zie waar energie lekt en waar je visuele identiteit je groei tegenhoudt.
-Wat we doen in de Scan:
-Diagnose: Waar wringt je huidige branding en waarom?
-Decodering: Vertaling van jouw unieke frequentie naar kleur en vorm.
-De Blueprint: Een visueel fundament dat je zenuwstelsel kalmeert en klanten magnetiseert.
+Wat: Een snelle, diepgaande scan van uw mentale en lichamelijke belastbaarheid. Ik lokaliseer energetische blokkades en chakra-stagnaties die uw flow in de weg zitten.
 
-Stop met trekken. Start met verschijnen.
-Een merk dat energetisch klopt, verkoopt zichzelf.</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ Op aanvraag</div>
-          <div class="dienst-duur">Blueprint Brand-Scan</div>
-        </div>
-        <div class="dienst-card fade-in">
-      <div class="dienst-number">06</div>
-      <h3 class="dienst-name">Energetische Huisreiniging (Op Afstand)</h3>
-      <p class="dienst-desc">Wat: Voelt je woning zwaar of onrustig? Ik saneer je huis op afstand van opgeslagen stress en oude patronen. Inclusief Energetische Audit, Systeem-Reset en een beknopt Architect-Rapport (PDF).
-
-Resultaat: Direct merkbare rust en een heldere sfeer. Je huis wordt weer een bedding die je oplaadt in plaats van leegtrekt.
-
-Direct resultaat, geen reiskosten..</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ 144</div>
-          <div class="dienst-duur">Op Afstand</div>
-        </div>
-        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">07</div>
-      <h3 class="dienst-name">De 144 Reality Scan</h3>
-      <p class="dienst-desc">De 144 Reality Scan
-Wat: Een 15-minuten deep-scan van je solo business-blauwdruk. Ik identificeer de verzakkingen en leg de Gouden Lijn van je succes bloot. Geen coaching, maar een zuivere systeem-diagnose.
-Resultaat: Je weet exact waar je fundament wankelt en wat er nodig is voor een structurele herstelactie op de 144-frequentie.</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ 144 ex btw</div>
-          <div class="dienst-duur">15 Minuten</div>
-        </div>
-        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">08</div>
-      <h3 class="dienst-name">Executive Flash Scan (particulieren</h3>
-      <p class="dienst-desc"> Lokaliseer de ruis in je leven en herstel je fundament.
-
-Lokaliseer de ruis in je leven en herstel je fundament.
-
-Optie 1: De Single Flash Scan (1 Vraag) 🎯
-Zit je vast op een specifiek punt in je werk, relatie of gezondheid? Ik scan je persoonlijke blauwdruk en leg de kern van de blokkade bloot. Je krijgt geen algemeen advies, maar de exacte sleutel tot herstel.
-Investering: € 144,- (Snel, zuiver en direct).
-
-Optie 2: De Gezins-Blauwdruk Scan 👨‍👩‍👧‍👦
-Waarom stagneert de harmonie thuis? Ik scan de onderlinge dynamiek en het energetisch fundament van je gezin. We elimineren de onzichtbare ruis en herstellen de rust en de verbinding in jullie 'kasteel'.
-Investering: € 333,- (Voor een thuis dat weer gedragen wordt).
-</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ 144/333</div>
-          <div class="dienst-duur">Digitaal Rapport</div>
-        </div>
-        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">09</div>
-      <h3 class="dienst-name">Tweelingziel/Soulmate</h3>
-      <p class="dienst-desc">De Soul-Alignment Scan
-Krijg grip op je diepste verbinding.
-
-De Situatie: Blijft een specifieke connectie je systeem domineren en kom je niet los van de ruis? Stop met gissen. Ik decodeer de blauwdruk van jullie energetische verbinding.
-Wat ik doe: Ik voer een vlijmscherpe diagnose uit op de onderstroom tussen jullie. Waar lekt jouw energie? Waar blokkeert de stroom? Ik onthul de 'Gouden Lijn' van deze ontmoeting en geef je inzicht in het 'waarom' en de 'hoe nu verder'.
-
-Het Resultaat: Je herwint je neutraliteit en de regie over je eigen fundament. Geen emotionele verwarring meer, maar de helderheid om weer vanuit je eigen kracht te bewegen.</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ 144</div>
-          <div class="dienst-duur">(Eenmalige diepe scan – 15 minuten)</div>
-        </div>
-        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">10</div>
-      <h3 class="dienst-name">ONDERHOUDS-RESET</h3>
-      <p class="dienst-desc">De Onderhouds-Audit (APK)
-
-Blijf de onbetwiste Architect van je eigen fundament.
-De Situatie: Je fundament staat, maar de buitenwereld zit vol ruis. Laat dagelijkse hectiek je systeem niet vervuilen. Wacht niet op stagnatie, kies voor preventieve herijking.
-De Interventie: Een exclusieve APK voor je energetische kasteel. We saneren de ruis en kalibreren je systeem terug naar de broncode van je succes.
-Systeem-Opschoning: Directe eliminatie van binnengekomen ruis.
-Frequentie-Check: Her-kalibratie naar jouw 144-alignment.
-Autoriteit-Update: Je fundament harden in de 177-frequentie.
-Het Resultaat: Een schone bouwplaats en vlijmscherpe focus.
-
-Exclusief voor cliënten die de Reset hebben voltooid.
-.</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ 144</div>
-          <div class="dienst">PDF</div>
-        </div>
-        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">11</div>
-      <h3 class="dienst-name">🚨 144 EMERGENCY RESET</h3>
-      <p class="dienst-desc">Directe interventie bij een energetische systeem-crisis.
-
-De Situatie: Sta je energetisch 'in brand'? Ervaar je een acute crisis, voelt het alsof je de regie over je eigen systeem verliest of word je gehinderd door vreemde energieën? Dit is de noodknop voor onmiddellijk herstel.
-Wat ik doe (binnen 24 uur):
-Acute Scan: Ik spoor direct de lekken of de energetische 'ruis' in je systeem op.
-Directe Sanering: Ik verwijder externe belasting en dicht de gaten in je fundament.
-Systeem-Lock: Ik herstel je autoriteit op de 144-frequentie. Jij bent weer kapitein op je eigen schip.
-
-Het Resultaat: Onmiddellijke terugkeer naar je eigen kern en het herstel van je persoonlijke soevereiniteit.
-
-Voor wie: Dappere zielen in een energetische noodsituatie die NU hun regie terug willen.
-Investering: €144,- (De code voor herstel).</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ 144</div>
-          <div class="dienst-duur">PDF binnen 48u</div>
-        </div>
-        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">12</div>
-      <h3 class="dienst-name">De Blauwdruk-Reset (3 Maanden)</h3>
-      <p class="dienst-desc">Klaar met symptoombestrijding? Bouw aan een onwrikbaar fundament.
-
-De Reis: Een intensief traject van 12 weken waarin we de architectuur van je leven en business volledig herijkt. We stoppen met pleisters plakken en gaan terug naar de broncode van je systeem.
-
-Maand 1: De Sanering. Een krachtige start met hoge frequentie (4 korte sessies p.w.) om direct de grootste lekken te dichten en 'ruis' te verwijderen.
-
-Maand 2: De Opschoning. Het afbreken van diepgewortelde patronen en het opschonen van je energetische hardware.
-
-Maand 3: De Nieuwe Opbouw. Je leert je eigen fundament te beheren. Jij wordt de onbetwiste Architect van je eigen realiteit.
-
-Voor wie: Ondernemers en leiders die klaar zijn met de oude weg en bereid zijn om hun ware autoriteit op de 144-frequentie te belichamen.
-
-Het Resultaat: Een bevrijd systeem, vlijmscherpe focus en een fundament dat niet meer wankelt, ongeacht de buitenwereld.</p>
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ Op aanvraag</div>
-          <div class="dienst-duur">of 3 maanden </div>
-        </div>
-        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-      <div class="dienst-number">13</div>
-      <h3 class="dienst-name">Strategic Alignment & Recovery</h3>
-      <p class="dienst-desc">De 3-daagse Systeem-Reset voor Leiders.
-
-Wat: Een intensieve interventie gericht op de sanering van je zenuwstelsel. We verwijderen de opgebouwde ruis van stress en overprikkeling om je natuurlijke besluitvaardigheid en vitale energie te herstellen. Ideaal voor wie op een kantelpunt staat of na een intense periode weer 'online' moet komen.
-Kies je niveau:
-
-Basis: De Reset (€ 222,-)
-3 dagen diepe energetische sanering en uitlijning van je fundament.
-
-Expansion: Support (€ 333,-)
-De 3-daagse reset inclusief onbeperkt contact (Mail) voor directe integratie en vragen.
-
-Elite: 5-daagse VIP (€ 555,-)
-De volledige diepte-interventie. 5 dagen intensieve begeleiding, maximale opschoning en directe herkalibratie van je strategische koers.
-
-Resultaat: Een kalm zenuwstelsel, herwonnen autoriteit en een vlijmscherpe focus..
-      <div class="dienst-footer">
-        <div>
-          <div class="dienst-prijs">€ 222</div>
-          <div class="dienst-duur">Strategic Alignment & Recovery €222-€333-€555 </div>
-        </div>
-        <<a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
-      </div>
-    </div>
-    <div class="dienst-card fade-in">
-  <div class="dienst-number">14</div>
-  <h3 class="dienst-name">Personal Baseline Audit)</h3>
-  <p class="dienst-desc">Wat: Een snelle, diepgaande scan van uw mentale en lichamelijke belastbaarheid. Ik lokaliseer energetische blokkades en chakra-stagnaties die uw flow in de weg zitten.
-
-Resultaat: Helderheid over uw fundament. U ontdekt waar uw energie lekt en krijgt de sleutel in handen om uw interne systeem weer volledig uit te lijnen.
-Het Resultaat: Een direct voelbare vergroting van je interne capaciteit, vlijmscherpe mentale helderheid en de herwonnen kracht om vanuit je volle potentieel te leiden.</p>
-  <div class="dienst-footer">
-    <div>
-      <div class="dienst-prijs">€ 111,-</div>
-      <div class="dienst-duur"Personal Baseline Audit</div>
-    </div>
-    <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
-  </div>
-    </div>
-  </div>
-</section>
-<!-- ERVARINGEN -->
-<section id="ervaringen">
-  <div class="section-header fade-in">
-    <div class="section-tag"><span>Ervaringen</span></div>
-    <h2 class="section-title">Wat Klanten <em>Zeggen</em></h2>
-  </div>
-  <div class="reviews-grid">
-    <div class="review-card fade-in">
-      <div class="review-quote-mark">"</div>
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Ik heb dit laatst gedaan bij Elora en echt waar ze  goed is in wat ze doet... echt een aanrader 😁🤗🤎 ."</p>
-      <div class="review-divider"></div>
-      <div class="review-name">Wim.</div>
-    </div>
-    <div class="review-card fade-in">
-      <div class="review-quote-mark">"</div>
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"CelestialElora is als je echt geholpen wilt worden. In mijn geval de  tweelingzielconnectie, in 1 klap tot de kern komen en ook meteen kunnen voelen dat het werkt.  Ben super dankbaar en blij dat ik een sessie heb geboekt bij haar. Had het veel eerder moeten doen. Ze is de beste, echt een master!"</p>
-      <div class="review-divider"></div>
-      <div class="review-name">Nancy.</div>
-    </div>
-    <div class="review-card fade-in">
-      <div class="review-quote-mark">"</div>
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">"Als je wil investeren in jezelf boek een sessie bij haar sta er open voor, niet twijfelen en je zal zeker geen spijt krijgen!!"</p>
-      <div class="review-divider"></div>
-      <div class="review-name">Lossi.</div>
-    </div>
-  </div>
-</section>
-
-<!-- WERKWIJZE -->
-<section id="werkwijze">
-  <div class="trust-bar fade-in">
-    <div class="trust-item">
-      <span class="trust-icon">🔒</span>
-      <span class="trust-text" style="color: #1a1a1a;">Veilig betalen via PayPal</span>
-    </div>
-    <div class="trust-item">
-      <span class="trust-icon">⚡</span>
-      <span class="trust-text" style="color: #1a1a1a;">Reactie binnen 24 uur</span>
-    </div>
-    <div class="trust-item">
-      <span class="trust-icon">🌍</span>
-      <span class="trust-text" style="color: #1a1a1a;">Internationaal beschikbaar</span>
-    </div>
-  </div>
-  <div class="section-header fade-in">
-    <div class="section-tag"><span>Werkwijze</span></div>
-    <h2 class="section-title">Hoe Het <em>Werkt</em></h2>
-  </div>
-  <div class="steps-row">
-    <div class="step fade-in">
-      <div class="step-num">I</div>
-      <h3 class="step-title">Intake</h3>
-      <p class="step-text">Je boekt een sessie en vult een korte intake in. Ik bereid mij voor op jouw specifieke energetisch veld.</p>
-    </div>
-    <div class="step fade-in">
-      <div class="step-num">II</div>
-      <h3 class="step-title">Diagnose</h3>
-      <p class="step-text">Ik scan je blauwdruk en identificeer de exacte blokkades. Geen aannames – alleen data.</p>
-    </div>
-    <div class="step fade-in">
-      <div class="step-num">III</div>
-      <h3 class="step-title">Interventie</h3>
-      <p class="step-text">Gerichte systeem-interventie op de gevonden foutcodes. Structureel, niet oppervlakkig.</p>
-    </div>
-    <div class="step fade-in">
-      <div class="step-num">IV</div>
-      <h3 class="step-title">Integratie</h3>
-      <p class="step-text">Je ontvangt een helder rapport en concrete vervolgstappen. Jij bouwt op een verankerd fundament.</p>
-    </div>
-  </div>
-</section>
-
-<!-- QUOTE -->
-<section id="quote">
-  <p class="big-quote fade-in">"De meeste mensen blijven pielen in de ruis, terwijl jij de kern wilt slopen om opnieuw te bouwen. Ik zie wat de rest mist."</p>
-  <p class="quote-attr fade-in">– Tamara Esseveld, CelestialElora</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-left fade-in">
-    <div class="section-tag"><span>Sessie Boeken</span></div>
-    <h2 class="contact-title">Klaar om Jouw <em>Fundament</em> te Saneren</h2>
-    <p class="contact-sub">Reactie binnen 24 uur gegarandeerd.</p>
-  </div>
-  <div class="contact-form fade-in" style="display:flex;flex-direction:column;justify-content:center;">
-    <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:rgba(245,240,232,0.7);margin-bottom:40px;line-height:1.7;">Stuur mij een e-mail en ik reageer binnen 24 uur.</p>
-    <a href="mailto:tamara.esseveld@live.nl" class="btn-primary" style="font-size:13px;padding:20px 40px;text-align:center;">tamara.esseveld@live.nl</a>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-logo">CelestialElora</div>
-  <p class="footer-copy">© 2025 Tamara Esseveld – CelestialElora</p>
-  <ul class="footer-links">
-    <li><a href="voorwaarden.html">Algemene Voorwaarden</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</footer>
-
-<script>
-  // Fade in observer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
-Voorwaarden.html
+Resultaat: Helderheid over uw fundament. U ontdekt waar uw energie lekt en krijgt de sleutel in handen om uw interne systeem weer volledig uit te lijnen.</p>
+      <div class="dienst-footer">
+        <div>
+          <div class="dienst-prijs">€ 111</div>
+          <div class="dienst-duur">Personal Baseline Audit</div>
+        </div>
+        <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-arrow" style="text-decoration:none;display:flex;align-items:center;justify-content:center;">💳</a>
+      </div>
+    </div>
+    <div class="dienst-card fade-in">
+      <div class="dienst-number">06</div>
+      <h3 class="dienst-name">Energetische Huisreiniging (Op Afstand)</h3>
+      <p class=
