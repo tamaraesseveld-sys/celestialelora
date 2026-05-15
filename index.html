@@ -12,8 +12,10 @@
     --dark-bg: #fdfaf5;   
     --card: #ffffff;      
     --gold: #b8964d;
+    --gold-light: #d4bc8d;
     --text-main: #1a1a1a; 
     --grey: #5a5a5a;
+    --black: #000000;
     --font-display: 'Cinzel', serif;
     --font-body: 'Cormorant Garamond', serif;
   }
@@ -45,27 +47,31 @@
     text-decoration: none;
   }
 
-  .nav-links {
-  display: flex;
-    gap: 15px; 
-    list-style: none;
-    margin: 10px 0;
-  }
-
   .nav-links a {
-   font-family: var(--font-display);
+    font-family: var(--font-display);
     font-size: 11px;
     letter-spacing: 0.2em;
     color: #1a1a1a; 
     text-decoration: none;
     transition: color 0.3s ease;
     text-transform: uppercase;
-}
+  }
+  .nav-links a:hover { color: var(--gold); }
 
-.nav-links a:hover {
-  color: var(--gold);
+  .btn-nav {
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 8px 15px;
+    text-decoration: none;
   }
 
+  .btn-nav:hover {
+    background: var(--gold);
+    color: white;
+  }
   .nav-links a:hover { color: var(--gold); }
 
   .btn-nav {
@@ -85,7 +91,7 @@
 
   /* ── HERO ── */
   #hero {
-   min-height: 80vh
+    min-height: 80vh;
     display: flex;
     align-items: center;
     padding: 180px 20px 60px; 
@@ -94,7 +100,7 @@
     background: var(--dark-bg);
   }
 
-  .hero-bg {
+  hero-bg {
     position: absolute;
     inset: 0;
     background: radial-gradient(ellipse at 70% 50%, rgba(184, 150, 77, 0.12) 0%, transparent 70%),
