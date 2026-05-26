@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CelestialElora – Tamara Esseveld</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --dark-bg: #fdfaf5;   
+            --card: #ffffff;      
+            --gold: #b8964d;
+            --text-main: #1a1a1a; 
+            --grey: #5a5a5a;
+            --font-display: 'Cinzel', serif;
+            --font-body: 'Cormorant Garamond', serif;
+        }
+        html { scroll-behavior: smooth; }
+        body { background: var(--dark-bg); color: var(--text-main); font-family: var(--font-body); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
+
+        /* NAVBAR */
+        nav { 
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100; 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 15px 40px; background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(20px); border-bottom: 2px solid var(--gold); 
+        }
+        .logo { font-family: var(--font-display); font-size: 18px; letter-spacing: 0.3em; text-decoration: none; color: var(--text-main); text-transform: uppercase; }
+        
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { font-family: var(--font-display); font-size: 11px; text-decoration: none; color: var(--text-main); text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* HERO */
+        #hero { padding: 200px 20px 100px; text-align: center; background: var(--dark-bg); min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .hero-label { font-family: var(--font-display); font-size: 12px; color: var(--gold); letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 20px; }
+        .hero-name { font-size: clamp(35px, 8vw, 65px); font-weight: 300; margin-bottom: 20px; text-transform: uppercase; line-height: 1.1; }
+        .hero-name em { font-style: italic; color: var(--gold); font-weight: 400; }
+        .hero-tagline { max-width: 700px; margin: 0 auto 40px; font-size: 22px; font-style: italic; color: var(--grey); }
+
+        /* OVER MIJ SECTIE */
+        #over { padding: 100px 40px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        
+        /* De container voor de foto en het zwevende goud frame */
+        .over-visual { position: relative; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 380px; margin: 0 auto; }
+        
+        /* Het nieuwe zwevende gouden frame achter de foto */
+        .over-visual::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--gold);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Luxe Rechthoekig Frame voor de foto zelf */
+        .portrait-frame { 
+            width: 100%; 
+            height: auto; 
+            aspect-ratio: 3 / 4; 
+            object-fit: cover; 
+            z-index: 2; 
+            border: 1px solid var(--gold); 
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+            background: #fff;
+            position: relative;
+        }
+        
+        /* De heilige geometrie aangepast qua positie */
+        .sacred-geo { position: absolute; width: 480px; height: 480px; opacity: 0.15; animation: rotate 60s linear infinite; z-index: 0; }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .over-content { text-align: left; }
+
+        /* DIENSTEN GRID */
+        #diensten { padding: 100px 20px; background: #fff; }
+        .diensten-section-title { text-align: center; margin-bottom: 40px; }
+        .diensten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1400px; margin: 0 auto 60px; }
+        .dienst-card { background: var(--dark-bg); padding: 40px; border: 1px solid rgba(184, 150, 77, 0.15); transition: 0.4s ease; display: flex; flex-direction: column; }
+        .dienst-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(184, 150, 77, 0.1); }
+        .dienst-number { font-size: 35px; color: var(--gold); opacity: 0.3; font-family: var(--font-body); }
+        .dienst-name { font-family: var(--font-body); font-size: 24px; font-weight: 600; margin: 10px 0; color: #000; }
+        .dienst-desc { font-size: 17px; color: var(--grey); flex-grow: 1; margin-bottom: 20px; text-align: left; white-space: pre-line; }
+        .prijs-tag { font-family: var(--font-display); font-size: 10px; color: var(--gold); letter-spacing: 0.2em; border-top: 1px solid rgba(184, 150, 77, 0.1); padding-top: 15px; text-transform: uppercase; margin-bottom: 15px; }
+        
+        /* Specifieke subtiele link voor betalingen binnen de kaarten */
+        .dienst-payment-link { font-family: var(--font-display); font-size: 12px; color: var(--gold); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: 0.3s; display: inline-block; margin-top: auto; }
+        .dienst-payment-link:hover { color: var(--text-main); padding-left: 5px; }
+
+        /* BUTTONS */
+        .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 18px 40px; text-decoration: none; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); }
+        .btn-primary:hover { background: transparent; color: var(--gold); }
+
+        /* CONTACT */
+        #contact { padding: 100px 20px; text-align: center; background: var(--dark-bg); clear: both; width: 100%; display: block; }
+        #contact .hero-name { margin-bottom: 10px; }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+            nav { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            #over { grid-template-columns: 1fr; text-align: center; padding: 60px 20px; }
+            .over-content { text-align: center; }
+            .sacred-geo { width: 340px; height: 340px; }
+            .over-visual { max-width: 300px; }
+            #hero { padding-top: 150px; }
+            #contact { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo">CelestialElora</a>
+    <ul class="nav-links">
+        <li><a href="#diensten">Services</a></li>
+        <li><a href="#over">About Tamara</a></li>
+        <li><a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank">Newsletter</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="../" style="color: var(--gold); font-weight: 600;">NL</a></li>
+    </ul>
+</nav>
+
+<section id="hero">
+    <p class="hero-label">Strategic Insight &amp; Return on Alignment</p>
+    <h1 class="hero-name">The Business &amp; System <em>Architect</em></h1>
+    <p class="hero-tagline">The highest return is a pure foundation. I clean and recalibrate the blueprint of your life, family, and empire.</p>
+    <a href="#contact" class="btn-primary">Request a High-End Scan</a>
+</section>
+
+<section id="over">
+    <div class="over-visual">
+        <svg class="sacred-geo" viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="180" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+            <polygon points="200,40 346,130 346,270 200,360 54,270 54,130" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+            <circle cx="200" cy="200" r="120" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+        </svg>
+        <img src="../tamara-blueprint.jpg" alt="Tamara Esseveld" class="portrait-frame">
+    </div>
+    <div class="over-content">
+        <p class="hero-label">The Woman Behind the Architect</p>
+        <h2 class="hero-name" style="font-size: 40px;">Tamara <em>Esseveld</em></h2>
+        <p style="margin-bottom: 15px;">Awaken the true foundation of your leadership and life. Advanced system scans for corporations, visionaries, and individuals.</p>
+
+        <p style="margin-bottom: 15px;"><strong>The Alchemy of Your Blueprint 🏛️🌹</strong><br>
+        An empire, a family, or a soul-led life is not built on willpower alone, but on a foundation that breathes and flows. My work as a System Architect is a deep, raw journey to the absolute core of your existence, tuned to the 144-frequency.</p>
+        
+        <p style="margin-bottom: 15px;">This is not a trajectory for the masses. This is an invitation to the leaders, innovators, and individuals who feel that old, rigid structures no longer serve them. Those who are ready to occupy their 'inner castle' and lead from soft power combined with unwavering authority. Because the energy we operate in is high and pure, I preserve a safe space through a selective intake policy.</p>
+        
+        <p style="margin-bottom: 15px;"><strong>The Intake as a Sacred Portal 🗝️</strong><br>
+        We always begin at the threshold: The targeted systemic measurement.</p>
+        
+        <p style="margin-bottom: 15px;"><strong>The Scan: Mapping Your System</strong><br>
+        During a scan, I tune into the unseen frequencies of your system. I look past the surface, directly into the blueprint of your body, family, or enterprise. I track exactly where energy stagnates—those subtle energetic blocks that lead to exhaustion, friction, or a stalling course—long before your system sends out physical or financial warning signs.</p>
+        
+        <p style="margin-bottom: 25px;"><strong>🧱 THE ACCESS CODE: MEET YOURSELF IN THE INTAKE 🏗️⚡</strong><br>
+        Are you ready to mute the noise of the outside world and build from your deepest knowing?<br>
+        *The Selection:* Only after the initial scan do we feel together if the resonance is aligned to lay the foundation for your new era.</p>
+
+        <p style="margin-bottom: 15px; font-style: italic; color: var(--gold);">Ready for the embodiment of your success?</p>
+        
+        <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(184, 150, 77, 0.2);">
+            <p style="font-size: 17px;"><strong>My book 'Celestial Elora' is now available</strong></p>
+            <a href="https://www.bravenewbooks.nl/books/22062910" target="_blank" style="color: var(--gold); text-decoration: underline; font-family: var(--font-display); font-size: 12px; display: inline-block; margin-top: 5px;">Order directly at Brave New Books →</a>
+        </div>
+    </div>
+</section>
+
+<section id="diensten">
+    
+    <div class="diensten-section-title">
+        <p class="hero-label">Individuals &amp; Families</p>
+        <h2 style="font-size: 40px; font-weight: 300; text-transform: uppercase;">Personal Foundation &amp; Alignment</h2>
+    </div>
+    
+    <div class="diensten-grid">
+        <div class="dienst-card">
+            <div class="dienst-number">01</div>
+            <h3 class="dienst-name">The Personal Flash Scan</h3>
+            <p class="dienst-desc">For the individual or family that feels stuck in persistent dynamics and wants to uncover the absolute root cause immediately.
+
+Are you hitting a wall in your career, relationship, health, or family life? Or is a specific connection (such as a soulmate or twin flame) dominating your energetic system? Within 5 minutes, I plug directly into your personal blueprint or family lineage. 
+
+My nervous system locates exactly where energy leaks or stagnates. Within one focused session, we expose the root of the noise and provide you with the exact keys to recovery and neutrality. Includes a sharp Personal Baseline Audit evaluating your current energetic capacity and chakra blockages.
+
+Result: Immediate clarity, reclaimed sovereignty, and the precise blueprint to structurally elevate your personal frequency.</p>
+            <div class="prijs-tag">From €144 / €333 (Family)</div>
+            <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-payment-link">Book &amp; Pay Directly →</a>
+        </div>
+        
+        <div class="dienst-card">
+            <div class="dienst-number">02</div>
+            <h3 class="dienst-name">The Deep System Reset</h3>
+            <p class="dienst-desc">An intensive intervention aimed at completely cleaning your nervous system, patterns, and internal hardware. We stop patching symptoms and eliminate years of accumulated stress, sensory overload, or deep systemic entanglements to restore your vital lifecycle.
+
+This potent transformation trajectory is fully customized to the depth required:
+• Core Reset: 3 days of deep energetic clearing and foundation realignment (€222)
+• Expansion Reset: 3 days of resetting including unlimited contact for immediate integration (€333)
+• Elite VIP Reset: *5 days of intensive guidance, maximum clearing, and instant recalibration (€555)
+• Complete Blueprint Overhaul: An intensive 3-month mastery trajectory (12 weeks) to permanently dismantle deep-seated structures and learn to govern from the pure 144-frequency (Price upon request).
+
+*As a premium bonus, a remote Energetic Home Clearing is performed during this reset, transforming your living space into a pure and harmonious sanctuary.</p>
+            <div class="prijs-tag">From €222 / Upon Request</div>
+            <a href="https://www.paypal.com/paypalme/TamaraEsseveld" target="_blank" class="dienst-payment-link">Book &amp; Pay Directly →</a>
+        </div>
+    </div>
+
+    <div class="diensten-section-title" style="margin-top: 50px;">
+        <p class="hero-label">Corporations &amp; Multinationals</p>
+        <h2 style="font-size: 40px; font-weight: 300; text-transform: uppercase;">Corporate Architecture &amp; Operations</h2>
+    </div>
+
+    <div class="diensten-grid">
+        <div class="dienst-card">
+            <div class="dienst-number">03</div>
+            <h3 class="dienst-name">The Corporate Quickscan</h3>
+            <p class="dienst-desc">An ultra-fast energetic audit for management teams, boards, departments, or corporate cultures. 
+
+As a director or executive, you often see the symptoms: targets are missed by a fraction, operations feel sluggish, or an inexplicable tension lingers on the work floor. Where traditional consultants take months, I read the operational undercurrent of your organization within minutes. I pinpoint exactly where communication leaks, where fear blocks innovation, and which key figures are misaligned in their positions. You receive an immediate, factual diagnosis of what is truly happening behind the scenes. 
+
+Please note: This Quickscan is a mandatory baseline assessment prior to any larger corporate engagements.</p>
+            <div class="prijs-tag">Upon Request</div>
+        </div>
+
+        <div class="dienst-card">
+            <div class="dienst-number">04</div>
+            <h3 class="dienst-name">The Operations &amp; Leadership Track</h3>
+            <p class="dienst-desc">Exclusive transformation trajectories to get the engine of your enterprise running flawlessly and to dominate from a pure foundation.
+
+Available structures:
+• The 3-Day Operations Reset: Root cause analysis, clearing organizational noise, and anchoring a clean, actionable execution plan on the work floor for immediate efficiency and financial peace.
+• The Vanguard Leadership Track (6 Months): Exclusive, deep-dive alignment for the CEO, founder, or high-end entrepreneur to structurally scale personal capacity, impact, and asset leadership without stress or 'chasing'.
+• Elite Business Alignment (Annual Retainer): Your dedicated 'Invisible Architect' stand-by behind the scenes of the board during strategic decisions, mergers, acquisitions, or multi-million investments to eliminate risks at an energetic level.</p>
+            <div class="prijs-tag">Upon Request</div>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2 class="hero-name">Ready for <em>Transformation</em>?</h2>
+    <p style="margin-bottom: 30px;">Get in touch directly for an introduction or an initial scan.</p>
+    <a href="mailto:info@celestialelora.nl" class="btn-primary">Send an E-mail</a>
+    <p style="margin-top: 20px; font-size: 14px; color: var(--grey);">Or subscribe to the <a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank" style="color: var(--gold);">newsletter</a></p>
+</section>
+
+<footer style="padding: 40px 20px; text-align: center; background: white; border-top: 1px solid #eee;">
+    <p style="font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em;">
+        © 2026 CelestialElora – Tamara Esseveld | 
+        <a href="../voorwaarden.html" target="_blank" style="color: #b8964d; text-decoration: none;">Terms &amp; Conditions</a>
+    </p>
+</footer>
+
+</body>
+</html>
