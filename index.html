@@ -42,10 +42,8 @@
         /* OVER MIJ SECTIE */
         #over { padding: 100px 40px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         
-        /* De container voor de foto ien het zwevende goud frame */
         .over-visual { position: relative; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 380px; margin: 0 auto; }
         
-        /* Het nieuwe zwevende gouden frame achter de foto */
         .over-visual::after {
             content: '';
             position: absolute;
@@ -58,7 +56,6 @@
             pointer-events: none;
         }
 
-        /* Luxe Rechthoekig Frame voor de foto zelf */
         .portrait-frame { 
             width: 100%; 
             height: auto; 
@@ -71,7 +68,6 @@
             position: relative;
         }
         
-        /* De heilige geometrie aangepast qua positie */
         .sacred-geo { position: absolute; width: 480px; height: 480px; opacity: 0.15; animation: rotate 60s linear infinite; z-index: 0; }
         @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .over-content { text-align: left; }
@@ -87,9 +83,9 @@
         .dienst-desc { font-size: 17px; color: var(--grey); flex-grow: 1; margin-bottom: 20px; text-align: left; white-space: pre-line; }
         .prijs-tag { font-family: var(--font-display); font-size: 10px; color: var(--gold); letter-spacing: 0.2em; border-top: 1px solid rgba(184, 150, 77, 0.1); padding-top: 15px; text-transform: uppercase; margin-bottom: 15px; }
         
-        /* Specifieke subtiele link voor betalingen binnen de kaarten */
-        .dienst-payment-link { font-family: var(--font-display); font-size: 12px; color: var(--gold); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: 0.3s; display: inline-block; margin-top: auto; }
-        .dienst-payment-link:hover { color: var(--text-main); padding-left: 5px; }
+        /* Luxe extra knop voor de Groepsreset kaart */
+        .btn-card { display: block; text-align: center; background: transparent; color: var(--gold); padding: 12px 20px; text-decoration: none; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); margin-top: auto; }
+        .btn-card:hover { background: var(--gold); color: white; }
 
         /* BUTTONS */
         .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 18px 40px; text-decoration: none; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); }
@@ -118,7 +114,8 @@
     <a href="#" class="logo">CelestialElora</a>
     <ul class="nav-links">
         <li><a href="#diensten">Diensten</a></li>
-        <li><a href="groepsreset.html" style="color: var(--gold); font-weight: 600;">Groepsreset Aanmelden</a></li>
+        <!-- RECHTSTREEKSE LINK NAAR JE ENQUETE/AANMELDPAGINA -->
+        <li><a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" style="color: var(--gold); font-weight: 600;">Groepsreset Aanmelden</a></li>
         <li><a href="#over">Over Tamara</a></li>
         <li><a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank">Nieuwsbrief</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -132,7 +129,8 @@
     <p class="hero-tagline">Het hoogste rendement is een zuiver fundament. Ik saneer de blauwdruk van je lifestyle, gezin en imperium.</p>
     <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
         <a href="#contact" class="btn-primary">Vraag een High-End Scan aan</a>
-        <a href="groepsreset.html" class="btn-primary" style="background: transparent; color: var(--gold);">Groepsreset Aanmelden</a>
+        <!-- RECHTSTREEKSE LINK IN DE INTRO -->
+        <a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" class="btn-primary" style="background: transparent; color: var(--gold);">Groepsreset Aanmelden</a>
     </div>
 </section>
 
@@ -185,7 +183,7 @@ Geef kort aan voor wie de aanvraag is, waar je nu het hardst vastloopt en of je 
 
 Zit je vast op een specifiek punt in je werk, relatie, gezondheid of gezinsleven? Of blijft een specifieke connectie (zoals een soulmate of tweelingziel) je systeem domineren? Ik plug binnen 5 minutes rechtstreeks in op jouw persoonlijke blauwdruk of gezinssysteem. 
 
-Mijn zenuwstelsel lokaliseert exact waar de energie lekt of stagneert. Binnen één gerichte sessie leggen we de wortel van de ruis bloot én krijg je de exacte sleutel tot herstel en neutraliteit. Inclusief een vlijmscherpe Personal Baseline Audit naar jouw actuele belastbaarheid ien chakra-blokkades.</p>
+Mijn zenuwstelsel lokaliseert exact waar de energie lekt of stagneert. Binnen één gerichte sessie leggen we de wortel van de ruis bloot én krijg je de exacte sleutel tot herstel ien neutraliteit. Inclusief een vlijmscherpe Personal Baseline Audit naar jouw actuele belastbaarheid ien chakra-blokkades.</p>
             
             <ul style="list-style: none; margin-bottom: 20px; padding: 0; color: var(--grey); font-size: 17px;">
                 <li style="margin-bottom: 5px;"><strong style="font-weight: 700; color: var(--text-main);">• Gezinsscan Klein</strong> (2-3 personen): € 333,-</li>
@@ -212,20 +210,32 @@ Dit krachtige transformatietraject wordt volledig afgestemd op de benodigde diep
             <div class="prijs-tag">Vanaf €222 / Op aanvraag</div>
         </div>
 
-        <div class="dienst-card" style="display: flex; flex-direction: column; height: 100%;">
-            <div class="dienst-number">03</div>
+        <!-- HIER IS HET NIEUWE LUXE VAK VOOR DE GROEPSRESET DIE RECHTSTREEKS LINKT -->
+        <div class="dienst-card" style="border: 2px solid var(--gold); background: #fff;">
+            <div class="dienst-number" style="opacity: 0.6;">03</div>
+            <h3 class="dienst-name">The Collective Groepsreset</h3>
+            <p class="dienst-desc">Stap in het krachtige, gezamenlijke energetische veld. Tijdens de Groepsreset zuiveren we collectieve stagnaties ien ontladen we diepliggende stress uit het zenuwstelsel om te herkalibreren naar de zuivere frequentie.</p>
+            <div class="prijs-tag" style="margin-top: auto;">Investering: €77 / Volgende: 14 juli</div>
+            <a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" class="btn-card">Bekijk &amp; Aanmelden →</a>
+        </div>
+    </div>
+
+    <!-- HIER KOMEN DE ABONNEMENTEN KEURIG ONDER DE EERSTE DRIE BLOKKEN -->
+    <div class="diensten-grid" style="margin-top: 30px;">
+        <div class="dienst-card" style="grid-column: 1 / -1;">
+            <div class="dienst-number">04</div>
             <h3 class="dienst-name">The Subscriptions / Alignment Retainer</h3>
-            <p class="dienst-desc" style="margin-bottom: 10px; flex-grow: 0;">Voor wie doorlopend ien consistent gekoppeld wil blijven aan het zuivere fundament. Geen eenmalige interventie, maar een strategisch energetisch abonnement om ruis direct te tackelen zodra het ontstaat.
+            <p class="dienst-desc" style="margin-bottom: 10px; flex-grow: 0;">Voor who doorlopend ien consistent gekoppeld wil blijven aan het zuivere fundament. Geen eenmalige interventie, maar een strategisch energetisch abonnement om ruis direct te tackelen zodra het ontstaat.
 
 Beschikbaar in de volgende abonnementsvormen:</p>
             
-            <ul style="list-style: none; margin-bottom: 20px; padding: 0; color: var(--grey); font-size: 17px; line-height: 1.6; flex-grow: 1;">
+            <ul style="list-style: none; margin-bottom: 20px; padding: 0; color: var(--grey); font-size: 17px; line-height: 1.6;">
                 <li style="margin-bottom: 8px;"><strong style="font-weight: 700; color: var(--text-main);">• ⭐ Sterren</strong> — Maandelijkse energie update over jouw zenuwstelsel ien blokkades. €24 pm</li>
                 <li style="margin-bottom: 8px;"><strong style="font-weight: 700; color: var(--text-main);">• 🌙 Maan</strong> — 1 persoonlijke vraagscan per maand ien kortingen op mijn diensten. € 49,- pm</li>
                 <li style="margin-bottom: 8px;"><strong style="font-weight: 700; color: var(--text-main);">• ✨ Cosmic</strong> — Alles van Maan plus: Voorrang bij boekingen ien een extra persoonlijke check-in. € 59,- pm</li>
             </ul>
             
-            <div class="prijs-tag" style="margin-top: auto;">Vanaf € 24 p.m. / Maandelijks opzegbaar</div>
+            <div class="prijs-tag">Vanaf € 24 p.m. / Maandelijks opzegbaar</div>
         </div>
     </div>
 
@@ -236,18 +246,18 @@ Beschikbaar in de volgende abonnementsvormen:</p>
 
     <div class="diensten-grid">
         <div class="dienst-card">
-            <div class="dienst-number">04</div>
+            <div class="dienst-number">05</div>
             <h3 class="dienst-name">The Corporate Quickscan</h3>
             <p class="dienst-desc">De ultrasnelle energetische doorlichting voor managementteams, directies, afdelingen of bedrijfsculturen. 
 
-Als directeur of manager zie je vaak de symptomen: targets worden net niet gehaald, de communicatie stroopt, of er hangt een onverklaarbare spanning op de werkvloer. Waar traditionele consultants maanden over doen, lees ik de operationele onderstroom van jouw organisatie binnen enkele minuten uit. Ik lokaliseer exact waar communicatie lekt, waar angst de innovatie blokkeert ien welke sleutelfiguren niet op de juiste positie staan. Je krijgt direct een glasheldere, feitelijke diagnose van what er achter de schermen écht speelt. 
+Als directeur of manager zie je vaak de symptomen: targets worden net niet gehaald, de communicatie stroopt, of er hangt een onverklaarbare tension op de werkvloer. Waar traditionele consultants maanden over doen, lees ik de operationele onderstroom van jouw organisatie binnen enkele minuten uit. Ik lokaliseer exact waar communicatie lekt, waar angst de innovatie blokkeert ien welke sleutelfiguren niet op de juiste positie staan. Je krijgt direct een glasheldere, feitelijke diagnose van what er achter de schermen écht speelt. 
 
 Let op: Deze Quickscan is de verplichte nulmeting voorafgaand aan grotere zakelijke trajecten.</p>
             <div class="prijs-tag">Op aanvraag</div>
         </div>
 
         <div class="dienst-card">
-            <div class="dienst-number">05</div>
+            <div class="dienst-number">06</div>
             <h3 class="dienst-name">The Operations &amp; Leadership Track</h3>
             <p class="dienst-desc" style="margin-bottom: 10px;">Voor wie: ondernemers ien leiders die hun organisatie structureel willen laten draaien ien opschalen.
 
