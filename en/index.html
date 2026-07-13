@@ -28,7 +28,7 @@
         }
         .logo { font-family: var(--font-display); font-size: 18px; letter-spacing: 0.3em; text-decoration: none; color: var(--text-main); text-transform: uppercase; }
         
-        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
         .nav-links a { font-family: var(--font-display); font-size: 11px; text-decoration: none; color: var(--text-main); text-transform: uppercase; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
 
@@ -42,10 +42,8 @@
         /* OVER MIJ SECTIE */
         #over { padding: 100px 40px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         
-        /* De container voor de foto en het zwevende goud frame */
         .over-visual { position: relative; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 380px; margin: 0 auto; }
         
-        /* Het nieuwe zwevende gouden frame achter de foto */
         .over-visual::after {
             content: '';
             position: absolute;
@@ -58,7 +56,6 @@
             pointer-events: none;
         }
 
-        /* Luxe Rechthoekig Frame voor de foto zelf */
         .portrait-frame { 
             width: 100%; 
             height: auto; 
@@ -71,15 +68,14 @@
             position: relative;
         }
         
-        /* De heilige geometrie aangepast qua positie */
         .sacred-geo { position: absolute; width: 480px; height: 480px; opacity: 0.15; animation: rotate 60s linear infinite; z-index: 0; }
         @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .over-content { text-align: left; }
 
-        /* DIENSTEN GRID */
+        /* DIENSTEN GRID (2x2 Structuur) */
         #diensten { padding: 100px 20px; background: #fff; }
         .diensten-section-title { text-align: center; margin-bottom: 40px; }
-        .diensten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1400px; margin: 0 auto 60px; }
+        .diensten-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1400px; margin: 0 auto 60px; }
         .dienst-card { background: var(--dark-bg); padding: 40px; border: 1px solid rgba(184, 150, 77, 0.15); transition: 0.4s ease; display: flex; flex-direction: column; }
         .dienst-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(184, 150, 77, 0.1); }
         .dienst-number { font-size: 35px; color: var(--gold); opacity: 0.3; font-family: var(--font-body); }
@@ -87,9 +83,9 @@
         .dienst-desc { font-size: 17px; color: var(--grey); flex-grow: 1; margin-bottom: 20px; text-align: left; white-space: pre-line; }
         .prijs-tag { font-family: var(--font-display); font-size: 10px; color: var(--gold); letter-spacing: 0.2em; border-top: 1px solid rgba(184, 150, 77, 0.1); padding-top: 15px; text-transform: uppercase; margin-bottom: 15px; }
         
-        /* Specifieke subtiele link voor betalingen binnen de kaarten */
-        .dienst-payment-link { font-family: var(--font-display); font-size: 12px; color: var(--gold); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: 0.3s; display: inline-block; margin-top: auto; }
-        .dienst-payment-link:hover { color: var(--text-main); padding-left: 5px; }
+        /* Luxe extra knop voor kaarten */
+        .btn-card { display: block; text-align: center; background: transparent; color: var(--gold); padding: 12px 20px; text-decoration: none; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); margin-top: auto; }
+        .btn-card:hover { background: var(--gold); color: white; }
 
         /* BUTTONS */
         .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 18px 40px; text-decoration: none; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); }
@@ -109,6 +105,7 @@
             .over-visual { max-width: 300px; }
             #hero { padding-top: 150px; }
             #contact { padding: 60px 20px; }
+            .diensten-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -118,6 +115,8 @@
     <a href="#" class="logo">CelestialElora</a>
     <ul class="nav-links">
         <li><a href="#diensten">Services</a></li>
+        <!-- RECHTSTREEKSE LINK NAAR JE ENQUETE/AANMELDPAGINA -->
+        <li><a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" style="color: var(--gold); font-weight: 600;">Register Group Reset</a></li>
         <li><a href="#over">About Tamara</a></li>
         <li><a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank">Newsletter</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -126,10 +125,14 @@
 </nav>
 
 <section id="hero">
-    <p class="hero-label">Strategic Insight &amp; Return on Alignment</p>
+    <p class="hero-label">Strategic Insight &amp; Returns</p>
     <h1 class="hero-name">The Business &amp; System <em>Architect</em></h1>
-    <p class="hero-tagline">The highest return is a pure foundation. I clean and recalibrate the blueprint of your life, family, and empire.</p>
-    <a href="#contact" class="btn-primary">Request a High-End Scan</a>
+    <p class="hero-tagline">The highest return is a pure foundation. I sanitize the blueprint of your lifestyle, family, and empire.</p>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+        <a href="#contact" class="btn-primary">Request a High-End Scan</a>
+        <!-- RECHTSTREEKSE LINK IN DE INTRO -->
+        <a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" class="btn-primary" style="background: transparent; color: var(--gold);">Register Group Reset</a>
+    </div>
 </section>
 
 <section id="over">
@@ -139,33 +142,25 @@
             <polygon points="200,40 346,130 346,270 200,360 54,270 54,130" fill="none" stroke="#b8964d" stroke-width="0.5"/>
             <circle cx="200" cy="200" r="120" fill="none" stroke="#b8964d" stroke-width="0.5"/>
         </svg>
-        <img src="../tamara-blueprint.jpg" alt="Tamara Esseveld" class="portrait-frame">
+        <img src="tamara-blueprint.jpg" alt="Tamara Esseveld" class="portrait-frame">
     </div>
     <div class="over-content">
         <p class="hero-label">The Woman Behind the Architect</p>
         <h2 class="hero-name" style="font-size: 40px;">Tamara <em>Esseveld</em></h2>
-        <p style="margin-bottom: 15px;">Access to Audits &amp; Resets
-Welcome. I’m Tamara Esseveld, and I’m here to skip the talk sessions.
-
-If you’ve landed on this page, you’re stuck somewhere—whether in your own energy, your family life, or the growth of your business. You’ve likely tried everything using your intellect, yet real change remains elusive.
-That’s because the blockage isn't in your head; it lies in the underlying current of your nervous system or your organization.
+        <p style="margin-bottom: 15px;">Access to the Audits &amp; Resets
+Welcome. I am Tamara Esseveld, and I am here to skip the small talk and endless talk therapy.
+If you have landed on this page, you are stuck somewhere. In your own energy, in your family dynamics, or in the growth of your company. You have likely tried everything using your rational mind, yet true change remains out of reach.
+That is because the blockage does not reside in your head—it is embedded in the undercurrent of your nervous system or your organization.
 
 What I do:
-My method is razor-sharp and takes mere minutes. While psychologists or business consultants might want to talk to you for months, I cut through the noise. I instantly scan the energetic blueprint of you, your family, or your business. I expose the root cause of the stagnation and perform an immediate, hard reset at the foundational level.
-Whether it’s a quick Personal Flash Scan or an intensive 3-day System Reset, you receive the raw data and an immediate restoration of your foundation.
-Want to claim a spot?
-I work exclusively with people who are ready for immediate transformation. Direct sales are currently closed. Please send an email to [tamara.esseveld@live.nl] with the subject line 'REQUEST [SERVICE NAME]'.
+My method is razor-sharp and takes only minutes. Where psychologists or business consultants want to talk to you for months, I bypass the noise. I directly scan the energetic blueprint of you, your family, or your business. I expose what is causing the stagnation and perform a hard reset in the foundational layer right then and there.
+Whether it is a quick Personal Flash Scan or an intensive 3-day System Reset: you receive raw data and an immediate restoration of your foundation.
+Want to claim a spot on the calendar?
+I work exclusively with individuals who are ready for immediate transformation. Direct sales are closed. Send an email to [tamara.esseveld@live.nl] with the subject line 'APPLICATION [NAME OF SERVICE]'.
 
-Briefly indicate who the request is for, where you are currently most stuck, and whether you are ready to leave the talking behind. You will hear back within 48 hours regarding your admission to the exclusive waiting list for the coming month.
+Briefly state who the application is for, where you are currently hitting the hardest roadblock, and if you are ready to leave the talking behind. Within 48 hours, you will hear if you have been admitted to the exclusive waiting list for the upcoming month.</p>
 
-Ready to embody your success?</p>
-
-        <p style="margin-bottom: 15px; font-style: italic; color: var(--gold);">Ready for the embodiment of your success?</p>
-        
-        <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(184, 150, 77, 0.2);">
-            <p style="font-size: 17px;"><strong>My book 'Celestial Elora' is now available</strong></p>
-            <a href="https://www.bravenewbooks.nl/books/22062910" target="_blank" style="color: var(--gold); text-decoration: underline; font-family: var(--font-display); font-size: 12px; display: inline-block; margin-top: 5px;">Order directly at Brave New Books →</a>
-        </div>
+        <p style="margin-bottom: 15px; font-style: italic; color: var(--gold);">Ready to embody your ultimate success?</p>
     </div>
 </section>
 
@@ -177,85 +172,122 @@ Ready to embody your success?</p>
     </div>
     
     <div class="diensten-grid">
+        <!-- VAKJE 01 -->
         <div class="dienst-card">
             <div class="dienst-number">01</div>
             <h3 class="dienst-name">The Personal Flash Scan</h3>
-            <p class="dienst-desc">For whom: individuals and families stuck in persistent patterns who want to quickly get to the core of the issue.
+            <p class="dienst-desc" style="margin-bottom: 10px;">For the individual or family stuck in persistent dynamics who wants to uncover the absolute root cause immediately.
 
-Are you stuck on a specific issue regarding work, relationships, health, or family life? Or is a particular connection weighing on your mind? In a single, focused session of about 5 minutes, we will uncover the root of the problem together and provide you with a concrete key to recovery. Includes a Personal Baseline Audit of your current capacity and blockages.
+Are you stuck at a specific point in your career, relationship, health, or family life? Or does a specific connection (like a soulmate or twin flame) continue to dominate your system? Within 5 minutes, I plug directly into your personal blueprint or family system.
 
-The result: immediate clarity, a regained sense of control, and a concrete starting point.. 
+My nervous system localizes exactly where energy is leaking or stagnating. Within one focused session, we expose the root of the noise and give you the exact key to recovery and neutrality. This includes a razor-sharp Personal Baseline Audit assessing your current capacity and chakra blockages.</p>
+            
+            <ul style="list-style: none; margin-bottom: 20px; padding: 0; color: var(--grey); font-size: 17px;">
+                <li style="margin-bottom: 5px;"><strong style="font-weight: 700; color: var(--text-main);">• Family Scan Small</strong> (2-3 people): € 333,-</li>
+                <li style="margin-bottom: 5px;"><strong style="font-weight: 700; color: var(--text-main);">• Family Scan Large</strong> (4-5 people): € 499,-</li>
+                <li style="margin-bottom: 5px;"><strong style="font-weight: 700; color: var(--text-main);">• Family Scan XL</strong> (6+ people): Upon request (or € 555,-)</li>
+            </ul>
 
-My nervous system locates exactly where energy leaks or stagnates. Within one focused session, we expose the root of the noise and provide you with the exact keys to recovery and neutrality. Includes a sharp Personal Baseline Audit evaluating your current energetic capacity and chakra blockages.
-• <strong>Family Scan Small</strong> (2-3 people): € 333
-• <strong>Family Scan Large</strong> (4-5 people): € 499
-• <strong>Family Scan XL</strong> (6+ people): On request (or € 555)
-
-Result: Immediate clarity, reclaimed sovereignty, and the precise blueprint to structurally elevate your personal frequency.</p>
+            <p class="dienst-desc">Result: Immediate clarity, regained control, and the precise blueprint to structurally elevate your personal frequency.</p>
             <div class="prijs-tag">From €144 / €333 (Family)</div>
         </div>
           
+        <!-- VAKJE 02 -->
         <div class="dienst-card">
             <div class="dienst-number">02</div>
             <h3 class="dienst-name">The Deep System Reset</h3>
-            <p class="dienst-desc">For whom: for those who are done with merely treating symptoms and want to structurally address years of stress or overstimulation.
+            <p class="dienst-desc">An intensive intervention focused on the complete sanitation of your nervous system, patterns, and hardware. We stop applying temporary band-aids and remove the accumulated noise of years of stress, sensory overload, or deep entanglements to fully restore your vital energy.
 
-An intensive program fully tailored to the desired depth:
-• <strong>Core Reset:</strong> 3 days, aligning the foundation —(€222)
-• <strong>Expansion Reset:</strong> 3 days + unlimited contact for integration —(€333)
-• <strong>Elite VIP Reset:</strong> *5 days of intensive guidance and recalibration — (€555)
-• <strong>Complete Blueprint Overhaul:</strong> 3-month program (12 weeks) — price on request.
+This powerful transformation journey is fully tailored to the required depth:
+• <strong>Base Reset:</strong> 3 days of deep energetic sanitation and alignment of your foundation (€222)
+• <strong>Expansion Reset:</strong> 3 days of reset including unlimited contact for direct integration (€333)
+• <strong>Elite VIP Reset:</strong> 5 days of intensive guidance, maximum clearing, and immediate recalibration (€555)
+• <strong>Full Blueprint Reset:</strong> An intensive 3-month mastery track (12 weeks) to permanently dismantle deep-rooted structures and learn to govern from the pure 144 frequency (Price upon request).
 
-*As a premium bonus, a remote Energetic Home Clearing is performed during this reset, transforming your living space into a pure and harmonious sanctuary.</p>
-            <div class="prijs-tag">From €222 / Upon Request</div>
+*As a premium bonus, a remote Energetic House Clearing is performed during this reset, transforming your living environment into a pure and harmonious sanctuary.</p>
+            <div class="prijs-tag">From €222 / Upon request</div>
+        </div>
+
+        <!-- VAKJE 03 -->
+        <div class="dienst-card">
+            <div class="dienst-number">03</div>
+            <h3 class="dienst-name">The Subscriptions / Alignment Retainer</h3>
+            <p class="dienst-desc" style="margin-bottom: 10px; flex-grow: 0;">For those who wish to remain consistently anchored to a pure foundation. Not a one-time intervention, but a strategic energetic subscription to tackle noise as soon as it arises.
+
+Available in the following subscription models:</p>
+            
+            <ul style="list-style: none; margin-bottom: 20px; padding: 0; color: var(--grey); font-size: 17px; line-height: 1.6;">
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 700; color: var(--text-main);">• ⭐ Stars</strong> — Monthly energy update regarding your nervous system and blockages. €24 p.m.</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 700; color: var(--text-main);">• 🌙 Moon</strong> — 1 personal question scan per month and discounts on my services. € 49,- p.m.</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 700; color: var(--text-main);">• ✨ Cosmic</strong> — Everything in Moon plus: Priority booking and an extra personal check-in. € 59,- p.m.</li>
+            </ul>
+            
+            <div class="prijs-tag" style="margin-top: auto;">From € 24 p.m. / Monthly cancelable after 3 months</div>
+        </div>
+
+        <!-- VAKJE 04 -->
+        <div class="dienst-card">
+            <div class="dienst-number">04</div>
+            <h3 class="dienst-name">The 3-Card Blueprint Scan</h3>
+            <p class="dienst-desc">Do you need immediate, razor-sharp data on one specific question or blockage without stepping straight into a long-term commitment?
+
+With The 3-Card Blueprint Scan, I plug directly into your energetic field within 5 minutes. I draw three tarot cards and scan not just their symbolism, but simultaneously read the undercurrent and energetic blueprint of your system.
+
+No endless talking or vague advice, but a targeted, three-dimensional diagnosis. We expose the raw blueprint: what is truly blocking you, and what is the only logical, pure step your system must take for immediate realignment?
+
+You do not need to do anything for this, nor do you need to be present live. I conduct the scan remotely in the energetic field and send the sharp data straight to your email, allowing you to integrate it immediately.</p>
+            <div class="prijs-tag">€88</div>
         </div>
     </div>
 
     <div class="diensten-section-title" style="margin-top: 50px;">
-        <p class="hero-label">Corporations &amp; Multinationals</p>
+        <p class="hero-label">Businesses &amp; Multinationals</p>
         <h2 style="font-size: 40px; font-weight: 300; text-transform: uppercase;">Corporate Architecture &amp; Operations</h2>
     </div>
 
     <div class="diensten-grid">
         <div class="dienst-card">
-            <div class="dienst-number">03</div>
+            <div class="dienst-number">05</div>
             <h3 class="dienst-name">The Corporate Quickscan</h3>
-            <p class="dienst-desc">For whom: management teams, executive boards, and departments that see symptoms but not the cause. 
+            <p class="dienst-desc">The ultra-fast energetic audit for management teams, boards, departments, or corporate cultures.
 
-Targets narrowly missed, sluggish communication, inexplicable workplace tension. While traditional consultants take months, I provide a clear diagnosis of what is happening behind the scenes within minutes: where communication stalls, where fear stifles innovation, and which individuals are in the wrong roles.
+As a director or manager, you often see the symptoms: targets are missed by a fraction, communication feels sluggish, or there is an unexplainable tension on the work floor. Where traditional consultants take months, I read the operational undercurrent of your organization within minutes. I pinpoint exactly where communication leaks, where fear blocks innovation, and which key figures are misaligned in their positions. You receive a crystal-clear, factual diagnosis of what is truly happening behind the scenes.
 
-Please note: this is the mandatory baseline assessment prior to larger-scale business initiatives.</p>
-            <div class="prijs-tag">Upon Request</div>
+Note: This Quickscan is the mandatory baseline measurement prior to engaging in larger corporate tracks.</p>
+            <div class="prijs-tag">Upon request</div>
         </div>
 
         <div class="dienst-card">
-            <div class="dienst-number">04</div>
+            <div class="dienst-number">06</div>
             <h3 class="dienst-name">The Operations &amp; Leadership Track</h3>
-            <p class="dienst-desc">For whom: entrepreneurs and leaders who want to get their organization running structurally and scale it up.
+            <p class="dienst-desc" style="margin-bottom: 10px;">For: entrepreneurs and leaders who want their organizations to run and scale structurally.
 
-Three forms, depending on your goal:
-• The 3-Day Operations Reset: Root cause analysis and a concrete action plan for immediate calm and efficiency.
-• The Vanguard Leadership Track (6 Months): Personal alignment for CEOs or founders to scale capacity and impact without stress.
-• Elite Business Alignment (Annual Retainer): On standby behind the scenes for strategic decisions, mergers, and major investments.</p>
-            <div class="prijs-tag">Upon Request</div>
+Three formats, depending on your objective:</p>
+            
+            <ul style="list-style: none; margin-bottom: 20px; padding: 0; color: var(--grey); font-size: 17px; line-height: 1.6;">
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 700; color: var(--text-main);">• 3-Day Operations Reset</strong> — Root cause analysis and a concrete action plan for immediate peace and efficiency.</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 700; color: var(--text-main);">• Vanguard Leadership Track (6 months)</strong> — Personal alignment for the CEO or founder to scale capacity and impact without burnout.</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 700; color: var(--text-main);">• Elite Business Alignment (annual retainer)</strong> — Permanent standby support behind the scenes for strategic decisions, mergers, and major investments.</li>
+            </ul>
+            
+            <div class="prijs-tag">Upon request</div>
         </div>
     </div>
 
 </section>
-
 <section id="contact">
     <h2 class="hero-name">Ready for <em>Transformation</em>?</h2>
-    <p style="margin-bottom: 30px;">Get in touch directly for an introduction or an initial scan.</p>
-    <a href="mailto:tamara.esseveld@live.nl" target="_top" onclick="window.location.href='mailto:tamara.esseveld@live.nl.nl'; return false;" class="btn-primary">Send an E-mail</a>
+    <p style="margin-bottom: 30px;">Contact me directly for an introduction or a light scan.</p>
+    <a href="mailto:tamara.esseveld@live.nl" target="_top" onclick="window.location.href='mailto:tamara.esseveld@live.nl'; return false;" class="btn-primary">Send an E-mail</a>
     <p style="margin-top: 20px; font-size: 14px; color: var(--grey);">Or subscribe to the <a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank" style="color: var(--gold);">newsletter</a></p>
 </section>
 
 <footer style="padding: 40px 20px; text-align: center; background: white; border-top: 1px solid #eee;">
     <p style="font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em;">
         © 2026 CelestialElora – Tamara Esseveld | 
-        <a href="../voorwaarden.html" target="_blank" style="color: #b8964d; text-decoration: none;">Terms &amp; Conditions</a>
+        <a href="voorwaarden.html" target="_blank" style="color: #b8964d; text-decoration: none;">Terms &amp; Conditions</a>
     </p>
-</footer>
+</footer> 
 
 </body>
 </html>
