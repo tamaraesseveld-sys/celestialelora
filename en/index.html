@@ -39,8 +39,8 @@
         .hero-name em { font-style: italic; color: var(--gold); font-weight: 400; }
         .hero-tagline { max-width: 700px; margin: 0 auto 40px; font-size: 22px; font-style: italic; color: var(--grey); }
 
-        /* ABOUT ME SECTION */
-        #over { padding: 100px 40px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        /* ABOUT SECTION */
+        #about { padding: 100px 40px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         
         .over-visual { position: relative; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 380px; margin: 0 auto; }
         
@@ -72,8 +72,8 @@
         @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .over-content { text-align: left; }
 
-        /* SERVICES GRID */
-        #diensten { padding: 100px 20px; background: #fff; }
+        /* SERVICES GRID (2x2 Structure) */
+        #services { padding: 100px 20px; background: #fff; }
         .diensten-section-title { text-align: center; margin-bottom: 40px; }
         .diensten-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1400px; margin: 0 auto 60px; }
         .dienst-card { background: var(--dark-bg); padding: 40px; border: 1px solid rgba(184, 150, 77, 0.15); transition: 0.4s ease; display: flex; flex-direction: column; }
@@ -83,6 +83,7 @@
         .dienst-desc { font-size: 17px; color: var(--grey); flex-grow: 1; margin-bottom: 20px; text-align: left; white-space: pre-line; }
         .prijs-tag { font-family: var(--font-display); font-size: 10px; color: var(--gold); letter-spacing: 0.2em; border-top: 1px solid rgba(184, 150, 77, 0.1); padding-top: 15px; text-transform: uppercase; margin-bottom: 15px; }
         
+        /* Luxury extra button for cards */
         .btn-card { display: block; text-align: center; background: transparent; color: var(--gold); padding: 12px 20px; text-decoration: none; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); margin-top: auto; }
         .btn-card:hover { background: var(--gold); color: white; }
 
@@ -98,7 +99,7 @@
         @media (max-width: 900px) {
             nav { padding: 15px 20px; flex-direction: column; gap: 10px; }
             .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
-            #over { grid-template-columns: 1fr; text-align: center; padding: 60px 20px; }
+            #about { grid-template-columns: 1fr; text-align: center; padding: 60px 20px; }
             .over-content { text-align: center; }
             .sacred-geo { width: 340px; height: 340px; }
             .over-visual { max-width: 300px; }
@@ -113,9 +114,10 @@
 <nav>
     <a href="#" class="logo">CelestialElora</a>
     <ul class="nav-links">
-        <li><a href="#diensten">Services</a></li>
-        <li><a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" style="color: var(--gold); font-weight: 600;">Group Reset Registration</a></li>
-        <li><a href="#over">About Tamara</a></li>
+        <li><a href="#services">Services</a></li>
+        <!-- DIRECT LINK TO APPLICATION PAGE -->
+        <li><a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" style="color: var(--gold); font-weight: 600;">Group Reset Application</a></li>
+        <li><a href="#about">About Tamara</a></li>
         <li><a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank">Newsletter</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="../" style="color: var(--gold); font-weight: 600;">NL</a></li>
@@ -123,16 +125,17 @@
 </nav>
 
 <section id="hero">
-    <p class="hero-label">Strategic Insight &amp; ROI</p>
+    <p class="hero-label">Strategic Insight &amp; Returns</p>
     <h1 class="hero-name">The Business &amp; System <em>Architect</em></h1>
-    <p class="hero-tagline">"Peace and success start at the foundation. I resolve the underlying blockages in your leadership, family, and business."</p>
+    <p class="hero-tagline">"Peace and success begin at the foundation. I resolve the underlying blockages in your leadership, family, and enterprise."</p>
     <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
         <a href="#contact" class="btn-primary">Request a High-End Scan</a>
-        <a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" class="btn-primary" style="background: transparent; color: var(--gold);">Group Reset Registration</a>
+        <!-- DIRECT LINK IN HERO -->
+        <a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" class="btn-primary" style="background: transparent; color: var(--gold);">Group Reset Application</a>
     </div>
 </section>
 
-<section id="over">
+<section id="about">
     <div class="over-visual">
         <svg class="sacred-geo" viewBox="0 0 400 400">
             <circle cx="200" cy="200" r="180" fill="none" stroke="#b8964d" stroke-width="0.5"/>
@@ -144,35 +147,36 @@
     <div class="over-content">
         <p class="hero-label">The Woman Behind The Architect</p>
         <h2 class="hero-name" style="font-size: 40px;">Celestial <em>Elora</em></h2>
-        <p style="margin-bottom: 15px;">Systemic Audits &amp; Resets
+        <p style="margin-bottom: 15px;">Systemic Audits & Resets
 Welcome. I am Celestial.
 
-My work begins where conversations, advice, and traditional programs often stop.
-If you have landed on this page, you are stuck somewhere. In your personal life, within your family, or in the leadership of your business. You feel that something is playing out beneath the surface, but logical thinking, talking about it, or simply working harder doesn't get you to the real core.
+My work begins where conversations, advice, and traditional pathways often end.
+If you have landed on this page, you are stuck somewhere. In your personal life, within your family, or in the leadership of your enterprise. You feel that something is playing out beneath the surface, but through logical thinking, talking about it, or simply working even harder, you cannot reach the true core.
 That is precisely where I step in.
-I analyze and scan the deeper underlying patterns of individuals, families, and organizations. I don't look at external symptoms, but expose why certain situations keep repeating or why desired progress remains elusive.
-During an Audit, I pinpoint with razor-sharp precision where the blockage or friction lies. Next, I guide a targeted Reset of the foundation, immediately creating room for clarity, peace, direction, and decisive action.
-My approach is direct, sharp, and efficient. No months of talking sessions or dragged-out processes, but a fast, clear diagnosis of what is truly going on.
-Whether you choose a swift Flash Scan (personal or business) or an intensive 3-Day System Reset: you receive instant, razor-sharp insight and a concrete recalibration of your situation.
+I analyze and scan the deeper underlying patterns of individuals, families, and organizations. I do not look at surface symptoms; instead, I expose why certain situations keep repeating themselves or why desired progress remains out of reach.
+During an Audit, I bring sharp clarity to where the blockage or friction lies. Following that, I guide a targeted Reset of the foundation, immediately restoring space, peace, direction, and decisive action.
+My approach is direct, sharp, and efficient. No months-long talking sessions or lingering trajectories, but a swift, guaranteed diagnosis of what is truly going on.
+Whether you choose a quick Flash Scan (personal or corporate) or an intensive 3-day System Reset: you immediately receive razor-sharp insight and a concrete recalibration of your situation.
 
-Methodology &amp; Applications
-I deliberately work with a limited number of clients and organizations at a time. Every application therefore starts with a brief selection to determine if there is a mutual match.
+Method & Applications
+I intentionally work with a limited number of clients and organizations at a time. Therefore, every application starts with a brief selection process to determine if there is a match.
 
 Would you like to apply? Send an email to tamara.esseveld@live.nl with the subject:
-APPLICATION – [Name of the Service]
+APPLICATION – [Name of the service]
 
-Briefly state:
-- Who the application is for (your situation, family, or organization);
-- What you are currently facing;
-- Why you feel this is the right moment for you or your business to take action.
+Please briefly mention:
 
-You will receive a response within 48 hours detailing the next steps.</p>
+Who the application is for (your situation, family, or organization);
+What challenges you are currently facing;
+Why now is the right moment for you or your business to take action.
 
-        <p style="margin-bottom: 15px; font-style: italic; color: var(--gold);">Ready to restore command and the foundation of your success?</p>
+You will receive a response within 48 hours outlining the next steps.</p>
+
+        <p style="margin-bottom: 15px; font-style: italic; color: var(--gold);">Ready to restore control and the foundation of your success?</p>
     </div>
 </section>
 
-<section id="diensten">
+<section id="services">
     
     <div class="diensten-section-title">
         <p class="hero-label">Individuals &amp; Families</p>
@@ -184,26 +188,25 @@ You will receive a response within 48 hours detailing the next steps.</p>
         <div class="dienst-card">
             <div class="dienst-number">01</div>
             <h3 class="dienst-name">The Personal Flash Scan</h3>
-            <p class="dienst-desc" style="margin-bottom: 10px;">For those stuck in persistent situations who want to uncover the true root cause immediately.
+            <p class="dienst-desc" style="margin-bottom: 10px;">For those stuck in persistent situations who want to uncover the true cause immediately.
 
 One targeted question. One razor-sharp insight.
-Do you feel like you keep hitting the same wall without being able to put your finger on it? The Personal Flash Scan is a fast, deep analysis of your current situation. Ideal for those who have no need for long talking sessions, but want to know immediately where the bottleneck lies.
+Do you feel like you keep hitting the same wall without being able to pinpoint why? The Personal Flash Scan is a fast, deep analysis of your current situation. Ideal for those who have no desire for long talking sessions, but want to know immediately where the knot is tied.
 During this scan, you bring one concrete question or situation. I penetrate your personal situation and analyze, among other things:
 
-Your capacity and energy balance: Where is your energy currently leaking away?
-Underlying patterns: Which subconscious beliefs or habits are keeping the situation in place?
-Blockages and friction: Where is progress stalling in your work, relationships, or personal growth?
-
-After the scan, you will receive a clear, direct debrief of my findings. This is not a lengthy track, but a powerful baseline measurement and your first concrete breakthrough.
+Your resilience and energy balance: Where is your energy currently leaking away?
+Underlying patterns: Which unconscious beliefs or habits are maintaining the situation?
+Blockages and friction: Where is progress stagnating in your work, relationships, or personal growth?
+After the scan, you will receive clear, direct feedback with my findings. This is not a lengthy trajectory, but a powerful baseline measurement and your first concrete breakthrough.
 
 Examples of questions you can bring:
-"Why do I keep hitting the same barrier in my work or business?"
+"Why do I keep running into the same boundaries in my work or business?"
 "Why is my current situation draining so much of my energy?"
-"Why can't I seem to make a certain decision or let go of a situation?"
-"What is currently the single biggest blockage holding back my progress?"</p>
+"Why am I unable to make a certain decision or let go of a situation?"
+"What is currently the greatest blockage holding back my progress?"</p>
             
-<p class="dienst-desc">Result: Instant clarity on the core issue, regained peace, and the exact tools to fully take back command over your life or work.</p>
-<div class="prijs-tag">From €144</div>
+            <p class="dienst-desc">Result: Direct clarity on the core of the problem, regained peace, and the exact tools to fully take back control of your life or work.</p>
+            <div class="prijs-tag">From €144</div>
         </div>
           
         <!-- CARD 02 -->
@@ -211,142 +214,161 @@ Examples of questions you can bring:
             <div class="dienst-number">02</div>
             <h3 class="dienst-name">The Deep System Reset</h3>
             <p class="dienst-desc">The Deep System Reset
-For those who feel that a single audit isn't enough and want to realign their entire blueprint.
+For those who feel one audit is not enough and wish to realign their entire blueprint.
 
-For those who want more than just insight—who want to actually implement and anchor change. You already know where the bottlenecks lie. Now is the time to break those patterns for good and breathe new life into your foundation.
+For those who want not just insight, but to actually implement and anchor the change. By now, you know where the bottlenecks are. Now it is time to permanently break the patterns and breathe new life into your foundation.
 
-Basic Reset — Immediate Recalibration (€222)
-For whom: A targeted, one-off intervention focusing on a specific theme (personal or business).
-Includes: Comprehensive analysis, a targeted reset session, and personalized feedback with concrete action points.
+Basic Reset — Direct Recalibration (€222)
+For whom: A targeted, one-time intervention around one specific theme (personal or business).
+Includes: Comprehensive analysis, targeted reset session, and personal feedback with concrete action points.
 
 Deep System Reset Intensive — 3 Days (€333)
-For whom: Deep-seated patterns requiring more attention, guidance, and anchoring.
-Content: Over three days, we work intensively on analysis, change, and the process of embedding the new approach. We touch base daily to monitor your progress and make adjustments where necessary.
-Includes: In-depth analysis, 3 days of tailored guidance, daily check-ins during integration, and a personal post-program evaluation.
+For whom: Deeper underlying patterns that require more attention, guidance, and anchoring.
+Content: Over three days, we work intensively on analysis, change, and the securing process. We align daily to monitor your progress and make adjustments where needed.
+Includes: Deep analysis, 3 days of tailored guidance, daily alignment during integration, and a personal evaluation afterwards.
 
-Elite VIP Reset — 3-Month Integration Program (€555)
-For whom: Complex personal, family, or business issues requiring profound restructuring without overloading the system.
-Content: Real, lasting change needs time to take root in your daily life and your body. Instead of five consecutive days, we spread this intensive transformation across five targeted reset sessions over the course of three months:
+Elite VIP Reset — 3-Month Integration Track (€555)
+For whom: Complex personal, family, or corporate issues that require deep restructuring without overloading the system.
+Content: Real, lasting change takes time to land in your daily life and body. Instead of 5 consecutive days, we spread this intensive transformation over 5 targeted reset sessions across 3 months:
 
-Month 1: 2x Reset (breaking through acute blockages and laying the foundation)
+Month 1: 2x Reset (breaking acute blockages and laying the groundwork)
+Month 2: 2x Reset (recalibration, deepening, and adjusting in practice)
+Month 3: 1x Reset (final anchoring and securing of your new foundation)
 
-Month 2: 2x Reset (recalibration, deepening, and real-world adjustments)
-
-Month 3: 1x Reset (solidifying and securing your new foundation)
-
-Includes: A comprehensive initial analysis, five powerful, tailored 1-on-1 reset sessions, interim guidance during the integration phases, an environmental scan of your living or workspace to maximize tranquility, and a final report outlining your personal strategy for moving forward.
+Includes: Extensive initial analysis, 5 powerful 1-on-1 tailored reset sessions, interim guidance during integration phases, an environmental scan of your living or workspace for maximum peace, and a final report with your personal follow-up strategy.
 
 The Result:
-By the end, you will have a stable, clear foundation. Old, limiting patterns have been broken and reset. This brings immediate relief: it creates mental calm, sharpens your decision-making, and fosters natural progress in your work, relationships, and daily life.</p>
-            <div class="prijs-tag">From €222 / Upon request</div>
+Afterwards, you will possess a stable and clear foundation. Old, limiting patterns are broken and reset. This provides immediate breathing room: peace in your mind, clarity in your choices, and natural progress in your work, relationships, and daily life.</p>
+            <div class="prijs-tag">From €222 / On request</div>
         </div>
 
         <!-- CARD 03 -->
         <div class="dienst-card">
             <div class="dienst-number">03</div>
             <h3 class="dienst-name">The Family Blueprint Scan</h3>
-            <p class="dienst-desc" style="margin-bottom: 10px; flex-grow: 0;">For families where a pattern doesn't seem to rest on just one individual.
+            <p class="dienst-desc" style="margin-bottom: 10px; flex-grow: 0;">For families where a pattern does not seem to belong to just one person.
                 
-Here I don't look at a single person, but at the dynamics between family members.
+Here I do not look at a single individual, but at the dynamics between family members.
 
 For example:
-- Recurring tensions;
-- Parent-child dynamics;
-- Interpersonal relationships;
-- Roles within the family;
-- Where systemic burden becomes most visible.
+Recurring tensions;
+Parent-child patterns;
+Interpersonal dynamics;
+Roles within the family;
+Where, according to my methodology, the greatest burden becomes visible.
 
 Family Scan Small (2/3 persons) — €333
 Family Scan Large (4/5 persons) — €499
-XL — €555 / upon request</p>
-
+XL — €555 / On request</p>
             <div class="prijs-tag" style="margin-top: auto;">From €333</div>
         </div>
 
         <!-- CARD 04 -->
         <div class="dienst-card">
             <div class="dienst-number">04</div>
-            <h3 class="dienst-name">To measure is to know: A quick, thorough diagnostic of your personal or business engine.
+            <h3 class="dienst-name">The MOT System Reset</h3>
+            <p class="dienst-desc">To measure is to know: A fast, thorough audit of your personal or business engine.
 
-Just as you take your car to the garage for a periodic inspection, your own system (or that of your company) needs a thorough check-up regularly. If you keep pushing forward with a dirty filter, the engine will eventually grind to a halt.
+Just as you periodically take your car to the garage for an MOT check, your own system (or that of your company) requires a thorough checkup regularly. If you keep driving on a dirty filter, the engine will eventually stall.
+The MOT System Reset is a swift, deep inspection where we pop open the hood of your life or business in no time. We don't look at what shines on the outside, but precisely measure where friction exists, where energy is leaking, and which parts require immediate maintenance.
 
-The 'System Reset' inspection is a quick, in-depth diagnostic where we pop the hood of your life or business in no time. We don't look at the shiny exterior; instead, we pinpoint exactly where the friction lies, where energy is leaking away, and which components require immediate maintenance.
-What we scan during your inspection:
-Your physical & mental energy levels: Where is your battery draining unnoticed?
-Underlying blockages: Which ingrained patterns are causing interference?
-Driveability & Course: Where are the sticking points in your decision-making, creativity, or ability to take action?
+What we scan during your MOT:
+Your physical & mental energy levels: Where is the battery silently draining?
+Underlying blockages: Which deeply rooted patterns are causing noise on the line?
+Driveability & Course: Where is friction occurring in your decision-making, creativity, or execution power?
 
-The result:
-
-No vague advice or drawn-out processes. You receive a direct, razor-sharp status update on your foundation and a clear fine-tuning. You drive away with a clean engine, instant clarity, and the right fuel to accelerate effortlessly once more.</p>
+The Result:
+No vague advice or long trajectories. You receive an immediate, sharp status update of your foundation plus a clear tune-up. You drive away with a clean engine, instant clarity, and the right fuel to accelerate effortlessly once again.</p>
             <div class="prijs-tag">€222</div>
+        </div>
+
+        <!-- CARD 05 -->
+        <div class="dienst-card">
+            <div class="dienst-number">05</div>
+            <h3 class="dienst-name">The 3-Card Scan</h3>
+            <p class="dienst-desc">Fast and focused insight into your current situation through an intuitive 3-card scan.
+
+A 3-Card Scan is a swift, razor-sharp alignment with your situation. Where your mind might keep circling in doubt or questions, this scan looks directly beneath the surface.
+You bring one concrete question for which you seek clarity. Using three tarot cards, we uncover the active layers at this moment:
+
+Card 1: The Undercurrent
+What is playing out invisibly in the background? We look at unconscious dynamics, emotions, or hidden influences steering your situation without your knowledge.
+
+Card 2: The Blueprint
+Where lies the foundation and what is the bigger picture? This card reveals the core of your issue: the patterns, potential, and what essentially wants to unfold.
+
+Card 3: The Insight & Movement
+What is needed to move forward? This provides concrete direction, the key, or action required to get energy flowing again.
+
+No complicated stories or lengthy sessions, but a clear, grounded baseline. You are presented with a sharp mirror and directly actionable insight to feel which step serves you best.
+Fast, clear, and directly applicable in your daily life.</p>
+            <div class="prijs-tag">€88</div>
         </div>
     </div>
 
     <div class="diensten-section-title" style="margin-top: 50px;">
-        <p class="hero-label">Corporates &amp; Enterprises</p>
+        <p class="hero-label">Corporations &amp; Multinationals</p>
         <h2 style="font-size: 40px; font-weight: 300; text-transform: uppercase;">Corporate Architecture &amp; Operations</h2>
     </div>
 
     <div class="diensten-grid">
-        <!-- CARD 05 -->
-        <div class="dienst-card">
-            <div class="dienst-number">05</div>
-            <h3 class="dienst-name">The Corporate Quickscan</h3>
-            <p class="dienst-desc">Systemic Analysis &amp; Baseline Assessment for Organizations
-
-Break through persistent blockages in leadership, team dynamics, and business operations.
-
-Organizations rarely stall because of what is written on paper. The true cause of stagnation almost always resides in the undercurrent: unexpressed tensions within executive management, unclear role distributions, communication noise, or a company culture that unintentionally suppresses innovation and growth.
-The Corporate Quickscan is a razor-sharp diagnosis of your organization's foundation. I pinpoint the exact pressure points and analyze which hidden dynamics are affecting collaboration, decision-making, and overall performance.
-
-What does the Quickscan focus on?
-- Executive &amp; Team Dynamics: Where is friction occurring at the board or MT level?
-- Communication &amp; Decision-Making: Where does noise, delay, or recurring friction arise?
-- Leadership &amp; Role Allocation: Are the right people in the right seats with clear accountability?
-- Capacity &amp; Workload: Where are energy and operational efficiency leaking within teams?
-- Growth Blockers: Which persistent patterns hinder further scalability or profitability?
-
-Afterward, you receive a clear, objective report of the analysis, including concrete strategic advice to restore tranquility, clarity, and execution power.
-
-For Whom?
-- Board members &amp; CEOs who want to get straight to the core of an organizational issue.
-- Executive Management Teams (MTs) stuck in collaboration or decision-making.
-- Family Businesses where personal and corporate interests have subtly blurred.
-- Mid-market companies looking to scale, but encountering internal resistance or stagnation.
-
-The Foundation for Sustainable Change
-The Corporate Quickscan marks the start of any corporate track. It serves as an independent baseline assessment before opting for a follow-up, such as the Corporate Alignment Program.</p>
-            <div class="prijs-tag">Upon Request</div>
-        </div>
-
         <!-- CARD 06 -->
         <div class="dienst-card">
             <div class="dienst-number">06</div>
+            <h3 class="dienst-name">The Corporate Quickscan</h3>
+            <p class="dienst-desc"><strong>An audit of the underlying blueprint of your organization.</strong>
+System Analysis & Baseline Measurement for Organizations
+
+Break persistent blockages in leadership, team dynamics, and business operations.
+Organizations rarely stall because of what is written on paper. The true cause of stagnation almost always resides in the undercurrent: unspoken tensions within management, unclear role divisions, communication noise, or an organizational culture that unconsciously slows down innovation and growth.
+The Corporate Quickscan is a razor-sharp diagnosis of your organization's foundation. I pinpoint the exact pressure points and investigate which invisible dynamics affect collaboration, decision-making, and financial returns.
+
+What does the Quickscan focus on?
+Team and Management Dynamics: Where is friction occurring at the executive or MT level?
+Communication & Decision-Making: Where does noise, delay, or repeated friction arise?
+Leadership & Role Division: Are the right people in the right places with the right responsibilities?
+Resilience & Workload: Where is energy and effectiveness leaking within teams or departments?
+Growth Blockages: Which persistent patterns hinder the further scalability or profitability of the enterprise?
+
+Afterwards, you will receive a clear, objective report of the analysis, including concrete strategic advice to restore peace, clarity, and execution power.
+
+For whom?
+Executives & CEOs who want to reach the core of an organizational problem quickly.
+Management Teams (MTs) struggling with collaboration or decision-making.
+Family businesses where personal and business interests silently overlap.
+SMEs looking to scale, but hitting internal resistance or stagnation.
+
+The Foundation for Sustainable Change
+The Corporate Quickscan forms the starting point for every corporate follow-up. It serves as an independent baseline measurement before choosing a follow-up pathway, such as the Corporate Alignment Program.</p>
+            <div class="prijs-tag">On request</div>
+        </div>
+
+        <!-- CARD 07 -->
+        <div class="dienst-card">
+            <div class="dienst-number">07</div>
             <h3 class="dienst-name">Corporate Blueprint Alignment</h3>
-            <p class="dienst-desc" style="margin-bottom: 10px;">Strategic advisory for entrepreneurs, directors, and leaders looking to sustainably grow their organization from a rock-solid foundation.
+            <p class="dienst-desc" style="margin-bottom: 10px;">Strategic guidance for entrepreneurs, executives, and leaders who want to scale their organization sustainably from a rock-solid foundation.
+Following the Corporate Quickscan, key bottlenecks and growth opportunities are sharply mapped out. The Corporate Alignment Track is designed for organizations seeking to translate these insights into lasting, measurable results.
 
-After the Corporate Quickscan, key bottlenecks and growth opportunities are sharply mapped out. The Corporate Alignment Program is engineered for organizations wanting to translate these insights into lasting, measurable results.
-Together, we build an organization where structure, leadership, and decision-making align seamlessly. Not by working harder or increasing pressure, but by continuously streamlining, refining, and adjusting the organizational culture, executive alignment, and leadership.
+Together, we build an organization where structure, leadership, and decision-making align seamlessly. Not by working harder or putting more pressure on the organization, but by continuously streamlining and adjusting the undercurrent, company culture, and leadership.
 
-Available Tracks
+Available Tracks:
 
-*Operations Reset — 3 Days
-Focus: Operational restructuring and efficiency.
-Content: An intensive diagnosis of operational workflows and team dynamics. We map primary friction points and translate them directly into an actionable execution plan focused on oversight, tranquility, and streamlined operations.
+*Operations Reset & Burnout Intervention — 3 Days
+Focus: Operational restructuring, acute burnout intervention, and resilience recovery.
+Content: An intensive audit of operational processes, workload, and underlying tensions. We expose energy leaks, sources of overload, and patterns leading to absenteeism. We translate this immediately into a concrete action plan focused on peace, restored resilience, oversight, and streamlined workflows.
 
 *Vanguard Leadership Track — 6 Months
-Focus: Executive leadership development for CEOs, founders, and directors.
-Content: Designed for leaders aiming to amplify their strategic impact and command while scaling the company. We focus on strategic decision-making, personal resilience, clear role definition, and sharpening your overall leadership profile.
+Focus: Leadership development, sustainable resilience, and burnout prevention for CEOs, founders, and executive board members.
+Content: For leaders seeking to expand their personal impact and governance while scaling the business. We work on strategic decision-making, personal resilience, clear role definition, and strengthening your leadership profile without sacrificing your energy.
 
 *Executive Advisory Partnership — Annual Retainer
-Focus: Exclusive background strategic advisory.
-Content: A continuous, discreet partnership where I act as an independent sounding board and auditor during critical transformations. Ideal during complex M&amp;A transactions, restructurings, board-level decisions, investments, and major organizational shifts.
+Focus: Exclusive strategic guidance on a background level.
+Content: A continuous, discreet partnership where I act as an independent sounding board and auditor during crucial transformations. Ideal for complex acquisitions, restructurings, board decisions, investments, and major organizational shifts.
 
-The Result
-A streamlined organization where leadership, culture, and business operations are fully in sync. This results in faster, higher-quality decision-making, reduced internal friction, and a solid foundation for sustainable, scalable growth.</p>
-            
-            <div class="prijs-tag">Upon Request</div>
+The Result:
+A streamlined organization where leadership, culture, and business operations are completely balanced. This leads to faster and better decision-making, reduced internal friction, and a solid foundation for sustainable, scalable growth.</p>
+            <div class="prijs-tag">On request</div>
         </div>
     </div>
 
@@ -354,7 +376,7 @@ A streamlined organization where leadership, culture, and business operations ar
 
 <section id="contact">
     <h2 class="hero-name">Ready for <em>Transformation</em>?</h2>
-    <p style="margin-bottom: 30px;">Contact me directly for an introduction or preliminary scan.</p>
+    <p style="margin-bottom: 30px;">Contact me directly for an introduction or light scan.</p>
     <a href="mailto:tamara.esseveld@live.nl" target="_top" onclick="window.location.href='mailto:tamara.esseveld@live.nl'; return false;" class="btn-primary">Send an Email</a>
     <p style="margin-top: 20px; font-size: 14px; color: var(--grey);">Or subscribe to the <a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank" style="color: var(--gold);">newsletter</a></p>
 </section>
