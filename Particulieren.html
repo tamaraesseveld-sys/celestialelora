@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CelestialElora | Systemische Audits & Resets voor Particulieren & Gezinnen</title>
+    <meta name="description" content="CelestialElora helpt individuen en gezinnen blokkades doorbreken via Systemische Audits en Resets. Direct inzicht, geen slepende trajecten. Vraag een scan aan.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght=400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --dark-bg: #fdfaf5;   
+            --card: #ffffff;      
+            --gold: #b8964d;
+            --text-main: #1a1a1a; 
+            --grey: #5a5a5a;
+            --font-display: 'Cinzel', serif;
+            --font-body: 'Cormorant Garamond', serif;
+        }
+        html { scroll-behavior: smooth; }
+        body { background: var(--dark-bg); color: var(--text-main); font-family: var(--font-body); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
+
+        /* NAVBAR */
+        nav { 
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100; 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 15px 40px; background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(20px); border-bottom: 2px solid var(--gold); 
+        }
+        .logo { font-family: var(--font-display); font-size: 18px; letter-spacing: 0.3em; text-decoration: none; color: var(--text-main); text-transform: uppercase; }
+        
+        .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+        .nav-links a { font-family: var(--font-display); font-size: 11px; text-decoration: none; color: var(--text-main); text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a.switch-page { border: 1px solid var(--gold); padding: 5px 10px; border-radius: 2px; }
+
+        /* HERO */
+        #hero { padding: 200px 20px 100px; text-align: center; background: var(--dark-bg); min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .hero-label { font-family: var(--font-display); font-size: 12px; color: var(--gold); letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 20px; }
+        .hero-name { font-size: clamp(35px, 8vw, 65px); font-weight: 300; margin-bottom: 20px; text-transform: uppercase; line-height: 1.1; }
+        .hero-name em { font-style: italic; color: var(--gold); font-weight: 400; }
+        .hero-tagline { max-width: 700px; margin: 0 auto 40px; font-size: 22px; font-style: italic; color: var(--grey); }
+
+        /* OVER MIJ SECTIE */
+        #over { padding: 100px 40px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        
+        .over-visual { position: relative; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 380px; margin: 0 auto; }
+        
+        .over-visual::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--gold);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .portrait-frame { 
+            width: 100%; 
+            height: auto; 
+            aspect-ratio: 3 / 4; 
+            object-fit: cover; 
+            z-index: 2; 
+            border: 1px solid var(--gold); 
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+            background: #fff;
+            position: relative;
+        }
+        
+        .sacred-geo { position: absolute; width: 480px; height: 480px; opacity: 0.15; animation: rotate 60s linear infinite; z-index: 0; }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .over-content { text-align: left; }
+
+        /* DIENSTEN GRID */
+        #diensten { padding: 100px 20px; background: #fff; }
+        .diensten-section-title { text-align: center; margin-bottom: 40px; }
+        .diensten-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1400px; margin: 0 auto; }
+        .dienst-card { background: var(--dark-bg); padding: 40px; border: 1px solid rgba(184, 150, 77, 0.15); transition: 0.4s ease; display: flex; flex-direction: column; }
+        .dienst-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(184, 150, 77, 0.1); }
+        .dienst-number { font-size: 35px; color: var(--gold); opacity: 0.3; font-family: var(--font-body); }
+        .dienst-name { font-family: var(--font-body); font-size: 24px; font-weight: 600; margin: 10px 0; color: #000; }
+        .dienst-desc { font-size: 17px; color: var(--grey); flex-grow: 1; margin-bottom: 20px; text-align: left; white-space: pre-line; }
+        .prijs-tag { font-family: var(--font-display); font-size: 10px; color: var(--gold); letter-spacing: 0.2em; border-top: 1px solid rgba(184, 150, 77, 0.1); padding-top: 15px; text-transform: uppercase; margin-bottom: 15px; }
+        
+        .btn-card { display: block; text-align: center; background: transparent; color: var(--gold); padding: 12px 20px; text-decoration: none; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); margin-top: auto; }
+        .btn-card:hover { background: var(--gold); color: white; }
+
+        /* BUTTONS */
+        .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 18px 40px; text-decoration: none; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); }
+        .btn-primary:hover { background: transparent; color: var(--gold); }
+
+        /* CONTACT */
+        #contact { padding: 100px 20px; text-align: center; background: var(--dark-bg); clear: both; width: 100%; display: block; }
+        #contact .hero-name { margin-bottom: 10px; }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+            nav { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            #over { grid-template-columns: 1fr; text-align: center; padding: 60px 20px; }
+            .over-content { text-align: center; }
+            .sacred-geo { width: 340px; height: 340px; }
+            .over-visual { max-width: 300px; }
+            #hero { padding-top: 150px; }
+            #contact { padding: 60px 20px; }
+            .diensten-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo">CelestialElora</a>
+    <ul class="nav-links">
+        <li><a href="#diensten">Aanbod Particulieren</a></li>
+        <li><a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" style="color: var(--gold); font-weight: 600;">Groepsreset Aanmelden</a></li>
+        <li><a href="#over">Over Tamara</a></li>
+        <li><a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank">Nieuwsbrief</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="zakelijk.html" class="switch-page">Voor Bedrijven</a></li>
+        <li><a href="en/" style="color: var(--gold); font-weight: 600;">EN</a></li>
+    </ul>
+</nav>
+
+<section id="hero">
+    <p class="hero-label">Persoonlijk Fundament &amp; Innerlijke Rust</p>
+    <h1 class="hero-name">Systemische Audits &amp; <em>Resets</em></h1>
+    <p class="hero-tagline">"Rust en vervulling beginnen bij de basis. Ik los de dieperliggende blokkades op in jouw persoonlijke leven en gezin."</p>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+        <a href="#diensten" class="btn-primary">Bekijk het aanbod</a>
+        <a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" class="btn-primary" style="background: transparent; color: var(--gold);">Groepsreset Aanmelden</a>
+    </div>
+</section>
+
+<section id="over">
+    <div class="over-visual">
+        <svg class="sacred-geo" viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="180" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+            <polygon points="200,40 346,130 346,270 200,360 54,270 54,130" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+            <circle cx="200" cy="200" r="120" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+        </svg>
+        <img src="tamara-blueprint.jpg" alt="Celestial Elora" class="portrait-frame">
+    </div>
+    <div class="over-content">
+        <p class="hero-label">Systemische Audits &amp; Resets</p>
+        <h2 class="hero-name" style="font-size: 40px;">Ik ben <em>Celestial</em></h2>
+        <p style="margin-bottom: 15px;">Mijn werk begint waar gesprekken, adviezen en traditionele trajecten vaak ophouden.</p>
+        <p style="margin-bottom: 15px;">Als je op deze pagina bent beland, loop je ergens vast. In je persoonlijke leven of binnen je gezin. Je voelt dat er onder de oppervlakte iets meespeelt, maar met logisch nadenken, erover praten of simpelweg nóg harder proberen kom je niet bij de werkelijke kern.</p>
+        <p style="margin-bottom: 15px;">Dat is precies waar ik instap. Ik analyseer en scan de dieperliggende patronen van personen en gezinnen. Ik kijk niet naar de uiterlijke symptomen, maar leg bloot waarom bepaalde situaties zich blijven herhalen of waarom de gewenste beweging uitblijft.</p>
+        <p style="margin-bottom: 15px;">Tijdens een Audit maak ik haarscherp zichtbaar waar de blokkade of frictie zit. Vervolgens begeleid ik een gerichte Reset van het fundament, zodat er direct weer ruimte, rust, richting en daadkracht ontstaat. Geen maandenlange praatsessies of slepende trajecten, maar een snelle, gegarandeerde doorlichting van wat er werkelijk speelt.</p>
+        
+        <h3 style="font-family: var(--font-display); font-size: 16px; color: var(--gold); margin-top: 25px; margin-bottom: 10px; text-transform: uppercase;">Werkwijze & Aanvragen</h3>
+        <p style="margin-bottom: 15px;">Ik werk bewust met een beperkt aantal cliënten tegelijk. Iedere aanvraag start daarom met een korte selectie om te bepalen of er een match is.</p>
+        <p style="margin-bottom: 15px;">Wil je een aanvraag doen? Stuur een e-mail naar <strong>tamara.esseveld@live.nl</strong> met als onderwerp: <em>AANVRAAG – [Naam van de dienst]</em></p>
+        <p style="margin-bottom: 15px; font-size: 16px; color: var(--grey);">Vermeld hierin kort: voor wie de aanvraag is, waar je op dit moment tegenaan loopt en waarom dit voor jou het juiste moment is om door te pakken. Je ontvangt binnen 48 uur een reactie met de vervolgstappen.</p>
+
+        <p style="margin-top: 20px; font-style: italic; color: var(--gold);">Klaar om de regie en het fundament van jouw leven te herstellen?</p>
+    </div>
+</section>
+
+<section id="diensten">
+    
+    <div class="diensten-section-title">
+        <p class="hero-label">Particulieren &amp; Gezinnen</p>
+        <h2 style="font-size: 40px; font-weight: 300; text-transform: uppercase;">Persoonlijk Fundament &amp; Alignment</h2>
+    </div>
+    
+    <div class="diensten-grid">
+        <!-- VAKJE 01 -->
+        <div class="dienst-card">
+            <div class="dienst-number">01</div>
+            <h3 class="dienst-name">The Personal Flash Scan</h3>
+            <p class="dienst-desc">Voor wie vastloopt in hardnekkige situaties en direct de werkelijke oorzaak boven tafel wil hebben.
+
+Eén gerichte vraag. Eén haarscherp inzicht.
+Heb je het gevoel dat je steeds tegen dezelfde muur aanloopt, maar kun je de vinger er niet op leggen? De Personal Flash Scan is een snelle, diepgaande analyse van jouw huidige situatie. Ideaal voor wie geen behoefte heeft aan lange praatsessies, maar direct wil weten waar de knoop zit.
+
+Tijdens deze scan neem je één concrete vraag of situatie mee. Ik doorgrond jouw persoonlijke situatie en analyseer onder andere:
+• Jouw belastbaarheid en energiebalans: Waar lekt momenteel jouw energie weg?
+• Onderliggende patronen: Welke onbewuste overtuigingen of gewoontes houden de situatie in stand?
+• Blokkades en frictie: Waar stagneert de vooruitgang in jouw werk, relaties of persoonlijke groei?
+
+Voorbeelden van vragen:
+"Waarom loop ik steeds tegen dezelfde grens aan?"
+"Waarom kost mijn huidige situatie me zo overmatig veel energie?"
+"Waarom lukt het me niet om een bepaalde beslissing te nemen?"
+
+Resultaat: Directe helderheid over de kern van het probleem, herwonnen rust en de exacte handvatten om de regie over jouw leven weer volledig over te nemen.</p>
+            <div class="prijs-tag">Vanaf €144</div>
+        </div>
+          
+        <!-- VAKJE 02 -->
+        <div class="dienst-card">
+            <div class="dienst-number">02</div>
+            <h3 class="dienst-name">The Deep System Reset</h3>
+            <p class="dienst-desc">Voor wie voelt dat één audit niet voldoende is en de volledige blauwdruk opnieuw wil uitlijnen.
+
+Voor wie niet alleen inzicht wil, maar de verandering daadwerkelijk wil doorvoeren en verankeren. Je weet inmiddels waar de knelpunten zitten. Nu is het tijd om de patronen definitief te doorbreken en jouw fundament nieuw leven in te blazen.
+
+• Basis Reset — Directe Herijking (€222)
+Een gerichte, eenmalige interventie rondom één specifiek thema. Inclusief uitgebreide analyse, gerichte reset-sessie en een persoonlijke terugkoppeling met concrete actiepunten.
+
+• Deep System Reset Intensive — 3 Dagen (€333)
+Voor dieperliggende patronen die meer aandacht vragen. Gedurende drie dagen werken we intensief aan de analyse, de verandering en het borgingsproces. Dagelijkse afstemming tijdens de integratie.
+
+• Elite VIP Reset — 3 Maanden Integration Traject (€555)
+Voor complexe persoonlijke of familiaire vraagstukken. 5 krachtige 1-op-1 reset-sessies verdeeld over 3 maanden (M1: 2x Reset, M2: 2x Reset, M3: 1x Reset), inclusief eenomgevingsscan van je woonruimte en eindrapportage.
+
+Resultaat: Een stabiel en helder fundament. Oude, belemmerende patronen zijn doorbroken, wat direct zorgt voor rust in je hoofd, scherpte in je keuzes en een natuurlijke vooruitgang.</p>
+            <div class="prijs-tag">Vanaf €222</div>
+        </div>
+
+        <!-- VAKJE 03 -->
+        <div class="dienst-card">
+            <div class="dienst-number">03</div>
+            <h3 class="dienst-name">The Family Blueprint Scan</h3>
+            <p class="dienst-desc">Voor gezinnen waarin een patroon niet alleen bij één persoon lijkt te liggen.
+                
+Hier kijk ik niet naar één individu, maar naar de dynamiek tussen de gezinsleden.
+
+We analyseren onder andere:
+• Terugkerende spanningen binnen het gezin
+• Patronen tussen ouder en kind
+• Onderlinge dynamiek en onuitgesproken rollen
+• Waar binnen het gezinssysteem de meeste belasting zichtbaar wordt
+
+Tarieven:
+Gezinsscan Klein (2/3 personen) — €333
+Gezinsscan Groot (4/5 personen) — €499
+XL — €555 / op aanvraag</p>
+            <div class="prijs-tag">Vanaf €333</div>
+        </div>
+
+        <!-- VAKJE 04 -->
+        <div class="dienst-card">
+            <div class="dienst-number">04</div>
+            <h3 class="dienst-name">De APK System Reset</h3>
+            <p class="dienst-desc">Meten is weten: Een snelle, grondige doorlichting van jouw persoonlijke motor.
+
+Net zoals je je auto periodiek naar de garage brengt voor een APK, heeft jouw eigen systeem ook regelmatig een grondige check nodig. Blijf je doordenderen op een vuil filter, dan valt de motor vanzelf stil.
+
+De APK System Reset is een snelle doorlichting waarin we haarscherp meten waar de frictie zit, waar de energie weglekt en welke onderdelen direct onderhoud nodig hebben.
+
+Wat we scannen:
+• Fysieke & mentale energieniveau: Waar loopt de accuspanning ongemerkt leeg?
+• Onderliggende blokkades: Welke vastgeroste patronen zorgen voor ruis?
+• Koers & Actiekracht: Waar wringt het in je besluitvorming of creativiteit?
+
+Het resultaat: Directe statusupdate van jouw fundament én een heldere afstelling. Je rijdt weg met een schone motor en heldere brandstof.</p>
+            <div class="prijs-tag">€222</div>
+        </div>
+
+        <!-- VAKJE 05 -->
+        <div class="dienst-card">
+            <div class="dienst-number">05</div>
+            <h3 class="dienst-name">De 3 Kaarten Scan</h3>
+            <p class="dienst-desc">Snel en gericht inzicht in jouw huidige situatie middels een intuïtieve 3-kaarten scan.
+
+Een snelle, haarscherpe afstemming op jouw situatie. Waar je met je hoofd soms blijft cirkelen in twijfel of vragen, kijken we met deze scan direct onder de oppervlakte. Je brengt één concrete vraag in. Met drie tarotkaarten leggen we de lagen bloot:
+
+• Kaart 1: De Onderstroom
+Wat speelt er onzichtbaar op de achtergrond? De onbewuste dynamiek, emoties of verborgen invloeden.
+
+• Kaart 2: De Blauwdruk
+Waar ligt het fundament en wat is de kern van jouw vraagstuk? De patronen en de potentie.
+
+• Kaart 3: Het Inzicht & De Beweging
+Wat is er nodig om verder te komen? De concrete richting om de energie weer te laten stromen.
+
+Snel, helder en direct toepasbaar in je dagelijks leven.</p>
+            <div class="prijs-tag">€88</div>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2 class="hero-name">Klaar voor <em>Rust &amp; Helderheid</em>?</h2>
+    <p style="margin-bottom: 30px;">Neem direct contact op om jouw traject of scan aan te vragen.</p>
+    <a href="mailto:tamara.esseveld@live.nl" target="_top" onclick="window.location.href='mailto:tamara.esseveld@live.nl'; return false;" class="btn-primary">Stuur een E-mail</a>
+    <p style="margin-top: 20px; font-size: 14px; color: var(--grey);">Of schrijf je in voor de <a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank" style="color: var(--gold);">nieuwsbrief</a></p>
+</section>
+
+<footer style="padding: 40px 20px; text-align: center; background: white; border-top: 1px solid #eee;">
+    <p style="font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em;">
+        © 2026 CelestialElora | 
+        <a href="voorwaarden.html" target="_blank" style="color: #b8964d; text-decoration: none;">Algemene Voorwaarden</a>
+    </p>
+</footer> 
+
+</body>
+</html>
