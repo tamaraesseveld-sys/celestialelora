@@ -9,7 +9,7 @@
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --dark-bg: #fdfaf5;   F
+            --dark-bg: #fdfaf5;   
             --card: #ffffff;      
             --gold: #b8964d;
             --text-main: #1a1a1a; 
@@ -73,21 +73,6 @@
         @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .over-content { text-align: left; }
 
-        /* DIENSTEN GRID (2x2 Structuur) */
-        #diensten { padding: 100px 20px; background: #fff; }
-        .diensten-section-title { text-align: center; margin-bottom: 40px; }
-        .diensten-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1400px; margin: 0 auto 60px; }
-        .dienst-card { background: var(--dark-bg); padding: 40px; border: 1px solid rgba(184, 150, 77, 0.15); transition: 0.4s ease; display: flex; flex-direction: column; }
-        .dienst-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(184, 150, 77, 0.1); }
-        .dienst-number { font-size: 35px; color: var(--gold); opacity: 0.3; font-family: var(--font-body); }
-        .dienst-name { font-family: var(--font-body); font-size: 24px; font-weight: 600; margin: 10px 0; color: #000; }
-        .dienst-desc { font-size: 17px; color: var(--grey); flex-grow: 1; margin-bottom: 20px; text-align: left; white-space: pre-line; }
-        .prijs-tag { font-family: var(--font-display); font-size: 10px; color: var(--gold); letter-spacing: 0.2em; border-top: 1px solid rgba(184, 150, 77, 0.1); padding-top: 15px; text-transform: uppercase; margin-bottom: 15px; }
-        
-        /* Luxe extra knop voor kaarten */
-        .btn-card { display: block; text-align: center; background: transparent; color: var(--gold); padding: 12px 20px; text-decoration: none; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); margin-top: auto; }
-        .btn-card:hover { background: var(--gold); color: white; }
-
         /* BUTTONS */
         .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 18px 40px; text-decoration: none; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); }
         .btn-primary:hover { background: transparent; color: var(--gold); }
@@ -106,7 +91,6 @@
             .over-visual { max-width: 300px; }
             #hero { padding-top: 150px; }
             #contact { padding: 60px 20px; }
-            .diensten-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -115,8 +99,8 @@
 <nav>
     <a href="#" class="logo">CelestialElora</a>
     <ul class="nav-links">
-        <li><a href="#diensten">Diensten</a></li>
-        <!-- RECHTSTREEKSE LINK NAAR JE ENQUETE/AANMELDPAGINA -->
+        <li><a href="Particulieren.html">Particulieren</a></li>
+        <li><a href="Bedrijven.html">Bedrijven</a></li>
         <li><a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" style="color: var(--gold); font-weight: 600;">Groepsreset Aanmelden</a></li>
         <li><a href="#over">Over Tamara</a></li>
         <li><a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank">Nieuwsbrief</a></li>
@@ -128,11 +112,12 @@
 <section id="hero">
     <p class="hero-label">Strategisch Inzicht &amp; Rendement</p>
     <h1 class="hero-name">De Business &amp; Systeem <em>Architect</em></h1>
-    <p class="hero-tagline">"Rust en succes beginnen bij de basis. Ik los de dieperliggende blokkades op in jouw leiderschap, gezin en onderneming</p>
+    <p class="hero-tagline">"Rust en succes beginnen bij de basis. Ik los de dieperliggende blokkades op in jouw leiderschap, gezin en onderneming"</p>
+    
+    <!-- 2 NIEUWE VAKJES / KNOPPEN NAAR DE PARICULIEREN EN BEDRIJVEN PAGINA'S -->
     <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-        <a href="#contact" class="btn-primary">Vraag een High-End Scan aan</a>
-        <!-- RECHTSTREEKSE LINK IN DE INTRO -->
-        <a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" class="btn-primary" style="background: transparent; color: var(--gold);">Groepsreset Aanmelden</a>
+        <a href="Particulieren.html" class="btn-primary">Voor Particulieren</a>
+        <a href="Bedrijven.html" class="btn-primary" style="background: transparent; color: var(--gold);">Voor Bedrijven</a>
     </div>
 </section>
 
@@ -148,232 +133,36 @@
     <div class="over-content">
         <p class="hero-label">De Vrouw achter De Architect</p>
         <h2 class="hero-name" style="font-size: 40px;">Celestial <em>Elora</em></h2>
-        <p style="margin-bottom: 15px;">Systemische Audits & Resets
-Ik ben Celestial
+        <p style="margin-bottom: 15px;">Systemische Audits & Resets<br>
+Ik ben Celestial<br><br>
 
-Mijn werk begint waar gesprekken, adviezen en traditionele trajecten vaak ophouden.
-Als je op deze pagina bent beland, loop je ergens vast. In je persoonlijke leven, binnen je gezin of in het leiderschap van je onderneming. Je voelt dat er onder de oppervlakte iets meespeelt, maar met logisch nadenken, erover praten of simpelweg nóg harder werken kom je niet bij de werkelijke kern.
-Dat is precies waar ik instap.
-Ik analyseer en scan de dieperliggende patronen van personen, gezinnen en organisaties. Ik kijk niet naar de uiterlijke symptomen, maar leg bloot waarom bepaalde situaties zich blijven herhalen of waarom de gewenste beweging uitblijft.
-Tijdens een Audit maak ik haarscherp zichtbaar waar de blokkade of frictie zit. Vervolgens begeleid ik een gerichte Reset van het fundament, zodat er direct weer ruimte, rust, richting en daadkracht ontstaat.
-Mijn werkwijze is direct, scherp en efficiënt. Geen maandenlange praatsessies of slepende trajecten, maar een snelle, gegarandeerde doorlichting van wat er werkelijk speelt.
-Of je nu kiest voor een snelle Flash Scan (persoonlijk of zakelijk) of een intensieve 3-daagse Systeem Reset: je krijgt direct haarscherp inzicht én een concrete herijking van jouw situatie.
+Mijn werk begint waar gesprekken, adviezen en traditionele trajecten vaak ophouden.<br>
+Als je op deze pagina bent beland, loop je ergens vast. In je persoonlijke leven, binnen je gezin of in het leiderschap van je onderneming. Je voelt dat er onder de oppervlakte iets meespeelt, maar met logisch nadenken, erover praten of simpelweg nóg harder werken kom je niet bij de werkelijke kern.<br><br>
 
-Werkwijze & Aanvragen
-Ik werk bewust met een beperkt aantal cliënten en organisaties tegelijk. Iedere aanvraag start daarom met een korte selectie om te bepalen of er een match is.
+Dat is precies waar ik instap.<br>
+Ik analyseer en scan de dieperliggende patronen van personen, gezinnen en organisaties. Ik kijk niet naar de uiterlijke symptomen, maar leg bloot waarom bepaalde situaties zich blijven herhalen of waarom de gewenste beweging uitblijft.<br><br>
 
-Wil je een aanvraag doen? Stuur een e-mail naar tamara.esseveld@live.nl met als onderwerp:
-AANVRAAG – [Naam van de dienst]
+Tijdens een Audit maak ik haarscherp zichtbaar waar de blokkade of frictie zit. Vervolgens begeleid ik een gerichte Reset van het fundament, zodat er direct weer ruimte, rust, richting en daadkracht ontstaat.<br><br>
+
+Mijn werkwijze is direct, scherp en efficiënt. Geen maandenlange praatsessies of slepende trajecten, maar een snelle, gegarandeerde doorlichting van wat er werkelijk speelt.<br><br>
+
+Of je nu kiest voor een snelle Flash Scan (persoonlijk of zakelijk) of een intensieve 3-daagse Systeem Reset: je krijgt direct haarscherp inzicht én een concrete herijking van jouw situatie.<br><br>
+
+<strong>Werkwijze & Aanvragen</strong><br>
+Ik werk bewust met een beperkt aantal cliënten en organisaties tegelijk. Iedere aanvraag start daarom met een korte selectie om te bepalen of er een match is.<br><br>
+
+Wil je een aanvraag doen? Stuur een e-mail naar tamara.esseveld@live.nl met als onderwerp:<br>
+AANVRAAG – [Naam van de dienst]<br><br>
 
 Vermeld hierin kort:
-
-Voor wie de aanvraag is (jouw situatie, gezin of organisatie);
-Waar je op dit moment tegenaan loopt;
-Waarom dit voor jou of jouw bedrijf het juiste moment is om door te pakken.
+<br>• Voor wie de aanvraag is (jouw situatie, gezin of organisatie);
+<br>• Waar je op dit moment tegenaan loopt;
+<br>• Waarom dit voor jou of jouw bedrijf het juiste moment is om door te pakken.<br><br>
 
 Je ontvangt binnen 48 uur een reactie met de vervolgstappen.</p>
 
         <p style="margin-bottom: 15px; font-style: italic; color: var(--gold);">Klaar om de regie en het fundament van jouw succes te herstellen?</p>
     </div>
-</section>
-
-<section id="diensten">
-    
-    <div class="diensten-section-title">
-        <p class="hero-label">Particulieren &amp; Gezinnen</p>
-        <h2 style="font-size: 40px; font-weight: 300; text-transform: uppercase;">Persoonlijk Fundament &amp; Alignment</h2>
-    </div>
-    
-    <div class="diensten-grid">
-        <!-- VAKJE 01 -->
-        <div class="dienst-card">
-            <div class="dienst-number">01</div>
-            <h3 class="dienst-name">The Personal Flash Scan</h3>
-            <p class="dienst-desc" style="margin-bottom: 10px;">Voor wie vastloopt in hardnekkige situaties en direct de werkelijke oorzaak boven tafel wil hebben.
-
-Eén gerichte vraag. Eén haarscherp inzicht.
-Heb je het gevoel dat je steeds tegen dezelfde muur aanloopt, maar kun je de vinger er niet op leggen? De Personal Flash Scan is een snelle, diepgaande analyse van jouw huidige situatie. Idealiter voor wie geen behoefte heeft aan lange praatsessies, maar direct wil weten waar de knoop zit.
-Tijdens deze scan neem je één concrete vraag of situatie mee. Ik doorgrond jouw persoonlijke situatie en analyseer onder andere:
-
-Jouw belastbaarheid en energiebalans: Waar lekt momenteel jouw energie weg?
-Onderliggende patronen: Welke onbewuste overtuigingen of gewoontes houden de situatie in stand?
-Blokkades en frictie: Waar stagneert de vooruitgang in jouw werk, relaties of persoonlijke groei?
-Na de scan ontvang je een heldere, directe terugkoppeling met mijn bevindingen. Dit is geen langdurig traject, maar een krachtige nulmeting en jouw eerste concrete doorbraak.
-
-Voorbeelden van vragen die je kunt inbrengen:
-"Waarom loop ik in mijn werk of onderneming steeds tegen dezelfde grens aan?"
-"Waarom kost mijn huidige situatie me zo overmatig veel energie?"
-"Waarom lukt het me niet om een bepaalde beslissing te nemen of situatie los te laten?"
-"Wat is op dit moment de grootste blokkade die mijn vooruitgang tegenhoudt?"</p>
-            
-            <p class="dienst-desc">Resultaat:Directe helderheid over de kern van het probleem, herwonnen rust en de exacte handvatten om de regie over jouw leven of werk weer volledig over te nemen.</p>
-            <div class="prijs-tag">Vanaf €144</div>
-        </div>
-          
-        <!-- VAKJE 02 -->
-        <div class="dienst-card">
-            <div class="dienst-number">02</div>
-            <h3 class="dienst-name">The Deep System Reset</h3>
-            <p class="dienst-desc">The Deep System Reset
-Voor wie voelt dat één audit niet voldoende is en de volledige blauwdruk opnieuw wil uitlijnen.
-
-Voor wie niet alleen inzicht wil, maar de verandering daadwerkelijk wil doorvoeren en verankeren. Je weet inmiddels waar de knelpunten zitten. Nu is het tijd om de patronen definitief te doorbreken en jouw fundament nieuw leven in te blazen.
-
-Basis Reset — Directe Herijking (€222)
-Voor wie: Een gerichte, eenmalige interventie rondom één specifiek thema (persoonlijk of zakelijk).
-Inclusief: Uitgebreide analyse, gerichte reset-sessie en een persoonlijke terugkoppeling met concrete actiepunten.
-
-Deep System Reset Intensive — 3 Dagen (€333)
-Voor wie: Dieperliggende patronen die meer aandacht, begeleiding en verankering vragen.
-Inhoud: Gedurende drie dagen werken we intensief aan de analyse, de verandering en het borgingsproces. Dagelijks stemmen we af om jouw voortgang te bewaken en bij te sturen waar nodig.
-Inclusief: Diepgaande analyse, 3 dagen begeleiding op maat, dagelijkse afstemming tijdens de integratie en een persoonlijke evaluatie na afloop.
-
-Elite VIP Reset — 3 Maanden Integration Traject (€555)
-Voor wie: Complexe persoonlijke, familiaire of zakelijke vraagstukken die vragen om een diepgaande herstructurering zonder het systeem te overbelasten.
-Inhoud: Echte, blijvende verandering heeft tijd nodig om te landen in je dagelijks leven en lichaam. In plaats van 5 opeenvolgende dagen, verdelen we deze intensieve transformatie over 5 gerichte reset-sessies in 3 maanden:
-
-Maand 1: 2x Reset (het doorbreken van de acute blokkades en de basis leggen)
-Maand 2: 2x Reset (herijking, verdieping en bijsturen in de praktijk)
-Maand 3: 1x Reset (definitieve verankering en borging van je nieuwe fundament)
-
-Inclusief: Uitgebreide beginanalyse, 5 krachtige 1-op-1 reset-sessies op maat, tussentijdse begeleiding tijdens de integratiefases, een omgevingsscan van je woon- of werkruimte voor maximale rust, en een eindrapportage met jouw persoonlijke vervolgstrategie.
-
-Het Resultaat:
-Na afloop beschik je over een stabiel en helder fundament. Oude, belemmerendinge patronen zijn doorbroken en gereset. Dit gives direct lucht: er ontstaat rust in je hoofd, scherpte in je keuzes en een natuurlijke vooruitgang in je werk, relaties en dagelijks leven.</p>
-            <div class="prijs-tag">Vanaf €222 / Op aanvraag</div>
-        </div>
-
-        <!-- VAKJE 03 -->
-        <div class="dienst-card">
-            <div class="dienst-number">03</div>
-            <h3 class="dienst-name">The Family Blueprint Scan</h3>
-            <p class="dienst-desc" style="margin-bottom: 10px; flex-grow: 0;">Voor gezinnen waarin een patroon niet alleen bij één persoon lijkt te liggen.
-                
-Hier kijk ik niet naar één individu, maar naar de dynamiek tussen de gezinsleden.
-
-Bijvoorbeeld:
-terugkerende spanningen;
-patronen tussen ouder en kind;
-onderlinge dynamiek;
-rollen binnen het gezin;
-waar volgens mijn methode de meeste belasting zichtbaar wordt.
-
-Gezinsscan Klein 2/3 personen— €333
-Gezinsscan Groot 4/5 personen — €499
-XL — €555 / op aanvraag</p>
-            <div class="prijs-tag" style="margin-top: auto;">vanaf €333 </div>
-        </div>
-
-        <!-- VAKJE 04 -->
-        <div class="dienst-card">
-            <div class="dienst-number">04</div>
-            <h3 class="dienst-name">De APK System Reset</h3>
-            <p class="dienst-desc">Meten is weten: Een snelle, grondige doorlichting van jouw persoonlijke of zakelijke motor.
-
-Net zoals je je auto periodiek naar de garage brengt voor een APK, heeft jouw eigen systeem (of dat van je bedrijf) ook regelmatig een grondige check nodig. Blijf je doordenderen op een vuil filter, dan valt de motor vanzelf stil.
-De APK System Reset is een snelle, diepgaande doorlichting waarin we binnen no-time de motorkap van jouw leven of business opentrekken. We kijken niet naar wat er aan de buitenkant mooi glimt, maar meten haarscherp waar de frictie zit, waar de energie weglekt en welke onderdelen direct onderhoud nodig hebben.
-
-Wat we scannen tijdens jouw APK:
-Jouw fysieke & mentale energieniveau: Waar loopt de accuspanning ongemerkt op leeg?
-Onderliggende blokkades: Welke vastgeroste patronen zorgen voor ruis op de lijn?
-Rijdbaarheid & Koers: Waar wringt het in je besluitvorming, creativiteit of actiekracht?
-
-Het resultaat:
-Geen vage adviezen of lange trajecten. Je krijgt een directe, haarscherpe statusupdate van jouw fundament én een heldere afstelling. Je rijdt weg met een schone motor, directe helderheid en de juiste brandstof om weer moeiteloos gas te geven.</p>
-            <div class="prijs-tag">€222</div>
-        </div>
-
-        <!-- VAKJE 05 (NIEUW TOEGEVOEGD) -->
-        <div class="dienst-card">
-            <div class="dienst-number">05</div>
-            <h3 class="dienst-name">De 3 Kaarten Scan</h3>
-            <p class="dienst-desc">Snel en gericht inzicht in jouw huidige situatie middels een intuïtieve 3-kaarten scan.
-
-Een 3 Kaarten Scan is een snelle, haarscherpe afstemming op jouw situatie. Waar je met je hoofd soms blijft cirkelen in twijfel of vragen, kijken we met deze scan direct onder de oppervlakte.
-Je brengt één concrete vraag in waaraan je helderheid over wilt. Aan de hand van drie tarotkaarten leggen we de lagen bloot die op dit moment actief zijn:
-
-Kaart 1: De Onderstroom
-Wat speelt er onzichtbaar op de achtergrond? We kijken naar de onbewuste dynamiek, emoties of verborgen invloeden die jouw situatie sturen zonder dat je het doorhebt.
-
-Kaart 2: De Blauwdruk
-Waar ligt het fundament en wat is het grotere plaatje? Deze kaart laat de kern van jouw vraagstuk zien: de patronen, de potentie en wat er in essentie wil gebeuren.
-
-Kaart 3: Het Inzicht & De Beweging
-Wat is er nodig om verder te komen? Dit geeft je de concrete richting, de sleutel of de actie die nodig is om de energie weer te laten stromen.
-
-Geen ingewikkelde verhalen of langdurige sessies, maar een heldere, gegronde nulmeting. Je krijgt een haarscherpe spiegel voorgehouden en direct toepasbaar inzicht om weer te voelen welke stap jou dient.
-Snel, helder en direct toepasbaar in je dagelijks leven.</p>
-            <div class="prijs-tag">€88</div>
-        </div>
-    </div>
-
-    <div class="diensten-section-title" style="margin-top: 50px;">
-        <p class="hero-label">Bedrijven &amp; Multinationals</p>
-        <h2 style="font-size: 40px; font-weight: 300; text-transform: uppercase;">Corporate Architecture &amp; Operations</h2>
-    </div>
-
-    <!-- GEKORTE EN HERNUMMERDE GRID VOOR BEDRIJVEN -->
-    <div class="diensten-grid">
-        <!-- VAKJE 06 -->
-        <div class="dienst-card">
-            <div class="dienst-number">06</div>
-            <h3 class="dienst-name">The Corporate Quickscan</h3>
-            <p class="dienst-desc"><strong>Een audit van de onderliggende blauwdruk van jouw organisatie.</strong>
-Systeemanalyse & Nulmeting voor Organisaties
-
-Doorbreek hardnekkige blokkades in leiderschap, teamdynamiek en bedrijfsvoering.
-Organisaties lopen zelden vast door wat er op papier staat. De werkelijke oorzaak van stagnatie bevindt zich vrijwel altijd in de onderstroom: onuitgesproken spanningen binnen het management, onduidelijke rolverdelingen, communicatieruis of een bedrijfscultuur die onbewust innovatie en groei afremt.
-De Corporate Quickscan is een vlijmscherpe diagnose van het fundament van jouw organisatie. Ik leg direct de vinger op de zere plek en onderzoek welke onzichtbare dynamieken de samenwerking, besluitvorming en het rendement beïnvloeden.
-
-Waar richt de Quickscan zich op?
-Team- en managementdynamiek: Waar schuurt de samenwerking op directie- of MT-niveau?
-Communicatie & Besluitvorming: Waar ontstaat ruis, vertraging of herhaalde frictie?
-Leiderschap & Rolverdeling: Zitten de juiste mensen op de juiste plek met de juiste verantwoordelijkheid?
-Belastbaarheid & Werkdruk: Waar lekt energie en effectiviteit weg binnen teams of afdelingen?
-Groeiblokkades: Welke hardnekkige patronen belemmeren de verdere schaalbaarheid of winstgevendheid van de onderneming?
-
-Na afloop ontvang je een heldere, objectieve rapportage van de analyse, inclusief een concreet strategisch advies voor het herstellen van de rust, helderheid en slagkracht.
-
-Voor wie?
-Directies & CEO's die snel tot de kern van een organisatorisch probleem willen komen.
-Managementteams (MT's) die vastlopen in samenwerking of besluitvorming.
-Familiebedrijven waar persoonlijke en zakelijke belangen ongemerkt door elkaar lopen.
-MKB-ondernemingen die willen schalen, maar stuiten op interne weerstand of stagnatie.
-
-De basis voor duurzame verandering
-De Corporate Quickscan vormt de start van elk zakelijk natraject. Het dient als een onafhankelijke nulmeting voordat er gekozen wordt voor een vervolg, zoals het Corporate Alignment Programma.</p>
-            <div class="prijs-tag">Op aanvraag</div>
-        </div>
-
-        <!-- VAKJE 07 -->
-        <div class="dienst-card">
-            <div class="dienst-number">07</div>
-            <h3 class="dienst-name">Corporate Blueprint Alignment</h3>
-            <p class="dienst-desc" style="margin-bottom: 10px;">Strategische begeleiding voor ondernemers, bestuurders en leiders die hun organisatie duurzaam willen laten groeien vanuit een ijzersterk fundament.
-Na de Corporate Quickscan zijn de belangrijkste knelpunten en groeikansen haarscherp in kaart gebracht. Het Corporate Alignment Traject is ontworpen voor organisaties die deze inzichten willen omzetten in blijvende, meetbare resultaten.
-
-Samen bouwen we aan een organisatie waarin structuur, leiderschap en besluitvorming naadloos op elkaar aansluiten. Niet door harder te werken of meer druk op de organisatie te leggen, maar door de onderstroom, de organisatiecultuur en het leiderschap continu te stroomlijnen en bij te sturen.
-
-Beschikbare Trajecten:
-
-*Operations Reset & Burn-out Interventie — 3 Dagen
-Focus: Operationele herstructurering, acute burn-out interventie en herstel van belastbaarheid.
-Inhoud: Een intensieve doorlichting van de operationele processen, werkdruk en onderliggende spanningen. We leggen bloot waar energie lekt, waar overbelasting ontstaat en welke patronen tot uitval leiden. We vertalen dit direct naar een concreet actieplan gericht op rust, herstelde belastbaarheid, overzicht en gestroomlijnde workflows.
-
-*Vanguard Leadership Track — 6 Maanden
-Focus: Leiderschapsontwikkeling, duurzame belastbaarheid en burn-out preventie voor CEO's, oprichters en directieleden.
-Inhoud: Voor leiders die hun persoonlijke impact en stuurmanskunst willen vergroten terwijl de onderneming schaalt. We werken aan strategische besluitvorming, persoonlijke belastbaarheid, duidelijke rolinvulling en de versterking van jouw leiderschapsprofiel zonder dat dit ten koste gaat van jouw energie.
-
-*Executive Advisory Partnership — Jaarlijkse Retainer
-Focus: Exclusieve strategische begeleiding op achtergrondniveau.
-Inhoud: Een continu, discreet partnership waarbij ik optreed als onafhankelijk sparringpartner en auditor bij cruciale transformaties. Idealiter bij complexe overnames, herstructureringen, board-besluiten, investeringen en grote organisatieveranderingen.
-
-Het Resultaat:
-Een gestroomlijnde organisatie waarin leiderschap, cultuur en bedrijfsvoering volledig in balans zijn. Dit leidt tot snellere en betere besluitvorming, een reductie van interne frictie, en een solide basis voor duurzame en schaalbare groei.</p>
-            <div class="prijs-tag">Op aanvraag</div>
-        </div>
-    </div>
-
 </section>
 
 <section id="contact">
