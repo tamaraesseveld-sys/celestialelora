@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CelestialElora | Systemische Audits & Resets voor Bedrijven & Organisaties</title>
+    <meta name="description" content="CelestialElora helpt leiders, teams en organisaties onderliggende blokkades doorbreken via Corporate & Systemische Audits. Directe helderheid en alignment.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght=400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --dark-bg: #fdfaf5;   
+            --card: #ffffff;      
+            --gold: #b8964d;
+            --text-main: #1a1a1a; 
+            --grey: #5a5a5a;
+            --font-display: 'Cinzel', serif;
+            --font-body: 'Cormorant Garamond', serif;
+        }
+        html { scroll-behavior: smooth; }
+        body { background: var(--dark-bg); color: var(--text-main); font-family: var(--font-body); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
+
+        /* NAVBAR */
+        nav { 
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100; 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 15px 40px; background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(20px); border-bottom: 2px solid var(--gold); 
+        }
+        .logo { font-family: var(--font-display); font-size: 18px; letter-spacing: 0.3em; text-decoration: none; color: var(--text-main); text-transform: uppercase; }
+        
+        .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+        .nav-links a { font-family: var(--font-display); font-size: 11px; text-decoration: none; color: var(--text-main); text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a.switch-page { border: 1px solid var(--gold); padding: 5px 10px; border-radius: 2px; }
+
+        /* HERO */
+        #hero { padding: 200px 20px 100px; text-align: center; background: var(--dark-bg); min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .hero-label { font-family: var(--font-display); font-size: 12px; color: var(--gold); letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 20px; }
+        .hero-name { font-size: clamp(35px, 8vw, 65px); font-weight: 300; margin-bottom: 20px; text-transform: uppercase; line-height: 1.1; }
+        .hero-name em { font-style: italic; color: var(--gold); font-weight: 400; }
+        .hero-tagline { max-width: 750px; margin: 0 auto 40px; font-size: 22px; font-style: italic; color: var(--grey); }
+
+        /* OVER MIJ SECTIE */
+        #over { padding: 100px 40px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        
+        .over-visual { position: relative; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 380px; margin: 0 auto; }
+        
+        .over-visual::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--gold);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .portrait-frame { 
+            width: 100%; 
+            height: auto; 
+            aspect-ratio: 3 / 4; 
+            object-fit: cover; 
+            z-index: 2; 
+            border: 1px solid var(--gold); 
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+            background: #fff;
+            position: relative;
+        }
+        
+        .sacred-geo { position: absolute; width: 480px; height: 480px; opacity: 0.15; animation: rotate 60s linear infinite; z-index: 0; }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .over-content { text-align: left; }
+
+        /* DIENSTEN GRID */
+        #diensten { padding: 100px 20px; background: #fff; }
+        .diensten-section-title { text-align: center; margin-bottom: 40px; }
+        .diensten-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1400px; margin: 0 auto; }
+        .dienst-card { background: var(--dark-bg); padding: 40px; border: 1px solid rgba(184, 150, 77, 0.15); transition: 0.4s ease; display: flex; flex-direction: column; }
+        .dienst-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(184, 150, 77, 0.1); }
+        .dienst-number { font-size: 35px; color: var(--gold); opacity: 0.3; font-family: var(--font-body); }
+        .dienst-name { font-family: var(--font-body); font-size: 24px; font-weight: 600; margin: 10px 0; color: #000; }
+        .dienst-desc { font-size: 17px; color: var(--grey); flex-grow: 1; margin-bottom: 20px; text-align: left; white-space: pre-line; }
+        .prijs-tag { font-family: var(--font-display); font-size: 10px; color: var(--gold); letter-spacing: 0.2em; border-top: 1px solid rgba(184, 150, 77, 0.1); padding-top: 15px; text-transform: uppercase; margin-bottom: 15px; }
+        
+        .btn-card { display: block; text-align: center; background: transparent; color: var(--gold); padding: 12px 20px; text-decoration: none; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); margin-top: auto; }
+        .btn-card:hover { background: var(--gold); color: white; }
+
+        /* BUTTONS */
+        .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 18px 40px; text-decoration: none; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); }
+        .btn-primary:hover { background: transparent; color: var(--gold); }
+
+        /* CONTACT */
+        #contact { padding: 100px 20px; text-align: center; background: var(--dark-bg); clear: both; width: 100%; display: block; }
+        #contact .hero-name { margin-bottom: 10px; }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+            nav { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            #over { grid-template-columns: 1fr; text-align: center; padding: 60px 20px; }
+            .over-content { text-align: center; }
+            .sacred-geo { width: 340px; height: 340px; }
+            .over-visual { max-width: 300px; }
+            #hero { padding-top: 150px; }
+            #contact { padding: 60px 20px; }
+            .diensten-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo">CelestialElora</a>
+    <ul class="nav-links">
+        <li><a href="#diensten">Zakelijk Aanbod</a></li>
+        <li><a href="#over">Over Tamara</a></li>
+        <li><a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank">Nieuwsbrief</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="particulieren.html" class="switch-page">Voor Particulieren</a></li>
+        <li><a href="en/" style="color: var(--gold); font-weight: 600;">EN</a></li>
+    </ul>
+</nav>
+
+<section id="hero">
+    <p class="hero-label">Corporate Alignment &amp; Organisatie Dynamiek</p>
+    <h1 class="hero-name">Corporate Systemic <em>Audits &amp; Resets</em></h1>
+    <p class="hero-tagline">"Duurzame groei en effectief leiderschap beginnen bij een zuiver fundament. Ik ontrafel de onzichtbare frictie binnen teams, directies en organisatiestructuren."</p>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+        <a href="#diensten" class="btn-primary">Bekijk Zakelijk Aanbod</a>
+        <a href="#contact" class="btn-primary" style="background: transparent; color: var(--gold);">Direct Audit Aanvragen</a>
+    </div>
+</section>
+
+<section id="over">
+    <div class="over-visual">
+        <svg class="sacred-geo" viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="180" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+            <polygon points="200,40 346,130 346,270 200,360 54,270 54,130" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+            <circle cx="200" cy="200" r="120" fill="none" stroke="#b8964d" stroke-width="0.5"/>
+        </svg>
+        <img src="tamara-blueprint.jpg" alt="Celestial Elora" class="portrait-frame">
+    </div>
+    <div class="over-content">
+        <p class="hero-label">Systemische Organisatie-Analyse</p>
+        <h2 class="hero-name" style="font-size: 40px;">Corporate <em>Auditor</em></h2>
+        <p style="margin-bottom: 15px;">Achter elk haperend proces, tegenvallende resultaten of hardnekkige frictie in een team schuilt een onderliggende dynamiek die niet met traditionele KPI's of managementmodellen op te lossen is.</p>
+        <p style="margin-bottom: 15px;">Als Corporate Systemic Auditor breng ik haarscherp in kaart waar de energie binnen een organisatie stagneert. Of het nu gaat om misalignement binnen een directie, terugkerende patronen in personeelsverloop, of een strategische koers die op papier klopt maar in de praktijk niet van de grond komt.</p>
+        <p style="margin-bottom: 15px;">Ik doorlicht het organisatiesysteem snel, scherp en zonder politieke ruis. Waar consultants vaak maanden nodig hebben voor dikke rapporten, leg ik binnen een audit direct de vinger op de zere plek en reik ik heldere stappen aan voor een duurzame reset.</p>
+
+        <h3 style="font-family: var(--font-display); font-size: 16px; color: var(--gold); margin-top: 25px; margin-bottom: 10px; text-transform: uppercase;">Corporate Aanvragen</h3>
+        <p style="margin-bottom: 15px;">Vanwege de intensiviteit van zakelijke trajecten accepteer ik een beperkt aantal organisatie-audits per kwartaal.</p>
+        <p style="margin-bottom: 15px;">Aanvragen verlopen via e-mail naar <strong>tamara.esseveld@live.nl</strong> met als onderwerp: <em>ZAKELIJK – [Naam Organisatie / Traject]</em>.</p>
+        <p style="margin-bottom: 15px; font-size: 16px; color: var(--grey);">Vermeld kort de omvang van de organisatie, het huidige knelpunt en de gewenste termijn. Binnen 24 uur nemen we contact op voor een korte intake.</p>
+
+        <p style="margin-top: 20px; font-style: italic; color: var(--gold);">Klaar om de stroming en helderheid binnen uw organisatie te herstellen?</p>
+    </div>
+</section>
+
+<section id="diensten">
+    
+    <div class="diensten-section-title">
+        <p class="hero-label">Zakelijk Aanbod</p>
+        <h2 style="font-size: 40px; font-weight: 300; text-transform: uppercase;">Organisatiedynamiek &amp; Leiderschap</h2>
+    </div>
+    
+    <div class="diensten-grid">
+        <!-- VAKJE 01 -->
+        <div class="dienst-card">
+            <div class="dienst-number">01</div>
+            <h3 class="dienst-name">Executive Strategic Flash Scan</h3>
+            <p class="dienst-desc">Voor leiders, ondernemers en C-level executives die voor een cruciale beslissing staan of stagnatie ervaren.
+
+Eén strategisch vraagstuk. Eén diepgaande analyse.
+Loop je vast op een strategische beslissing, is er sprake van onverklaarbare frictie in het leiderschapsteam, of wil je de haalbaarheid van een nieuwe koers toetsen? 
+
+Tijdens deze scan analyseren we:
+• De onderstroom binnen de leiderschapslaag
+• Verborgen blokkades op het gebied van groei en omzet
+• Blinde vlekken in besluitvorming en strategie
+
+Resultaat: Directe scherpte, het wegnemen van twijfel en een heldere routekaart voor het leiderschap.</p>
+            <div class="prijs-tag">Op aanvraag / Vanaf €495 ex. BTW</div>
+        </div>
+          
+        <!-- VAKJE 02 -->
+        <div class="dienst-card">
+            <div class="dienst-number">02</div>
+            <h3 class="dienst-name">Corporate Team Dynamics Audit</h3>
+            <p class="dienst-desc">Voor teams en afdelingen waar frictie, eilandjescultuur of hoog ziekteverzuim de resultaten belemmeren.
+
+Symptomen aanpakken werkt niet als de onderliggende verhoudingen scheef zitten. In deze audit kijken we naar het complete team als samenhangend systeem.
+
+We analyseren:
+• Onuitgesproken verhoudingen en hiërarchische ruis
+• Waar energie lekt en waarom samenwerking stokt
+• De werkelijke oorzaak van verloop of weerstand tegen verandering
+
+Resultaat: Transparantie in de onderlinge verhoudingen, verhoogde betrokkenheid en een herstelde flow op de werkvloer.</p>
+            <div class="prijs-tag">Op aanvraag / Maatwerk</div>
+        </div>
+
+        <!-- VAKJE 03 -->
+        <div class="dienst-card">
+            <div class="dienst-number">03</div>
+            <h3 class="dienst-name">Organization Blueprint & Reset</h3>
+            <p class="dienst-desc">Een compleet doorlichtingstraject voor organisaties die aan de vooravond staan van een grote transformatie, fusie of herstructurering.
+
+Een intensief traject waarin we het gehele organisatiesysteem doorlichten. We kijken niet alleen naar de structuur op papier, maar naar de feitelijke stroom van verantwoordelijkheid, visie en leiderschap.
+
+Inclusief:
+• 1-op-1 audits met sleutelfiguren binnen de organisatie
+• Systemische opstellingen van het organisatieveld
+• Uitgebreid analyserapport met concrete transformatiestappen
+• Begeleiding van het borgingsproces
+
+Resultaat: Een zuiver uitgelijnde organisatie, klaar voor duurzame schaalvergroting en gezonde groei.</p>
+            <div class="prijs-tag">Maatwerk traject</div>
+        </div>
+
+        <!-- VAKJE 04 -->
+        <div class="dienst-card">
+            <div class="dienst-number">04</div>
+            <h3 class="dienst-name">Executive Systemic Sparring</h3>
+            <p class="dienst-desc">Continue klankbordondersteuning voor de CEO, DGA of directie.
+
+Als leider sta je er soms alleen voor. Met Executive Systemic Sparring heb je een onafhankelijke, scherpe sparringpartner aan je zijde die meekijkt onder de oppervlakte van je dagelijkse bedrijfsvoering.
+
+• Maandelijkse strategische auditsessie
+• Directe reflectie bij acute vraagstukken of conflicten
+• Blijvende bewaking van jouw persoonlijke en zakelijke alignment
+
+Resultaat: Scherpte in keuzes, voorkomen van kostbare misstappen en een leider die krachtig in zijn/haar fundament staat.</p>
+            <div class="prijs-tag">Periodiek retraintraject</div>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2 class="hero-name">Klaar voor <em>Organisatorische Helderheid</em>?</h2>
+    <p style="margin-bottom: 30px;">Neem contact op voor een intakegesprek of vrijblijvende offerte.</p>
+    <a href="mailto:tamara.esseveld@live.nl" target="_top" onclick="window.location.href='mailto:tamara.esseveld@live.nl'; return false;" class="btn-primary">Zakelijke Aanvraag Doen</a>
+    <p style="margin-top: 20px; font-size: 14px; color: var(--grey);">Of schrijf je in voor de zakelijke <a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank" style="color: var(--gold);">nieuwsbrief</a></p>
+</section>
+
+<footer style="padding: 40px 20px; text-align: center; background: white; border-top: 1px solid #eee;">
+    <p style="font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em;">
+        © 2026 CelestialElora | 
+        <a href="voorwaarden.html" target="_blank" style="color: #b8964d; text-decoration: none;">Algemene Voorwaarden</a>
+    </p>
+</footer> 
+
+</body>
+</html>
+```
+
+In dit document voor de zakelijke pagina zijn de volgende specifieke aanpassingen doorgevoerd:
+
+1. **Zakelijke propositie & positionering:** De invalshoek is aangepast naar leiderschap, teamdynamiek, organisatiestructuren en strategische besluitvorming.
+2. **Nieuw zakelijk aanbod:**
+   * *Executive Strategic Flash Scan*
+   * *Corporate Team Dynamics Audit*
+   * *Organization Blueprint & Reset*
+   * *Executive Systemic Sparring*
+3. **Navigatie & Koppeling:** De navigatie bevat nu de knop **"Voor Particulieren"** (`particulieren.html`), zodat bezoekers naadloos heen en weer kunnen navigeren tussen de particuliere en zakelijke tak.
