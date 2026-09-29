@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Personal Flash Scan | CelestialElora</title>
+    <meta name="description" content="Eén gerichte vraag. Eén haarscherp inzicht. Doorbreek hardnekkige blokkades met The Personal Flash Scan door CelestialElora.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght=400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --dark-bg: #fdfaf5;   
+            --card: #ffffff;      
+            --gold: #b8964d;
+            --text-main: #1a1a1a; 
+            --grey: #5a5a5a;
+            --font-display: 'Cinzel', serif;
+            --font-body: 'Cormorant Garamond', serif;
+        }
+        html { scroll-behavior: smooth; }
+        body { background: var(--dark-bg); color: var(--text-main); font-family: var(--font-body); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
 
+        /* NAVBAR */
+        nav { 
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100; 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 15px 40px; background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(20px); border-bottom: 2px solid var(--gold); 
+        }
+        .logo { font-family: var(--font-display); font-size: 18px; letter-spacing: 0.3em; text-decoration: none; color: var(--text-main); text-transform: uppercase; }
+        
+        .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+        .nav-links a { font-family: var(--font-display); font-size: 11px; text-decoration: none; color: var(--text-main); text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* HERO SECTION */
+        #page-hero { 
+            padding: 180px 20px 80px; 
+            text-align: center; 
+            background: var(--dark-bg); 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        .hero-label { font-family: var(--font-display); font-size: 12px; color: var(--gold); letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 15px; }
+        .hero-title { font-size: clamp(32px, 6vw, 54px); font-weight: 300; margin-bottom: 20px; text-transform: uppercase; line-height: 1.1; }
+        .hero-title em { font-style: italic; color: var(--gold); font-weight: 400; }
+        .hero-subtitle { max-width: 750px; font-size: 22px; font-style: italic; color: var(--grey); margin-bottom: 30px; }
+
+        /* CONTENT SECTION */
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 30px;
+            background: var(--card);
+            border: 1px solid rgba(184, 150, 77, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            margin-bottom: 80px;
+        }
+
+        .section-block { margin-bottom: 40px; }
+        .section-block h2 { font-family: var(--font-display); font-size: 22px; color: var(--gold); margin-bottom: 15px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .section-block p { color: var(--grey); font-size: 19px; margin-bottom: 15px; text-align: justify; }
+        
+        .bullet-list { list-style: none; margin: 20px 0; }
+        .bullet-list li { position: relative; padding-left: 25px; margin-bottom: 12px; color: var(--text-main); font-size: 18px; }
+        .bullet-list li::before { content: "✦"; position: absolute; left: 0; color: var(--gold); }
+
+        .price-box {
+            background: var(--dark-bg);
+            border: 1px solid var(--gold);
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .price-amount { font-family: var(--font-display); font-size: 28px; color: var(--gold); margin: 10px 0; }
+
+        /* BUTTONS */
+        .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 18px 40px; text-decoration: none; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; transition: 0.3s; border: 1px solid var(--gold); }
+        .btn-primary:hover { background: transparent; color: var(--gold); }
+
+        /* FOOTER */
+        footer { padding: 40px 20px; text-align: center; background: white; border-top: 1px solid #eee; }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            #page-hero { padding-top: 140px; }
+            .content-container { padding: 30px 20px; }
+            .section-block p { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">CelestialElora</a>
+    <ul class="nav-links">
+        <li><a href="index.html#diensten">Alle Diensten</a></li>
+        <li><a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" style="color: var(--gold); font-weight: 600;">Groepsreset Aanmelden</a></li>
+        <li><a href="index.html#over">Over Tamara</a></li>
+        <li><a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank">Nieuwsbrief</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="page-hero">
+    <p class="hero-label">Dienst 01 — Particulieren &amp; Gezinnen</p>
+    <h1 class="hero-title">The Personal <em>Flash Scan</em></h1>
+    <p class="hero-subtitle">"Eén gerichte vraag. Eén haarscherp inzicht. Voor wie vastloopt in hardnekkige situaties en direct de werkelijke oorzaak boven tafel wil hebben."</p>
+</section>
+
+<div class="content-container">
+
+    <div class="section-block">
+        <h2>Direct Inzicht Zonder Slepende Trajecten</h2>
+        <p>Heb je het gevoel dat je steeds tegen dezelfde muur aanloopt, maar kun je de vinger er niet op leggen? De Personal Flash Scan is een snelle, diepgaande analyse van jouw huidige situatie. Ideaal voor wie geen behoefte heeft aan lange praatsessies, maar direct wil weten waar de knoop zit.</p>
+    </div>
+
+    <div class="section-block">
+        <h2>Wat We Analyseert Tijdens De Scan</h2>
+        <p>Tijdens deze scan neem je één concrete vraag of situatie mee. Ik doorgrond jouw persoonlijke situatie en analyseer onder andere:</p>
+        <ul class="bullet-list">
+            <li><strong>Jouw belastbaarheid en energiebalans:</strong> Waar lekt momenteel jouw energie weg?</li>
+            <li><strong>Onderliggende patronen:</strong> Welke onbewuste overtuigingen of gewoontes houden de situatie in stand?</li>
+            <li><strong>Blokkades en frictie:</strong> Waar stagneert de vooruitgang in jouw werk, relaties of persoonlijke groei?</li>
+        </ul>
+        <p>Na de scan ontvang je een heldere, directe terugkoppeling met mijn bevindingen. Dit is geen langdurig traject, maar een krachtige nulmeting en jouw eerste concrete doorbraak.</p>
+    </div>
+
+    <div class="section-block">
+        <h2>Voorbeeldvragen Die Je Kunt Inbrengen</h2>
+        <ul class="bullet-list">
+            <li>"Waarom loop ik in mijn werk of onderneming steeds tegen dezelfde grens aan?"</li>
+            <li>"Waarom kost mijn huidige situatie me zo overmatig veel energie?"</li>
+            <li>"Waarom lukt het me niet om een bepaalde beslissing te nemen of situatie los te laten?"</li>
+            <li>"Wat is op dit moment de grootste blokkade die mijn vooruitgang tegenhoudt?"</li>
+        </ul>
+    </div>
+
+    <div class="section-block">
+        <h2>Het Resultaat</h2>
+        <p>Directe helderheid over de kern van het probleem, herwonnen rust en de exacte handvatten om de regie over jouw leven of werk weer volledig over te nemen.</p>
+    </div>
+
+    <div class="price-box" id="contact">
+        <p class="hero-label">Investering &amp; Aanvragen</p>
+        <div class="price-amount">Vanaf €144</div>
+        <p style="font-size: 16px; color: var(--grey); margin-bottom: 25px;">
+            Stuur een e-mail naar <strong>tamara.esseveld@live.nl</strong> met als onderwerp:<br>
+            <em>AANVRAAG – Personal Flash Scan</em>
+        </p>
+        <a href="mailto:tamara.esseveld@live.nl?subject=AANVRAAG%20%E2%80%93%20Personal%20Flash%20Scan" class="btn-primary">Aanvraag Versturen</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="index.html#diensten" style="color: var(--gold); text-decoration: none; font-family: var(--font-display); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">← Terug naar alle diensten</a>
+    </div>
+
+</div>
+
+<footer>
+    <p style="font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em;">
+        © 2026 CelestialElora | 
+        <a href="voorwaarden.html" target="_blank" style="color: var(--gold); text-decoration: none;">Algemene Voorwaarden</a>
+    </p>
+</footer>
+
+</body>
+</html>
