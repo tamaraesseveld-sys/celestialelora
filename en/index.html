@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CelestialElora | Systemic Audits & Resets for Individuals & Families</title>
-    <meta name="description" content="CelestialElora helps individuals and families break through blockages via Systemic Audits and Resets. Immediate clarity, no drawn-out programs. Request a scan.">
+    <title>CelestialElora | Systemic Audits & Resets for Individuals, Families & Organizations</title>
+    <meta name="description" content="CelestialElora helps individuals, families, leaders, and organizations break through underlying blockages via Systemic Audits and Resets. Immediate clarity, no drawn-out programs.">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght=400;500&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,7 +29,7 @@
         }
         .logo { font-family: var(--font-display); font-size: 18px; letter-spacing: 0.3em; text-decoration: none; color: var(--text-main); text-transform: uppercase; }
         
-        .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+        .nav-links { display: flex; gap: 18px; list-style: none; align-items: center; }
         .nav-links a { font-family: var(--font-display); font-size: 11px; text-decoration: none; color: var(--text-main); text-transform: uppercase; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
         .nav-links a.switch-page { border: 1px solid var(--gold); padding: 5px 10px; border-radius: 2px; }
@@ -39,7 +39,7 @@
         .hero-label { font-family: var(--font-display); font-size: 12px; color: var(--gold); letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 20px; }
         .hero-name { font-size: clamp(35px, 8vw, 65px); font-weight: 300; margin-bottom: 20px; text-transform: uppercase; line-height: 1.1; }
         .hero-name em { font-style: italic; color: var(--gold); font-weight: 400; }
-        .hero-tagline { max-width: 700px; margin: 0 auto 40px; font-size: 22px; font-style: italic; color: var(--grey); }
+        .hero-tagline { max-width: 750px; margin: 0 auto 40px; font-size: 22px; font-style: italic; color: var(--grey); }
 
         /* ABOUT SECTION */
         #over { padding: 100px 40px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -75,10 +75,12 @@
         .over-content { text-align: left; }
 
         /* SERVICES GRID */
-        #diensten { padding: 100px 20px; background: #fff; }
+        .diensten-section { padding: 100px 20px; background: #fff; }
+        .diensten-section.corporate-bg { background: var(--dark-bg); border-top: 1px solid rgba(184, 150, 77, 0.2); border-bottom: 1px solid rgba(184, 150, 77, 0.2); }
         .diensten-section-title { text-align: center; margin-bottom: 40px; }
         .diensten-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1400px; margin: 0 auto; }
         .dienst-card { background: var(--dark-bg); padding: 40px; border: 1px solid rgba(184, 150, 77, 0.15); transition: 0.4s ease; display: flex; flex-direction: column; }
+        .corporate-bg .dienst-card { background: #ffffff; }
         .dienst-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(184, 150, 77, 0.1); }
         .dienst-number { font-size: 35px; color: var(--gold); opacity: 0.3; font-family: var(--font-body); }
         .dienst-name { font-family: var(--font-body); font-size: 24px; font-weight: 600; margin: 10px 0; color: #000; }
@@ -115,23 +117,23 @@
 <nav>
     <a href="#" class="logo">CelestialElora</a>
     <ul class="nav-links">
-        <li><a href="#diensten">Private Services</a></li>
-        <li><a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" style="color: var(--gold); font-weight: 600;">Group Reset Registration</a></li>
+        <li><a href="#diensten-particulieren">Individuals &amp; Families</a></li>
+        <li><a href="#diensten-bedrijven">Corporate</a></li>
+        <li><a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" style="color: var(--gold); font-weight: 600;">Group Reset</a></li>
         <li><a href="#over">About Tamara</a></li>
         <li><a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank">Newsletter</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="../zakelijk.html" class="switch-page">For Businesses</a></li>
-        <li><a href="../Particulieren.html" style="color: var(--gold); font-weight: 600;">NL</a></li>
+        <li><a href="../Particulieren.html" class="switch-page">NL</a></li>
     </ul>
 </nav>
 
 <section id="hero">
-    <p class="hero-label">Personal Foundation &amp; Inner Calm</p>
+    <p class="hero-label">Personal Foundation &amp; Corporate Alignment</p>
     <h1 class="hero-name">Systemic Audits &amp; <em>Resets</em></h1>
-    <p class="hero-tagline">"Calm and fulfillment start at the base. I resolve the deeper-lying blockages in your personal life and family."</p>
+    <p class="hero-tagline">"Calm, sustainable growth, and effective leadership start at the base. I resolve deeper-lying blockages in personal lives, families, and organizational structures."</p>
     <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-        <a href="#diensten" class="btn-primary">View the offer</a>
-        <a href="https://tamaraesseveld-sys.github.io/celestialeloramaster/" class="btn-primary" style="background: transparent; color: var(--gold);">Group Reset Registration</a>
+        <a href="#diensten-particulieren" class="btn-primary">Individuals &amp; Families</a>
+        <a href="#diensten-bedrijven" class="btn-primary" style="background: transparent; color: var(--gold);">Corporate &amp; Organizations</a>
     </div>
 </section>
 
@@ -147,21 +149,21 @@
     <div class="over-content">
         <p class="hero-label">Systemic Audits &amp; Resets</p>
         <h2 class="hero-name" style="font-size: 40px;">I am <em>Celestial</em></h2>
-        <p style="margin-bottom: 15px;">My work begins where conversations, advice, and traditional programs often stop.</p>
-        <p style="margin-bottom: 15px;">If you have landed on this page, you are stuck somewhere. In your personal life or within your family. You feel that something is playing out beneath the surface, but logical thinking, talking about it, or simply trying even harder won't get you to the real core.</p>
-        <p style="margin-bottom: 15px;">That is exactly where I step in. I analyze and scan the deeper-lying patterns of individuals and families. I don't look at outward symptoms, but expose why certain situations keep repeating themselves or why desired movement fails to happen.</p>
-        <p style="margin-bottom: 15px;">During an Audit, I make crystal clear where the blockage or friction is located. Then I guide a targeted Reset of the foundation, so that space, calm, direction, and decisive power are immediately restored. No months-long talk sessions or drawn-out trajectories, but a fast, guaranteed examination of what is truly going on.</p>
+        <p style="margin-bottom: 15px;">My work begins where conversations, advice, traditional programs, and standard management models often stop.</p>
+        <p style="margin-bottom: 15px;">Whether you are stuck in your personal life or family, or facing recurring friction, stagnating results, or leadership misalignment within an organization: beneath the surface, deeper patterns are at play that logical thinking or political noise cannot resolve.</p>
+        <p style="margin-bottom: 15px;">During an Audit, I expose with pinpoint accuracy where the blockage or friction is located. Then I guide a targeted Reset of the foundation, restoring calm, clarity, direction, and decisive power—without months-long talk sessions or drawn-out trajectories.</p>
         
         <h3 style="font-family: var(--font-display); font-size: 16px; color: var(--gold); margin-top: 25px; margin-bottom: 10px; text-transform: uppercase;">Approach &amp; Applications</h3>
-        <p style="margin-bottom: 15px;">I consciously work with a limited number of clients at a time. Every application therefore starts with a brief selection to determine if there is a match.</p>
-        <p style="margin-bottom: 15px;">Would you like to submit an application? Send an email to <strong>tamara.esseveld@live.nl</strong> with the subject: <em>APPLICATION – [Name of the service]</em></p>
-        <p style="margin-bottom: 15px; font-size: 16px; color: var(--grey);">Please briefly mention: who the application is for, what you are currently running up against, and why this is the right moment for you to take action. You will receive a response with the next steps within 48 hours.</p>
+        <p style="margin-bottom: 15px;">I consciously work with a limited number of private clients and corporate audits at a time to ensure depth, precision, and quality.</p>
+        <p style="margin-bottom: 15px;">To apply, send an email to <strong>tamara.esseveld@live.nl</strong> with the subject: <em>APPLICATION – [Name of the service / Organization]</em>.</p>
+        <p style="margin-bottom: 15px; font-size: 16px; color: var(--grey);">Briefly state who the application is for, what you are currently running up against, and your desired timeframe. You will receive a response with the next steps within 24 to 48 hours.</p>
 
-        <p style="margin-top: 20px; font-style: italic; color: var(--gold);">Ready to restore the control and foundation of your life?</p>
+        <p style="margin-top: 20px; font-style: italic; color: var(--gold);">Ready to restore clarity, control, and alignment?</p>
     </div>
 </section>
 
-<section id="diensten">
+<!-- PARTICULIEREN / INDIVIDUALS & FAMILIES -->
+<section id="diensten-particulieren" class="diensten-section">
     
     <div class="diensten-section-title">
         <p class="hero-label">Individuals &amp; Families</p>
@@ -275,19 +277,45 @@ Result: Razor-sharp insight into the timeline, your energy and chakra system, an
 
 </section>
 
-<section id="contact">
-    <h2 class="hero-name">Ready for <em>Calm &amp; Clarity</em>?</h2>
-    <p style="margin-bottom: 30px;">Get in touch directly to request your trajectory or scan.</p>
-    <a href="mailto:tamara.esseveld@live.nl" target="_top" onclick="window.location.href='mailto:tamara.esseveld@live.nl'; return false;" class="btn-primary">Send an Email</a>
-    <p style="margin-top: 20px; font-size: 14px; color: var(--grey);">Or subscribe to the <a href="https://laposta.nl/f/ssuhizunl3rw" target="_blank" style="color: var(--gold);">newsletter</a></p>
-</section>
+<!-- BEDRIJVEN / CORPORATE & ORGANIZATIONS -->
+<section id="diensten-bedrijven" class="diensten-section corporate-bg">
+    
+    <div class="diensten-section-title">
+        <p class="hero-label">Corporate &amp; Organizations</p>
+        <h2 style="font-size: 40px; font-weight: 300; text-transform: uppercase;">Organizational Dynamics &amp; Leadership</h2>
+    </div>
+    
+    <div class="diensten-grid">
+        <!-- CORPORATE BOX 01 -->
+        <div class="dienst-card">
+            <div class="dienst-number">01</div>
+            <h3 class="dienst-name">Executive Strategic Flash Scan</h3>
+            <p class="dienst-desc">For leaders, entrepreneurs, and C-level executives facing a crucial decision or experiencing stagnation.
 
-<footer style="padding: 40px 20px; text-align: center; background: white; border-top: 1px solid #eee;">
-    <p style="font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em;">
-        © 2026 CelestialElora | 
-        <a href="../voorwaarden.html" target="_blank" style="color: #b8964d; text-decoration: none;">Terms and Conditions</a>
-    </p>
-</footer> 
+One strategic issue. One in-depth analysis.
+Are you stuck on a strategic decision, experiencing unexplained friction within the leadership team, or looking to test the viability of a new direction?
 
-</body>
-</html>
+During this scan, we analyze:
+- The undercurrent within the leadership layer
+- Hidden blockages regarding growth and revenue
+- Blind spots in decision-making and strategy
+
+Result: Immediate sharpness, removing doubt, and a clear roadmap for leadership.</p>
+            <div class="prijs-tag">Upon request</div>
+        </div>
+          
+        <!-- CORPORATE BOX 02 -->
+        <div class="dienst-card">
+            <div class="dienst-number">02</div>
+            <h3 class="dienst-name">Operations Reset &amp; Burn-out Intervention</h3>
+            <p class="dienst-desc">3-Day Intensive Intervention for Absenteeism, Overload &amp; Burn-out.
+
+When employees, key figures, or managers drop out due to burn-out or long-term sick leave, that is rarely just an individual issue. It is a symptom of overload and imbalance in the undercurrent of the entire system.
+
+In this 3-day intensive intervention, we address the root cause of energy leaks and dropout:
+- Uncovering causes of absenteeism: Where do work processes chafe and where does energy leak away unnoticed?
+- Restoring load capacity: Razor-sharp insight into boundaries, resilience, and breaking overextension within teams.
+- Acute symptom &amp; system analysis: Immediate relief for the affected employee/manager and restructuring of the team to prevent recurrence.
+- Streamlined workflows &amp; calm: Reorganizing roles and expectations for a sustainable, healthy work environment.
+
+Result: Rapid restoration of calm, reduction of absenteeism costs, increased resilience, and a healthy operational
